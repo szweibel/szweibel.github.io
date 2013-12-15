@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Life With Pi: Microcomputing in Academia</title>
+		<meta name="description"
+			content="A presentation on Microcomputing for the 2013 CUNY IT Conference" />
+		<meta name="author" content="Stephen Zweibel" />
+		<meta name="author" content="Allie Verbovetskaya" />
+		<meta name="author" content="Robin Davis" />
+		<meta name="author" content="Junior Tidal" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="reveal/css/reveal.min.css" />
+		<link rel="stylesheet" href="reveal/css/theme/default.css" id="theme" />
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css" />
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+	document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+	</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	</head>
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- Intro -->
+				<section>
+					<h1>Life With Pi: Microcomputing in Academia</h1>
+					<p>
+						<small><a href="http://verbovetskaya.com/" target="_blank">Allie
+								Verbovetskaya</a>, <a href="http://juniortidal.com">Junior
+							Tidal</a>, <a href="http://twitter.com/robincamille" target="_blank"
+								>Robin Davis</a>, &amp; <a href="https://github.com/szweibel"
+								target="_blank">Stephen Zweibel</a>
+						</small>
+					</p>
+				</section>
+				<!-- Allie -->
+				<section data-state="cobalt">
+					<p><a href="http://vimeo.com/55658574" target="_blank">BeetBox</a></p>
+					<iframe src="http://player.vimeo.com/video/55658574?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<p><a href="http://scott.j38.net/interactive/beetbox/" target="_blank">BeetBox</a> by <a href="http://scott.j38.net/" target="_blank">Scott Garner</a></p>
+				</section>
+				<section data-state="cobalt">
+					<section>
+						<h1>A Brief Introduction</h1>
+						<a href="#" class="navigate-down"> &darr; </a>
+					</section>
+					<section>
+						<h2>What's a microcomputer?</h2>
+						<ul>
+							<li>Cheap</li>
+							<li>Small</li>
+							<li>Open source</li>
+							<li>Computer</li>
+						</ul>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h3>Raspberry Pi</h3>
+						<p>
+							$35.00
+						</p>
+						<img src="images/raspberry_pi_-_labeled.jpg" height="375" />
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h3>BeagleBoard BeagleBone</h3>
+						<p>
+							$89.00
+						</p>
+						<img src="images/beagleboard_bone_-_labeled.png" height="375" />
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h3>Arduino Uno</h3>
+						<p>
+							$29.95
+						</p>
+						<img src="images/arduino_uno_-_labeled.jpg" height="375" />
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h2>What are they for?</h2>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h3>Hobbies</h3>
+						<p><a href="http://learn.adafruit.com/retro-gaming-with-raspberry-pi" target="_blank">Retro Gaming with Raspberry Pi</a></p>
+						<img src="images/joust.jpg" height="375" />
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h3>Special Needs & Interests</h3>
+						<p><a href="http://www.instructables.com/id/RFID-pet-feeder/" target="_blank">RFID Pet Feeder</a></p>
+						<iframe src="http://player.vimeo.com/video/10896151?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h3>Data Collection</h3>
+						<p><a href="http://www.botanicalls.com/" target="_blank">Botanicalls</a></p>
+						<img src="images/botanicalls.jpg" height="375" />
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h2>But I'm not a programmer!</h2>
+						<ul>
+							<li><a href="http://www.adafruit.com/" target="_blank">http://www.adafruit.com/</a></li>
+							<li><a href="http://www.makesize.com/" target="_blank">http://www.makezine.com/</a></li>
+							<li><a href="http://www.themagpi.com/" target="_blank">http://www.themagpi.com/</a></li>
+							<li><a href="http://raspberrypi.stackexchange.com/" target="_blank">http://raspberrypi.stackexchange.com/</a></li>
+							<li><a href="http://www.element14.com/" target="_blank">http://www.element14.com/</a></li>
+</li>
+						</ul>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h2>Why should I bother?</h2>
+						<ul>
+							<li>Uses beyond recreation</li>
+							<li>Ripe for inclusion in academia</li>
+						</ul>
+						<p>
+							<a href="#" class="navigate-right"> &rarr; </a>
+						</p>
+					</section>
+				</section>
+				<!-- Junior -->
+				<section data-state="sunset">
+					<section>
+						<h1>Pedagogy</h1>
+						<a href="#" class="navigate-down"> &darr; </a>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment roll-in">Applications in the Classroom</li>
+							<li class="fragment roll-in">Class Webserver</li>
+							<li class="fragment roll-in">Repository for Coursework </li>
+						</ul>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h2>Applications in the classroom</h2>
+						<ul>
+							<li class="fragment roll-in">In-class research stations</li>
+							<!-- restricted web browsing, only for research -->
+							<li class="fragment roll-in">Cross-disciplinary projects</li>
+							<!-- Mathematics and music, computer science and mechnical/robotic drafting, humanities & linux, simple gaming projects, device interactions such as cameras or audio interfaces -->
+							<li class="fragment roll-in">Testing environment for coding class
+								projects</li>
+							<!-- RPi may be too slow for on-board development, but would be useful for testing code produced elsewhere -->
+						</ul>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h2>Class Webserver</h2>
+						<ul>
+							<li class="fragment roll-in">Class specific webserver on an SD card</li>
+							<!-- Faculty perspective for multiple course management-->
+							<li class="fragment roll-in">A webserver on every student's desk</li>
+							<!-- Student perspective for learning/dev. web applications-->
+							<li class="fragment roll-in">Virtual space for collaborative
+								learning</li>
+							<!-- CMS, wiki, blog specific to the classroom, harvest class related information from social media-->
+
+						</ul>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<!-- webserver -->
+					<section>
+						<h2>Repository for Coursework</h2>
+						<ul>
+							<li class="fragment roll-in">The paperless classroom</li>
+							<!-- Your class's course management software BB independent. -->
+							<li class="fragment roll-in">Classroom/coursework cloud storage or
+								repository</li>
+							<!-- stepping stone for instutional repo? -->
+							<li class="fragment roll-in">Archive for past courses</li>
+						</ul>
+						<!--
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>-->
+					</section>
+					<!-- coursework -->
+				</section>
+				<!-- Research: Robin -->
+				<section data-state="lila">
+					<section>
+						<h1>Research</h1>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h2>Applications in the lab &amp; studio</h2>
+						<p>Cheap, disposable computing</p>
+						<br />
+						<div style="float:left;width:35%;margin-right:10px;">
+							<img src="http://www.adafruit.com/images/large/basicsensors_LRG.jpg"
+								alt="Sensors" style="width:100%;height:auto;" />
+						</div>
+						<ul style="float:left;width:60%">
+							<li>Sensors!</li>
+							<li>Clusters!</li>
+							<li>Prototypes!</li>
+							<li>Integration with other machines!</li>
+						</ul>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h2>Advantages</h2>
+						<ul style="line-height:2em;">
+							<li>Low-cost <em>(stretch that grant!)</em></li>
+							<li>Tight control over your machines</li>
+							<li>Build on code others in the community have contributed</li>
+							<li>Publish &amp; brag</li>
+						</ul>
+						<p>
+							<a href="#" class="navigate-down"> &darr; </a>
+						</p>
+					</section>
+					<section>
+						<h2>Sample publications</h2>
+						<div style="font-size:0.9em;text-align:left;">
+							<p style="margin-bottom:1em;"
+								title="Nagy, T., & Gingl, Z. (2013). Low-cost photoplethysmograph solutions using the Raspberry Pi."
+								>Low-cost Photoplethysmograph Solutions Using the Raspberry Pi</p>
+							<p style="margin-bottom:1em;"
+								title="Petteri, T., Raymond P., N., Hemi, M., Kenneth, K., Dominique, D., Claude, G., & Howard M., C. (n.d). Basic Neuroscience: An inexpensive Arduino-based LED stimulator system for vision research. Journal Of Neuroscience Methods, 211227-236. doi:10.1016/j.jneumeth.2012.09.012"
+								>Basic Neuroscience: An Inexpensive Arduino-based LED Stimulator
+								System for Vision Research</p>
+							<p style="margin-bottom:1em;"
+								title="ElShafee, A., El Menshawi, M., & Saeed, M. (2013). Integrating Social Network Services with Vehicle Tracking Technologies. International Journal Of Advanced Computer Science & Applications, 4(6), 124-132."
+								>Integrating Social Network Services with Vehicle Tracking
+								Technologies</p>
+							<p style="margin-bottom:1em;"
+								title="Leeuw, T., Boss, E. S., & Wright, D. L. (2013). In situ Measurements of Phytoplankton Fluorescence Using Low Cost Electronics. Sensors (14248220), 13(6), 7872-7883. doi:10.3390/s130607872"
+								>In Situ Measurements of Phytoplankton Fluorescence Using Low Cost
+								Electronics</p>
+						</div>
+						<p style="font-size:0.4em;">Hover for full citations</p>
+
+					</section>
+				</section>
+				<!-- End research -->
+				<!-- Steve -->
+						<section data-state="submerge">
+							<section>
+								<h1>Literacy</h1>
+								<p>
+									<a href="#" class="navigate-down"> &darr; </a>
+								</p>
+							</section>
+							<section>
+								<h2>Literacy!</h2>
+								<ul>
+									<li>Reading &amp; Writing</li>
+									<li>Digital</li>
+									<li class="fragment roll-in">Computational (Software &amp; Hardware)</li>
+								</ul>
+								<p><a href="#" class="navigate-down"> &darr; </a></p>
+							</section>
+							<section style="line-height:2em;">
+								<h2>What is Computational Literacy?</h2>
+								<p>Algorithmic thinking</p>
+								<p>Basic understanding of how computers work</p>
+								<p>Capability to collaborate</p>
+								<p><a href="#" class="navigate-down"> &darr; </a></p>
+							</section>
+							<section>
+								<h2>Why Now?</h2>
+							</section>
+							<section>
+								<h2>The Internet of Things</h2>
+								<div style="font-size:0.9em;text-align:left;">
+									<ul style="line-height:2em;">
+										<li>Merging of the physical and digital realms</li>
+										<li>Proliferation of internet-connected sensors and actuators</li>
+										<li>Smaller, more flexible/expendable computing technology </li>
+									</ul>
+								</div>
+								<p><small>(According to the Open University)</small></p>
+								<p><a href="#" class="navigate-down"> &darr; </a></p>
+							</section>
+							<section>
+								<h2>Analogy to reading</h2>
+								<p>Important when required for government</p>
+								<p><em>Infrastructural</em> when society came to depend on it</p>
+								<!-- commerce, transportation, communication, news -->
+								<br/>
+								<p><small>Vee, Annette. "Understanding Computer Programming as a Literacy." Literacy in Composition Studies 1.2 (2013): 42-64.</small></p>
+								<!-- <p>While people benefit from skills, they need <em>literacies</em> to negotiate their world.</p> -->
+								<p><a href="#" class="navigate-down"> &darr; </a></p>
+							</section>
+							<section>
+								<h2>Computational Literacy in practice</h2>
+								<pre><code>def Hello world:
+	print('Hello world!')</code></pre>
+								<p>Can you read this?</p>
+								<p><a href="#" class="navigate-down"> &darr; </a></p>
+							</section>
+							<section>
+								<img src="images/raspberrypi-schematic.jpg">
+								<p>What about this?</p>
+								<p><a href="#" class="navigate-down"> &darr; </a></p>
+							</section>
+							<section>
+								<h3>We drive cars, do we all need to be mechanics?</h3>
+							</section>
+							<section>
+								<h2>Not about becoming a programmer</h2>
+								<p>Awareness of technology in society</p>
+								<br/>
+								<p>Fluency in technology news: NSA, Google Books, etc. </p>
+								<br/>
+								<!-- <p>Witness NSA metadata, Google Books</p> -->
+								<p>Technical knowledge hepful for effective leadership</p>
+							</section>
+							<section>
+								<!-- <h2>Teach Computational Literacy!</h2> -->
+								<h3>Computer hardware: cheap</h3>
+								<br/>
+								<h3>Development software: often <em>free</em></h3>
+								<br/>
+								<h3>Computational Literacy: Priceless</h3>
+								<!-- <p>Barrier to entry is low</p>
+								<p>Possible benefits are huge</p> -->
+							</section>
+							<section>
+								<h3>In your English class:</h3>
+									Investigate how computers interpret language through Natural Language Processing
+								</p>
+								<br/>
+								<h3>In your Biology class:</h3>
+									Program sensors to monitor (and email updates on) the growth of a plant
+								</p>
+								<br/>
+								<h3>In your Sociology class:</h3>
+									Discuss the 'Quantified Self', track and compare personal life data
+								</p>
+							</section>
+						</section>
+						<!-- Demonstrations -->
+						<section data-state="blackout">
+							<h1>Demonstrations</h1>
+						</section>
+						<!-- Questions -->
+						<section data-state="blackout">
+							<section>
+								<h1>Questions?</h1>
+								<p>
+									<a href="#" class="navigate-down"> &darr; </a>
+								</p>
+							</section>
+							<section>
+								<h1>Get in touch</h1>
+								<p>Allie Verbovetskaya, <a href="http://twitter.com/alevtina" target="_blank">@alevtina</a></p>
+								<p>Junior Tidal, <a href="http://twitter.com/juniortidal" target="_blank">@juniortidal</a></p>
+								<p>Robin Davis, <a href="http://twitter.com/robincamille" target="_blank">@robincamille</a></p>
+								<p>Stephen Zweibel, <a href="http://twitter.com/zwounds" target="_blank">@zwounds</a></p>
+							</section>
+						</section>
+					</div>
+				</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+		<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+	theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+	transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+	// Optional libraries used to extend on reveal.js
+	dependencies: [
+		{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		// { src: 'reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+	]
+});
+</script>
+
+	</body>
+</html>

@@ -1,0 +1,178 @@
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Know Thy Shelf</title>
+
+        <meta name="description" content="Know Thy Shelf">
+        <meta name="author" content="Stephen Zweibel">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="reveal/css/reveal.min.css">
+        <link rel="stylesheet" href="reveal/css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                    <h1>Know Thy Shelf</h1>
+                    <h3>A Bookshelf-Reading App for Libraries</h3>
+                    <p>
+                        <small><a href="https://github.com/szweibel" target="_blank">Stephen Zweibel</a></small>
+                    </p>
+                </section>
+
+                <!-- Nested vertical slides -->
+                <section>
+                    <section>
+                    <h2>What is RFID? (Radio Frequency Identification)</h2>
+                    <p>Small tags containing electronic information</p>
+                    <p>Powered by electromagnetic induction</p>
+                        <a href="#" class="navigate-down">
+                            ↓
+                        </a>
+                    </section>
+                    <section>
+                        <img src="/images/rfid.jpg">
+                    </section>
+                    <section>
+                        <h2>Uses:</h2>
+                            <ul>
+                                <li>Toll collection (EasyPass)</li>
+                                <li>Tracking animals & people</li>
+                                <li>Tracking inventory</li>
+                            </ul>
+                    </section>
+                    <section>
+                        <h2>Advantages Over Barcodes</h2>
+                            <ul>
+                                <li>Doesn't require line-of-sight</li>
+                                <li>Can read more than one at a time</li>
+                            </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section data-state="alert">
+                        <h2>My Library's Use Case</h2>
+                        <p>Inventory</p>
+                    </section>
+                    <section>
+                        <p>If a book is out of place, it may as well not exist</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <p>And so...</p>
+                        <h2>Know Thy Shelf</h2>
+                        <a href="#" class="navigate-down">
+                            ↓
+                        </a>
+                    </section>
+                    <section>
+                        <img src="/images/knowthyshelf.png">
+                    </section>
+                    <section>
+                        <h2>Process</h2>
+                        <p>Scan barcode</p>
+                        <br/>
+                        <p>Automatically added:</p>
+                        <ol>
+                            <li>Title</li>
+                            <li>Call Number</li>
+                            <li>ISBN</li>
+                        </ol>
+                        <br/>
+                        <br/>
+                        <p>Apply RFID tag</p>
+                        <br/>
+                        <p>Average 45 seconds per book</p>
+
+                        <a href="#" class="navigate-down">
+                            ↓
+                        </a></p>
+                    </section>
+                    <section>
+                        <h2>Bookshelf Scanning Process</h2>
+                        <p>Use RFID reader (Bluetooth)</p>
+                        <p>Computer/Phone/Tablet</p>
+                        <p>Scan books without opening them</p>
+                        <p>Less than 50 seconds per shelf</p>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>Graphical representation of library shelves</p>
+                        <p>Automatically determines:</p>
+                        <ul>
+                            <li>Shelf order</li>
+                            <li>Lost items</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2>Current Status</h2>
+                    <p>Ongoing pilot program</p>
+                    <p>1500 books in Know Thy Shelf</p>
+                </section>
+                <section data-state="blackout">
+                    <h1>THE END</h1>
+                    <h3>BY Stephen Zweibel</h3>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.min.js"></script>
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
