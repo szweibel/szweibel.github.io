@@ -38,10 +38,10 @@
                 <a href="/about.html">C.V.</a>
             </li>
         </ul>
-        <div class="thumbnail">
-          <img src="/images/me.jpg" alt="Logo" >
-    </div>
-    <div>
+        <a href="#" class="thumbnail">
+          <img data-src="images/me.jpg" alt="...">
+        </a>
+    <div class="row">
       <ul>
         {% for post in site.posts %}
           <li>
@@ -51,9 +51,9 @@
       </ul>
     </div>
         </div>
-        <div class='span9'>
-            {{content}}
-        </div>
+    <div class='span9'>
+        {{content}}
+    </div>
     </div>
 </div>
 </body>
