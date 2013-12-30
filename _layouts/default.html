@@ -24,29 +24,31 @@
 <body>
 <div class="container-fluid">
     <div class='row-fluid'>
-        <div class='span3'>
-            <ul class="nav nav-tabs nav-stacked">
-                <li>
-                    <h1>
-                        <a href="/">Stephen Zweibel</a>
-                    </h1>
-                </li>
-                <li class=''>
-                    <a href="/projects.html">Papers, Presentations, & Projects</a>
-                </li>
-                <li class=''>
-                    <a href="/about.html">C.V.</a>
-                </li>
-            </ul>
-            <div>
-        <img src="/images/me.jpg" alt="Logo" height="42" width="42">
-        <ul>
-          {% for post in site.posts %}
+    <div class='span3'>
+        <ul class="nav nav-tabs nav-stacked">
             <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
+                <h1>
+                    <a href="/">Stephen Zweibel</a>
+                </h1>
             </li>
-          {% endfor %}
+            <li class=''>
+                <a href="/projects.html">Papers, Presentations, & Projects</a>
+            </li>
+            <li class=''>
+                <a href="/about.html">C.V.</a>
+            </li>
         </ul>
+        <div class="thumbnail">
+          <img src="/images/me.jpg" alt="Logo" >
+    </div>
+    <div>
+      <ul>
+        {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
         </div>
         <div class='span9'>
