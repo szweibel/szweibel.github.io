@@ -1,10 +1,5 @@
 body {
-  margin: 0;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 18px;
-  color: #404040;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a, h1, h2
