@@ -8,13 +8,13 @@
 - title: Know Thy Shelf
   github: https://github.com/szweibel/know-thy-shelf
   link: http://zweibel.net/presentations/knowshelf.html
-  location:
-  image:
+  location: CUNY Emerging Tech Committee
+  image: images/knowthyshelf.png
   content: wagawaga
 
 - title: New CUNY Catalog API
   github: https://github.com/szweibel/CUNYplusmobile
   link: http://zweibel.net/presentations/catalogAPI.html
-  location:
+  location: METRO Reference SIG
   image:
   content: wagawaasaaa
