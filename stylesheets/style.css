@@ -3,5 +3,6 @@ A.thumbnail.list-group-item, A.list-group-item {
 }
 
 body{
-    background: #E0E0E0;
+    /*background: #E0E0E0;*/
+    background-image:url(/images/squared_metal.png); background-repeat:repeat
 }
