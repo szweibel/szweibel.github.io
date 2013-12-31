@@ -7,7 +7,7 @@
   github: https://github.com/szweibel/know-thy-shelf
   presentation: http://zweibel.net/presentations/knowshelf.html
   image: /presentations/images/shelfshot.png
-  content: A radio frequency identification (RFID)-based inventory system for libraries, Know thy Shelf increases the efficiency and accuracy of inventory management. Know thy Shelf uses inexpensive microcomputer hardware to read RFID tags, which can encode more information and be read more efficiently than barcodes. Because RFID tags can be read without opening books, the RFID reader can scan an entire shelf's worth of books in one momentary (less than 50-second) sweep; whereupon Know thy Shelf checks the presence (as checked-in or -out) and location of each book against the catalog. While RFID tags have a greater unit cost than barcodes, inexpensive hardware and open-source analysis allow Know thy Shelf to be easy and affordably implemented.
+  content: A radio frequency identification (RFID)-based inventory system for libraries, Know thy Shelf allows users to scan an entire shelf's worth of books in less than 50 seconds. Know thy Shelf then checks the status and location of each book against the library catalog.
 
 - title: New CUNY Catalog API
   github: https://github.com/szweibel/CUNYplusmobile
