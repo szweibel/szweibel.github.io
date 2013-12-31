@@ -14,8 +14,8 @@ by Evaluating Circulation Activity Data at Columbia University Libraries</a>, Th
 <h2>Projects</h2>
 {% for project in site.data.projects %}
 <div class="media">
-  <a class="pull-left thumbnail" href="project.link">
-    <img class="media-object" src="images/me.jpg" alt="{{ project.title }}">
+  <a class="pull-left thumbnail" href="{{ project.link }}">
+    <img class="media-object" src="images/me.jpg" style='width: 150px; height: 150px;' alt="{{ project.title }}">
   </a>
   <div class="media-body">
     <h4 class="media-heading">{{ project.title }}</h4>
