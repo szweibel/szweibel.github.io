@@ -1,7 +1,7 @@
 - title: Microcomputing in Academia
   github: https://github.com/szweibel/CUNY-IT-Presentation
   link: http://zweibel.net/presentations/raspberry.html
-  image: /images/pithumb.png
+  image: /presentations/images/raspberry_pi_-_labeled.jpg
   location: CUNY IT Conference
   content: The Raspberry Pi and Arduino – inexpensive and versatile credit-card-sized computers – have been embraced by the open-source and DIY communities. The size, affordability, and versatility of microcomputers make it easy to develop, deploy, and replicate projects. This presentation described and illustrated how these powerful microcomputers are now finding an expanding range of applications in academic and library settings. We also demonstrated original, interactive applications for research and instruction.
 
@@ -9,12 +9,12 @@
   github: https://github.com/szweibel/know-thy-shelf
   link: http://zweibel.net/presentations/knowshelf.html
   location: CUNY Emerging Tech Committee
-  image: images/knowthyshelf.png
+  image: /images/knowthyshelf.png
   content: wagawaga
 
 - title: New CUNY Catalog API
   github: https://github.com/szweibel/CUNYplusmobile
   link: http://zweibel.net/presentations/catalogAPI.html
   location: METRO Reference SIG
-  image:
+  image: /images/holdings.png
   content: wagawaasaaa
