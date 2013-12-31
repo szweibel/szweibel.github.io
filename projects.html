@@ -13,11 +13,16 @@ by Evaluating Circulation Activity Data at Columbia University Libraries</a>, Th
  -->
 <h2>Projects</h2>
 {% for project in site.data.projects %}
-<div>
-    <h3>
-    <a href="{{ project.link }}">{{ project.title }}</a>
-    </h3>
-    <p>{{ project.content }}</p>
+<div class="media">
+  <a class="pull-left" href="project.link">
+    <img class="media-object" src="{{ project.image }}" alt="{{ project.title }}">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">{{ project.title }}</h4>
+    {{ project.content }}
+  </div>
 </div>
 {% endfor %}
+
+
 </div>
