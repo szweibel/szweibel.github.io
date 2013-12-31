@@ -19,7 +19,7 @@ title: Presentations
 {% for presentation in site.data.presentations %}
 <div class="media">
   <a class="pull-left thumbnail" href="{{ presentation.link }}">
-    <img class="media-object" src="images/me.jpg" style='width: 150px; height: 150px;' alt="{{ presentation.title }}">
+    <img class="media-object" src="{{ presentation.image }}" style='width: 150px; height: 150px;' alt="{{ presentation.title }}">
   </a>
   <div class="media-body">
     <a href="{{ presentation.link }}"><h3 class="media-heading">{{ presentation.title }}</h3></a>
