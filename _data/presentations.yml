@@ -2,6 +2,7 @@
   github: https://github.com/szweibel/CUNY-IT-Presentation
   link: http://zweibel.net/presentations/raspberry.html
   image:
+  location: CUNY IT Conference
   content: The Raspberry Pi and Arduino – inexpensive and versatile credit-card-sized computers – have been embraced by the open-source and DIY communities. 
   The size, affordability and versatility of microcomputers make it easy to develop, deploy and replicate projects. 
   This presentation described and illustrated how these powerful microcomputers are now finding an expanding range of applications in academic and library settings. 
@@ -10,11 +11,13 @@
 - title: Know Thy Shelf
   github: https://github.com/szweibel/know-thy-shelf
   link: http://zweibel.net/presentations/knowshelf.html
+  location:
   image:
   content: wagawaga
 
 - title: New CUNY Catalog API
   github: https://github.com/szweibel/CUNYplusmobile
   link: http://zweibel.net/presentations/catalogAPI.html
+  location:
   image:
   content: wagawaasaaa
