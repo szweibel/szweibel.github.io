@@ -1,6 +1,6 @@
 - title: Augur
   github: https://github.com/szweibel/Augur
-  image: /presentations/images/charts_top.png
+  image: /presentations/images/augur/charts_top.png
   content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt …
 
 - title: Know Thy Shelf
@@ -12,5 +12,5 @@
 - title: New CUNY Catalog API
   github: https://github.com/szweibel/CUNYplusmobile
   presentation: http://zweibel.net/presentations/catalogAPI.html
-  image:
+  image: /images/source.png
   content: wagawaasaaa
