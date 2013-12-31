@@ -9,8 +9,8 @@
   image: /presentations/images/knowthyshelf.png
   content: A radio frequency identification (RFID)-based inventory system for libraries, Know Thy Shelf allows users to scan an entire shelf of books in less than 50 seconds. Know Thy Shelf then checks the status and location of each book against the library catalog, creating a visual representation of the shelves for easy reference.
 
-- title: CUNY Catalog API and Mobile App
+- title: CUNY+ Catalog API and Mobile App
   github: https://github.com/szweibel/CUNYplusmobile
   presentation: http://zweibel.net/presentations/catalogAPI.html
   image: /presentations/images/mobile_app.png
-  content: Using the CUNY+ Catalog API allows for programmatic search of the catalog, providing results that can be used to create applications that take advantage of CUNY's holdings and metadata. In this way I created a mobile app of the Hunter College Libraries catalog, allowing users to search for resources using any web-enabled device.
+  content: Using the CUNY+ Catalog API allows for programmatic search of the catalog, providing results that can be used to create applications that take advantage of CUNY's holdings and metadata. As a demonstration of its utility, I created a mobile app for the Hunter College Libraries catalog, allowing users to search for resources using any web-enabled device.
