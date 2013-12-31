@@ -1,14 +1,17 @@
-- title: Augur
-  github: https://github.com/szweibel/Augur
+- title: Microcomputing in Academia
+  github: https://github.com/szweibel/CUNY-IT-Presentation
+  link: http://zweibel.net/presentations/raspberry.html
   image:
   content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt …
 
 - title: Know Thy Shelf
   github: https://github.com/szweibel/know-thy-shelf
+  link: http://zweibel.net/presentations/knowshelf.html
   image:
   content: wagawaga
 
 - title: New CUNY Catalog API
   github: https://github.com/szweibel/CUNYplusmobile
+  link: http://zweibel.net/presentations/catalogAPI.html
   image:
   content: wagawaasaaa
