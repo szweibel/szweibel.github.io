@@ -1,7 +1,7 @@
 - title: Augur
   github: https://github.com/szweibel/Augur
   image: /presentations/images/augur/charts_top.png
-  content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt …
+  content: Augur is a web app that tracks statistics about library reference desk interactions. It improves on previous reference tracking programs by providing a better user interface, including more and clearer charts illustrating the reference data, and by using a controlled vocabulary of tags. Hunter College Libraries, and several others (as far away as Nigeria) currently use Augur to track their reference statistics.
 
 - title: Know Thy Shelf
   github: https://github.com/szweibel/know-thy-shelf
