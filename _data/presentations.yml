@@ -12,7 +12,7 @@
   image: /images/knowthyshelf.png
   content: wagawaga
 
-- title: New CUNY Catalog API
+- title: Catalogs Exposed: Web APIs and Libraries
   github: https://github.com/szweibel/CUNYplusmobile
   link: http://zweibel.net/presentations/catalogAPI.html
   location: METRO Reference SIG
