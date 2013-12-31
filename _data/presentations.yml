@@ -10,7 +10,7 @@
   link: http://zweibel.net/presentations/knowshelf.html
   location: CUNY Emerging Tech Committee
   image: /presentations/images/shelfshot.png
-  content: wagawaga
+  content: This presentation summarizes a pilot implementation of my web app <a href='http://zweibel.net/presentations/knowshelf.html'>Know thy Shelf</a> at the Hunter College Health Professions Library.
 
 - title: Catalogs Exposed! Web APIs and Libraries
   github: https://github.com/szweibel/CUNYplusmobile
