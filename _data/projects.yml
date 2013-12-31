@@ -13,4 +13,4 @@
   github: https://github.com/szweibel/CUNYplusmobile
   presentation: http://zweibel.net/presentations/catalogAPI.html
   image: /presentations/images/mobile_app.png
-  content: wagawaasaaa
+  content: Using the CUNY+ Catalog API allows for programmatic search of the catalog, providing results that can be used to create applications that take advantage of CUNY's holdings and metadata. In this way I created a mobile app of the Hunter College Libraries catalog, allowing users to search for resources using any web-enabled device.
