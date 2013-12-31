@@ -1,15 +1,15 @@
 - title: Augur
   github: https://github.com/szweibel/Augur
   image: /presentations/images/augur/charts_top.png
-  content: Augur is a web app that tracks statistics about library reference desk interactions. It improves on previous reference tracking programs by providing a better user interface, including more and clearer charts illustrating the reference data, and by using a controlled vocabulary of tags. Hunter College Libraries, and several others (as far away as Nigeria) currently use Augur to track their reference statistics.
+  content: Augur is a web app that tracks statistics about library reference desk interactions. It improves on previous reference tracking programs by providing a better user interface, including more and clearer charts illustrating the reference data, and by using a controlled vocabulary of tags. Hunter College Libraries, and several other institutions (as far away as Nigeria) currently use Augur to track their reference statistics.
 
 - title: Know Thy Shelf
   github: https://github.com/szweibel/know-thy-shelf
   presentation: http://zweibel.net/presentations/knowshelf.html
-  image: /presentations/images/shelfshot.png
-  content: A radio frequency identification (RFID)-based inventory system for libraries, Know thy Shelf allows users to scan an entire shelf's worth of books in less than 50 seconds. Know thy Shelf then checks the status and location of each book against the library catalog, creating a visual representation of the shelves for easy reference.
+  image: /presentations/images/knowthyshelf.png
+  content: A radio frequency identification (RFID)-based inventory system for libraries, Know thy Shelf allows users to scan an entire shelf of books in less than 50 seconds. Know thy Shelf then checks the status and location of each book against the library catalog, creating a visual representation of the shelves for easy reference.
 
-- title: New CUNY Catalog API
+- title: CUNY Catalog API and Mobile App
   github: https://github.com/szweibel/CUNYplusmobile
   presentation: http://zweibel.net/presentations/catalogAPI.html
   image: /images/source.png
