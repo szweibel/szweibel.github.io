@@ -2,6 +2,10 @@ A.thumbnail.list-group-item, A.list-group-item {
     background: transparent
 }
 
+div.thumbnail.list-group-item, div.list-group-item {
+    background: transparent
+}
+
 body{
     /*background: #E0E0E0;*/
     background-image:url(/images/backgrounds/cubes.png); background-repeat:repeat
