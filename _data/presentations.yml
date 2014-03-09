@@ -18,3 +18,10 @@
   location: METRO Reference SIG
   image: /presentations/images/catalogs_exposed.png
   content: This is still a test.
+
+- title: DH Box: a Turnkey Digital Humanities Laboratory
+  github: https://github.com/dhbox
+  link: http://zweibel.net/presentations/dhbox.html
+  location: Hunter ACERT Lunch
+  image: /presentations/images/DH_BOX_LOGO_BLACK.png
+  content: A new project that I'm very excited about.
