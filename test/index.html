@@ -4,10 +4,11 @@ title: Testing
 ---
 <script type="text/javascript">
 $( document ).ready(function() {
+    // Prevents going to API page, allows showing a success indicator
     $('#dhbox_form').click(function(event){
         event.preventDefault();
         var formData = $('#dhbox').serialize();
-        $.post('http://66.108.238.228:3000/dhbox', formData);
+        $.post('http://54.83.200.29:8080/dhbox', formData);
     });
 });
 
