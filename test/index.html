@@ -5,15 +5,14 @@ title: Testing
 <script type="text/javascript">
 $( document ).ready(function() {
     // Prevents going to API page, allows showing a success indicator
-    $('#dhbox_form').click(function(event){
-        event.preventDefault();
-        var formData = $('#dhbox').serialize();
-        console.log(formData);
-        $.post('http://54.83.200.29:8080/dhbox', formData);
-        delete window.formData;
+    $('#dhbox_form').click(function(e){
+        e.preventDefault();
+        // var formData = $('#dhbox').serialize();
+        // console.log(formData);
+        // $.post('http://54.83.200.29:8080/dhbox', formData);
+        // delete window.formData;
     });
 });
-
 </script>
 <div class="col-md-10">
     <div id='dhbox_form'>
