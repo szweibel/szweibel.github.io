@@ -8,6 +8,7 @@ $( document ).ready(function() {
     $('#dhbox_form').click(function(event){
         event.preventDefault();
         var formData = $('#dhbox').serialize();
+        console.log(formData);
         $.post('http://54.83.200.29:8080/dhbox', formData);
     });
 });
