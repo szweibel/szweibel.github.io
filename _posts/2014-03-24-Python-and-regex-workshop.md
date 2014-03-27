@@ -4,7 +4,7 @@ title: Python, CSV, and Regular Expressions Hackathon
 ---
 Some pre-written Python scripts, and a demonstration CSV to get us started on using Python and regular expressions to work with CSVs and Excel data:
 
-* A [typical Collection Development CSV](/workshops/coldev.csv) that a librarian might want to process. Notice it has gaps, mistypings, and other idiosyncrasies. This is the challenge of processing human-created data.
+* [A typical Collection Development CSV](/workshops/coldev.csv) that a librarian might want to process. Notice it has gaps, mistypings, and other idiosyncrasies. This is the challenge of processing human-created data.
 
 * [Script for pulling cells out of a CSV according to a regular expression.](/workshops/regex.py)
 * [Similar](/workshops/with_tablib.py), using the [tablib](https://github.com/kennethreitz/tablib) library.
