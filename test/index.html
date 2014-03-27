@@ -5,12 +5,11 @@ title: Testing
 <script type="text/javascript">
 $( document ).ready(function() {
     // Prevents going to API page, allows showing a success indicator
-    $('#dhbox_form').click(function(e){
+    $('#dhbox_form_submit').click(function(e){
         e.preventDefault();
         var formData = $('#the_form').serialize();
         console.log(formData);
-        // $.post('http://54.83.200.29:8080/dhbox', formData);
-        // delete window.formData;
+        $.post('http://54.83.200.29:8080/dhbox', formData);
     });
 });
 </script>
@@ -20,7 +19,7 @@ $( document ).ready(function() {
             <input type'text' name='admin'/>
             <input type'text' name='users'/>
             <input type'text' name='users'/>
-            <input name="save" id='dhbox_form' type="submit" value="Save" class="btn btn-success" />
+            <input name="save" id='dhbox_form_submit' type="submit" value="Save" class="btn btn-success" />
         </form>
     </div>
 </div>
