@@ -20,6 +20,7 @@ $( document ).ready(function() {
         removeButton.click(function() {
             $(this).parent().remove();
         });
+        userWrapper.append(newUserLabel);
         userWrapper.append(newUser);
         userWrapper.append(removeButton);
         $("#the_form").append(userWrapper);
