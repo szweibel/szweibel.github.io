@@ -7,9 +7,9 @@ $( document ).ready(function() {
     // Prevents going to API page, allows showing a success indicator
     $('#dhbox_form').click(function(e){
         e.preventDefault();
-        // var formData = $('#dhbox').serialize();
+        var formData = $('#dhbox').serialize();
         // console.log(formData);
-        // $.post('http://54.83.200.29:8080/dhbox', formData);
+        $.post('http://54.83.200.29:8080/dhbox', formData);
         // delete window.formData;
     });
 });
