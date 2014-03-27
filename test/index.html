@@ -12,7 +12,7 @@ $( document ).ready(function() {
         $.post('http://54.83.200.29:8080/dhbox', formData);
     });
 
-    $(document).on('submit', '#add', function(e) {
+    $(document).on('click', '#add', function(e) {
         var intId = $("#the_form div").length + 1;
         var userWrapper = $("<div class=\"userwrapper\" id=\"field" + intId + "\"/>");
         var newUserLabel = $("<label for=\"user" + intId + "\">User:</label>");
