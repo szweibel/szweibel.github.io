@@ -11,15 +11,33 @@ $( document ).ready(function() {
         console.log(formData);
         $.post('http://54.83.200.29:8080/dhbox', formData);
     });
+    $("#add").click(function() {
+        var intId = $("#the_form div").length + 1;
+        var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\"/>");
+        var fName = $("<input type=\"text\" class=\"fieldname\" />");
+        var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
+        var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
+        removeButton.click(function() {
+            $(this).parent().remove();
+        });
+        fieldWrapper.append(fName);
+        fieldWrapper.append(fType);
+        fieldWrapper.append(removeButton);
+        $("#the_form").append(fieldWrapper);
+    });
+
 });
 </script>
 <div class="col-md-10">
-    <div>
-        <form action="http://66.108.238.228:3000/dhbox" id="the_form" method="post">
-            <input type'text' name='admin'/>
-            <input type'text' name='users'/>
-            <input type'text' name='users'/>
+    <form action="http://66.108.238.228:3000/dhbox" id="the_form" method="post">
+        <div>
+            <label for='admin'>Administrator:</label>
+            <input type'text' id='admin' name='admin'/>
+        </div>
+<!--             <input type'text' class='users' name='users'/> -->
             <input name="save" id='dhbox_form_submit' type="submit" value="Save" class="btn btn-success" />
-        </form>
-    </div>
+    </form>
+        <div>
+            <input type="button" value="Add a user" class="add" id="add" />
+        </div>
 </div>
