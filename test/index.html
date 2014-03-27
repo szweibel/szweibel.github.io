@@ -13,15 +13,16 @@ $( document ).ready(function() {
     });
     $("#add").click(function() {
         var intId = $("#the_form div").length + 1;
-        var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\"/>");
-        var fName = $("<input type=\"text\" class=\"fieldname\" />");
+        var userWrapper = $("<div class=\"userwrapper\" id=\"field" + intId + "\"/>");
+        var newUserLabel = $("<label for=\"user" + intId + "\" />");
+        var newUser = $("<input type=\"text\" class=\"fieldname\" id=\"user" + intId + "\" />");
         var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
         removeButton.click(function() {
             $(this).parent().remove();
         });
-        fieldWrapper.append(fName);
+        fieldWrapper.append(newUser);
         fieldWrapper.append(removeButton);
-        $("#the_form").append(fieldWrapper);
+        $("#the_form").append(userWrapper);
     });
 
 });
