@@ -11,11 +11,12 @@ $( document ).ready(function() {
         console.log(formData);
         $.post('http://54.83.200.29:8080/dhbox', formData);
     });
+
     $("#add").click(function() {
         var intId = $("#the_form div").length + 1;
         var userWrapper = $("<div class=\"userwrapper\" id=\"field" + intId + "\"/>");
         var newUserLabel = $("<label for=\"user" + intId + "\">User:</label>");
-        var newUser = $("<input type=\"text\" class=\"fieldname\" id=\"user" + intId + "\" />");
+        var newUser = $("<input type=\"text\" class=\"users\" id=\"user" + intId + "\" />");
         var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
         removeButton.click(function() {
             $(this).parent().remove();
