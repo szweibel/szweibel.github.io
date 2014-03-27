@@ -7,7 +7,7 @@ $( document ).ready(function() {
     // Prevents going to API page, allows showing a success indicator
     $('#dhbox_form').click(function(e){
         e.preventDefault();
-        var formData = $('#dhbox').serialize();
+        var formData = $('#the_form').serialize();
         console.log(formData);
         // $.post('http://54.83.200.29:8080/dhbox', formData);
         // delete window.formData;
@@ -16,7 +16,7 @@ $( document ).ready(function() {
 </script>
 <div class="col-md-10">
     <div id='dhbox_form'>
-        <form action="http://66.108.238.228:3000/dhbox" id="dhbox" method="post">
+        <form action="http://66.108.238.228:3000/dhbox" id="the_form" method="post">
             <input type'text' name='admin'/>
             <input type'text' name='users'/>
             <input type'text' name='users'/>
