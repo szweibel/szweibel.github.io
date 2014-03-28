@@ -8,6 +8,7 @@ Some pre-written Python scripts, and a demonstration CSV to get us started on us
 
 * [Script for pulling cells out of a CSV according to a regular expression.](/workshops/regex.py)
 * [Similar](/workshops/with_tablib.py), using the [tablib](https://github.com/kennethreitz/tablib) library.
+* [Similar](/workshops/colldev.py).
 
 Here are some helpful links for building regular expressions:
 
