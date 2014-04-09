@@ -9,7 +9,7 @@ $( document ).ready(function() {
         e.preventDefault();
         var formData = $('#the_form').serialize();
         console.log(formData);
-        $.post('http://66.108.238.228:3000/test', function( formData ) {
+        $.post('http://66.108.238.228:3000/dhbox', function( formData ) {
             console.log(formData);
     });
     });
@@ -36,7 +36,7 @@ $( document ).ready(function() {
 });
 </script>
 <div class="col-md-10">
-    <form action="" id="the_form" method="post">
+    <form action="http://66.108.238.228:3000/dhbox" id="the_form" method="post">
         <div>
             <label for='admin'>Administrator:</label>
             <input type'text' id='admin' name='admin'/>
