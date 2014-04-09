@@ -9,31 +9,37 @@ $( document ).ready(function() {
         e.preventDefault();
         var formData = $('#the_form').serialize();
         console.log(formData);
-        $.post('http://66.108.238.228:3000/dhbox', formData);
+        $.post('http://Localhost:8080/test', formData);
     });
 
     $(document).on('click', '#add', function(e) {
-        var intId = $("#the_form div").length + 1;
-        var userWrapper = $("<div class=\"userwrapper\" id=\"field" + intId + "\"/>");
-        var newUserLabel = $("<label for=\"user" + intId + "\">User:</label>");
-        var newUser = $("<input type=\"text\" class=\"users\" name=\"users\" id=\"user" + intId + "\" />");
-        var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
-        removeButton.click(function() {
-            $(this).parent().remove();
+            var intId = $("#the_form div").length + 1;
+            var userWrapper = $("<div class=\"userwrapper\" id=\"field" + intId + "\"/>");
+            var newUserLabel = $("<label for=\"user" + intId + "\">User:</label>");
+            var newUser = $("<input type=\"text\" class=\"users\" name=\"user" + intId + "\" id=\"user" + intId + "\" />");
+            var newPassLabel = $("<label for=\"passUser" + intId + "\">Password:</label>");
+            var newPass = $("<input type=\"text\" class=\"users\" name=\"pass" + intId + "\" id=\"passUser" + intId + "\" />");
+            var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
+            removeButton.click(function() {
+                $(this).parent().remove();
+            });
+            userWrapper.append(newUserLabel);
+            userWrapper.append(newUser);
+            userWrapper.append(newPassLabel);
+            userWrapper.append(newPass);
+            userWrapper.append(removeButton);
+            $("#the_form").append(userWrapper);
         });
-        userWrapper.append(newUserLabel);
-        userWrapper.append(newUser);
-        userWrapper.append(removeButton);
-        $("#the_form").append(userWrapper);
-    });
 
-});
-</script>
+    });
+    </script>
 <div class="col-md-10">
-    <form action="http://66.108.238.228:3000/dhbox" id="the_form" method="post">
+    <form action="http://66.108.238.228:3000/test" id="the_form" method="post">
         <div>
             <label for='admin'>Administrator:</label>
             <input type'text' id='admin' name='admin'/>
+            <label for='adminPass'>Password:</label>
+            <input type'text' id='adminPass' name='adminPass'/>
         </div>
 <!--             <input type'text' class='users' name='users'/> -->
     </form>
@@ -44,3 +50,4 @@ $( document ).ready(function() {
             <input name="save" id='dhbox_form_submit' type="submit" value="Save" class="btn btn-success" />
         </div>
 </div>
+<div id='result'></div>
