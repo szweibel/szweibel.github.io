@@ -7,9 +7,19 @@ $( document ).ready(function() {
     // Prevents going to API page, allows showing a success indicator
     $('#dhbox_form_submit').click(function(e){
         e.preventDefault();
-        var formData = $('#the_form').serialize();
-        console.log(formData);
-        $.post('http://Localhost:8080/test', formData);
+        var stuff = { users: [] };
+        $('.userwrapper').each(function () { 
+            stuff.users.push({ 
+            name: $(this).find('[class=users]').val(), 
+            pass: $(this).find('[class=passes]').val(), 
+            isAdmin: $(this).find('[name=admin]').val() 
+            }) 
+        });
+        stuff = JSON.stringify(stuff);
+        console.log(stuff);
+
+        // var formData = $(stuff).serialize();
+        $.post('http://Localhost:8080/test', stuff);
     });
 
     $(document).on('click', '#add', function(e) {
@@ -18,7 +28,7 @@ $( document ).ready(function() {
             var newUserLabel = $("<label for=\"user" + intId + "\">User:</label>");
             var newUser = $("<input type=\"text\" class=\"users\" name=\"user" + intId + "\" id=\"user" + intId + "\" />");
             var newPassLabel = $("<label for=\"passUser" + intId + "\">Password:</label>");
-            var newPass = $("<input type=\"text\" class=\"users\" name=\"pass" + intId + "\" id=\"passUser" + intId + "\" />");
+            var newPass = $("<input type=\"password\" class=\"passes\" name=\"pass" + intId + "\" id=\"passUser" + intId + "\" />");
             var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
             removeButton.click(function() {
                 $(this).parent().remove();
@@ -35,11 +45,11 @@ $( document ).ready(function() {
     </script>
 <div class="col-md-10">
     <form action="http://66.108.238.228:3000/test" id="the_form" method="post">
-        <div>
+        <div class='userwrapper' id='field1'>
             <label for='admin'>Administrator:</label>
-            <input type'text' id='admin' name='admin'/>
+            <input type'text' class='users' id='admin' name='admin'/>
             <label for='adminPass'>Password:</label>
-            <input type'text' id='adminPass' name='adminPass'/>
+            <input type'text' type="password" id='adminPass' class='passes' name='adminPass'/>
         </div>
 <!--             <input type'text' class='users' name='users'/> -->
     </form>
