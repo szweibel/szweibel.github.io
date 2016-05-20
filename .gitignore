@@ -2,3 +2,4 @@ _site
 _backups
 *.save
 *.zip
+.DS_Store
