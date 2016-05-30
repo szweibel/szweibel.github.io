@@ -20,7 +20,7 @@ The API will return a list of items from the catalog:
       "author": "Di Ciaccio, Agostino.",
       "year": "2012",
       "resourceType": "Electronic Resource",
-      "library": "Hunter Main",
+      "library": "Hunter",
       "thumbnail": "http://syndetics.com/index.aspx?isbn=9783642210372 (electronic bk.)/SC.GIF&client=cunyh&type=xw12",
       "docNumber": "007268706",
       "libraryCode": "HC001"
