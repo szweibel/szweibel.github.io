@@ -7,6 +7,7 @@
 
 		<title>Data Management</title>
 
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
 		<meta name="description" content="A presentation on the CUNY+ API">
 		<meta name="author" content="Stephen Zweibel">
 
@@ -37,122 +38,261 @@
 	<h1>Data Management</h1>
 </section>
 <section>
-	<div>What is data management?</div>
-</section>
-<section>
-	<div>history of data management plans</div>
-	<div>DMP started seriously with the NSF in 2011</div>
-They had found that up to %80 of data lost within 20 years
-</section>
-<section>
-	<div>Why share data?</div>
-    <ul>
-    <li>Ensures reproducibility</li>
-    <li>Promote discovery</li>
-    <li>Synthesis for data mining</li>
-    <li>Citation</li>
-    <li>Correct credit</li>
-    <li>Required!</li>
-    </ul>
-</section>
-<section>
-	<div>Definitions</div>
-	<div>Research data: material or information accepted to be necessary to come to your conclusion</div>
-</section>
-<section>
-<h2>Version Control</h2>
-<img src="images/datacomic.png" style='max-height: 400px;max-width: 400px'>
-</section>
-<section>
-	<div>What constitutes data?</div>
-</section>
-<section>
 	<section>
-		<div>What data do you expect to have?</div>
+		<h2>What constitutes research data?</h2>
+	</section>
+	<section>
+	<div class='col-md-6'>
+		<small>
+		<p>"Material or information on which an argument, theory, test or hypothesis, or another research output is based."</p>
+		<p>"What constitutes such data will be determined by the community of interest through the process of peer review and program management. This may include, but is not limited to: data, publications, samples, physical collections, software and models"</p>
+	</small>
+	</div>
+	<div class='col-md-6'>
+		<small>
+		<p>"Units of information created in the course of research"</p>
+		<p>"(i) Research data is defined as the recorded factual material commonly accepted in the scientific community as necessary to validate research findings, but not any of the following: preliminary analyses, drafts of scientific papers, plans for future research, peer reviews, or communications with colleagues."</p>
+		</small>
+	</div>
+		<small style="padding-top: 100px;">Queensland University of Technology. Manual of Procedures and Policies. Section 2.8.3. http://www.mopp.qut.edu.au/D/D_02_08.jsp<br>
+Marieke Guy. http://www.slideshare.net/MariekeGuy/bridging-the-gap-between-researchers-and-research-data-management , #2 <br>
+https://www.nsf.gov/bfa/dias/policy/dmpfaqs.jsp <br>
+OMB-110, Subpart C, section 36, (d) (i), http://www.whitehouse.gov/omb/circulars_a110/</small>
+	</section>
+	<section>
+	<p>Material or information necessary to come to your conclusion</p>
+	</section>
+	<section>
+		<h2>Getting data</h2>
+		<dl><div class="container">
+				<div class="row"><div class='col-md-5'>
+							<dt>Collection</dt>
+							    <dd>Experiment</dd>
+							    <dd>Observation</dd>
+							    <dd>Simulation</dd>
+								<dd>Compilation/Derivation</dd>
+								<dd>Reference data</dd>
+						</div>
+						<dl>
+							<dt>Methods</dt>
+							<dd>What was done</dd>
+							<dd>How it was done</dd>
+							<dd>Instrumentation</dd>
+							<dd>Limitations</dd>
+						</dl>
+			</div>
+			</div>
+		</dl>
+	</section>
+	<section>
+		<h2>Being data</h2>
+		<div class='col-md-6'>
+							<dt>Stage</dt>
+								<dd>Raw</dd>
+							    <dd>Cleaned</dd>
+							    <dd>Processed</dd>
+							    <dd>Analyzed</dd>
+							    <dd>Visualized</dd>
+						</div>
+<!-- 				<div class='row'> -->
+				<div class="col-md-3">
+					<dt>Form</dt>
+					    <dd>Textual</dd>
+					    <dd>Numeric</dd>
+					    <dd>Audio</dd>
+					    <dd>Video</dd>
+					    <dd>Image</dd>
+					    <dd>Code</dd>
+				</div>
+	</section>
+	<section>
+	<h2>Forms of data</h2>
+	<div class='col-md-6'>
+		<small>
+		<p>Non-digital text (lab books, field notebooks)</p>
+		<p>Digital texts or digital copies of text</p>
+		<p>Spreadsheets</p>
+		<p>Audio, video</p>
+		<p>Computer Aided Design/CAD</p>
+		<p>Statistical analysis (SPSS, SAS)</p>
+		<p>Databases</p>
+		<p>Geographic Information Systems (GIS) and spatial data</p>
+		<p>Digital copies of images</p>
+		<p>Web files</p>
+		</small>
+	</div>
+	<div class='col-md-6'>
+		<small>
+		<p>Scientific sample collections</p>
+		<p>Matlab files & 3D Models</p>
+		<p>Metadata & Paradata</p>
+		<p>Data visualizations</p>
+		<p>Computer code</p>
+		<p>Standard operating procedures and protocols</p>
+		<p>Protein or genetic sequences</p>
+		<p>Artistic products</p>
+		<p>Curriculum materials</p>
+		<p>Collection of digital objects acquired and generated during research</p>
+		</small>
+	</div>
+		<small>Adapted from: Georgia Tech–http://libguides.gatech.edu/content.php?pid=123776&sid=3067221</small>
 	</section>
 </section>
 <section>
 	<section>
-		<div>What are your responsibilities to your data?</div>
+		<h2>Why share data?</h2>
+	    <ul>
+	    <li>Ensure reproducibility</li>
+	    <li>Promote discovery</li>
+	    <li>Synthesis for data mining</li>
+	    <li>Citation</li>
+	    <li>Correct credit</li>
+	    <li>Required!</li>
+	    </ul>
 	</section>
-</section>
-<section>
-<h2>for useful data:</h2>
-<dl>
-	<dt>methods:</dt>
-	<dd>what was done</dd>
-	<dd>how it was done</dd>
-	<dd>instrumentation</dd>
-	<dd>limitations</dd>
-</dl>
-</section>
-<section>
-<dl>
-	<dt>code:</dt>
-	<dd>meanings</dd>
-	<dd>description/documentation</dd>
-	<dd>codebook</dd>
-	<dd>data dictionary</dd>
-</dl>
-</section>
-<section>
-	<h3>what would a stranger need to know about your data to be able to trust and use it?</h3>
-</section>
-<section>
 	<section>
-		<div>how will you expose it?</div>
+		<img src="images/data/entropy.png">
+		<small>http://dx.doi.org/10.1890/1051-0761(1997)007%5B0330:NMFTES%5D2.0.CO;2</small>
+	</section>
+	<section>
+		<img src="images/data/missing.png">
+		<small>http://www.nature.com/news/scientists-losing-data-at-a-rapid-rate-1.14416</small>
+	</section>
+	<section>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc" frameborder="0" allowfullscreen></iframe>
 	</section>
 </section>
 <section>
 	<section>
-		<div>how will you preserve it?</div>
+		<h2>What is data management?</h2>
 	</section>
 	<section>
-		<img src="images/medialife.png">
+		<h2>Considerations</h2>
+		<p>What data do you expect to have?</p>
+		<p>How will you describe/document your data?</p>
+		<p>How will you store it?</p>
+		<p>What are your obligations for these data (storage/security)?</p>
+		<p>How will you expose these data?</p>
+		<p>How will you preserve these data?</p>
 	</section>
 </section>
-
 <section>
-	<section>
-		<h3>Writing a Data Management Plan</h3>
+	<section>	    
+	<h2>What data do you expect to have?</h2>
+	    <p>What tools are you using for your data?</p>
+        <p>How much data?</p>
 	</section>
 	<section>
-		Review:
-	    <div>what data do you expect to have?</div>
-	        what tools are you using for your data?
-	        how much data?
-	        is it possible to regenerate your data?
-	    <div>How will you store it?</div>
-	        multiple locations: Here, near, and far
-	        how will it be maintained and managed?
-	    <div>what are your obligations for these data?</div>
-	        security
-	            physical
-	            network
-	            computer system and file
-	        privacy
-	            Personally identifying info (PII)
-	            personal health info (PHI)
-	        intellectual property
-	    <div>how will you expose it?</div>
-	        what will be shared?
-	        what is the audience?
-	        is it citable?
-	        persistent access
-	        quality assurance
-	    <div>how will you preserve it?</div>
-	        don't archive in proprietary format!
-	        sustainable formats:
-	            unencrypted
-	            uncompressed
-	            open standard
-	        domain specific repositories
-	        institutional repositories
+		<h2>How will you describe/document your data?</h2>
+		<p>Write a data abstract</p>
+		<p>Provide a data dictionary</p>
+	</section>	    	
+    <section>
+		<h2>How will you store it?</h2>
+		<p>Multiple locations: Here, near, and far</p>
+		<p>How will it be maintained(during and after)?</p>
+    </section>
+    <section>
+		<h2>Version Control</h2>
+		<img src="images/data/datacomic.gif">
+	</section>
+    <section>
+		<img src="images/data/medialife.png">
+	</section>
+	<section>
+		<h2>What are your obligations for these data?</h2>
+        <dl>
+        <dt>Security</dt>
+            <dd>Physical</dd>
+            <dd>Network</dd>
+            <dd>Computer system and file</dd>
+        <dt>Privacy</dt>
+            <dd>Personally identifying info (PII)</dd>
+            <dd>Personal health info (PHI)</dd>
+        </dl>
+	</section>
+	<section>
+	    <h2>How will you expose these data?</h2>
+        <p>What will be shared?</p>
+        <p>Who is the audience?</p>
+        <p>Is the data citable?</p>
+        <p>Persistent access</p>
+        <p>Quality assurance</p>
+    </section>
+	<section>   
+		<h2>How will you preserve it?</h2>
+		<p>Don't archive in proprietary format!</p>
+		<dl>Sustainable formats:</dl>
+			<dd>Unencrypted</dd>
+			<dd>Uncompressed</dd>
+			<dd>Open standard</dd>
+		<p>ASCII, PDF, .csv, FLAC, TIFF, JPEG2000, MPEG-4, XML, RDF, .txt, .r</p>
+		<p>Domain specific repositories</p>
+		<p>Institutional repositories</p>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Best practices</h2>
+	</section>
+	<section>
+    	<h2>What are the data structure standards for your discipline?</h2>
+		<p>Standard ways to label fields</p> 
+		<p>Specific variables and coding guidelines</p> 
+		<p>Accepted hierarchies and directory structures</p>
+    </section>
+    <section>
+    	<h2>Structure</h2>
+    	<ol>
+			<li>Use one variable per column</li>
+			<li>Make one observation per row</li>
+			<li>Use human-readable column names</li>
+			<li>Include one table per tab</li>
+			<li>If using multiple related tables, use an ID or key to indicate how the tables are related</li>
+    	</ol>
+    </section>
+    <section>
+	    <h2>Context</h2>
+		<p>Include a readme text file with the following:</p>
+		<dl>
+			<dt>Abstract</dt>
+			<dd>Describe why the data has been collected</dd>
+			<dt>Content</dt>
+			<dd>List and describe the files in your data package</dd>
+			<dt>Basic Data Dictionary</dt>
+			<dd>List and describe the variables in the file</dd>
+		</dl>
+    </section>
+    <section>
+    	<h2>Other best practices</h2>
+		<dl>
+			<dt>Do:</dt>
+				<dd>Consider how to represent your NULL values</dd>
+				<dd>Consider whether a more robust data dictionary is required (e.g. with in-depth description of methods, instruments, models, etc.)</dd>
+			<dt>Do not:</dt>
+				<dd>Use formatting to convey information</dd>
+				<dd>Place comments in cells</dd>
+				<dd>Use special characters in field names</dd>
+		</dl>
+		<small>educopia.org ETD guidance</small>
+    </section>
+</section>
+<section>
+		<h2>Data management plans</h2>
+		<div>"Beginning January 18, 2011, proposals submitted to NSF must include a supplementary document of no more than two pages labeled "Data Management Plan" (DMP). This supplementary document should describe how the proposal will conform to NSF policy on the dissemination and sharing of research results. Proposals that do not include a DMP will not be able to be submitted."</div>
+		<small>https://www.nsf.gov/eng/general/dmp.jsp</small>
+	</section>
+<!-- 	<section>
+		<h1>Writing a Data Management Plan</h1>
+	</section> -->
+	<section>
+		<img src="images/data/DMPtool.png">
+		<img src="images/data/IEDA.png">
 	</section>
 </section>
 <section data-state="blackout">
 	<h1>THE END</h1>
-	<h3>BY Stephen Zweibel</h3>
+<small>Thanks to Amy Nurnberger, Columbia University</small>
 </section>
 </div>
 </div>
