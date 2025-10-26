@@ -24,12 +24,12 @@ const currentPath = Astro.url.pathname;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-white text-gray-900 antialiased">
-    <nav class="border-b border-gray-200 bg-white">
+  <body class="bg-white text-charcoal antialiased">
+    <nav class="border-b border-warm-gray-200 bg-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
-            <a href="/" class="text-xl font-bold text-gray-900 hover:text-gray-700">
+            <a href="/" class="text-xl font-bold text-charcoal hover:text-rust-600">
               Stephen Zweibel
             </a>
           </div>
@@ -37,8 +37,8 @@ const currentPath = Astro.url.pathname;
             <a
               href="/"
               class:list={[
-                "text-sm font-medium hover:text-gray-900",
-                currentPath === '/' ? 'text-gray-900' : 'text-gray-600'
+                "text-sm font-medium hover:text-rust-600 transition-colors",
+                currentPath === '/' ? 'text-rust-600 border-b-2 border-rust-600' : 'text-warm-gray-600'
               ]}
             >
               Home
@@ -46,8 +46,8 @@ const currentPath = Astro.url.pathname;
             <a
               href="/about"
               class:list={[
-                "text-sm font-medium hover:text-gray-900",
-                currentPath === '/about' ? 'text-gray-900' : 'text-gray-600'
+                "text-sm font-medium hover:text-rust-600 transition-colors",
+                currentPath === '/about' ? 'text-rust-600 border-b-2 border-rust-600' : 'text-warm-gray-600'
               ]}
             >
               About
@@ -55,8 +55,8 @@ const currentPath = Astro.url.pathname;
             <a
               href="/projects"
               class:list={[
-                "text-sm font-medium hover:text-gray-900",
-                currentPath.startsWith('/projects') ? 'text-gray-900' : 'text-gray-600'
+                "text-sm font-medium hover:text-rust-600 transition-colors",
+                currentPath.startsWith('/projects') ? 'text-rust-600 border-b-2 border-rust-600' : 'text-warm-gray-600'
               ]}
             >
               Projects
@@ -64,8 +64,8 @@ const currentPath = Astro.url.pathname;
             <a
               href="/teaching"
               class:list={[
-                "text-sm font-medium hover:text-gray-900",
-                currentPath === '/teaching' ? 'text-gray-900' : 'text-gray-600'
+                "text-sm font-medium hover:text-rust-600 transition-colors",
+                currentPath === '/teaching' ? 'text-rust-600 border-b-2 border-rust-600' : 'text-warm-gray-600'
               ]}
             >
               Teaching
@@ -73,8 +73,8 @@ const currentPath = Astro.url.pathname;
             <a
               href="/publications"
               class:list={[
-                "text-sm font-medium hover:text-gray-900",
-                currentPath === '/publications' ? 'text-gray-900' : 'text-gray-600'
+                "text-sm font-medium hover:text-rust-600 transition-colors",
+                currentPath === '/publications' ? 'text-rust-600 border-b-2 border-rust-600' : 'text-warm-gray-600'
               ]}
             >
               Publications
@@ -82,8 +82,8 @@ const currentPath = Astro.url.pathname;
             <a
               href="/cv"
               class:list={[
-                "text-sm font-medium hover:text-gray-900",
-                currentPath === '/cv' ? 'text-gray-900' : 'text-gray-600'
+                "text-sm font-medium hover:text-rust-600 transition-colors",
+                currentPath === '/cv' ? 'text-rust-600 border-b-2 border-rust-600' : 'text-warm-gray-600'
               ]}
             >
               CV
@@ -97,20 +97,20 @@ const currentPath = Astro.url.pathname;
       <slot />
     </main>
 
-    <footer class="border-t border-gray-200 mt-24">
+    <footer class="border-t border-warm-gray-200 mt-24 bg-warm-gray-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="flex justify-between items-center">
-          <div class="text-sm text-gray-600">
+          <div class="text-sm text-warm-gray-600">
             &copy; {new Date().getFullYear()} Stephen Zweibel
           </div>
           <div class="flex space-x-6">
-            <a href="https://twitter.com/stevezweibel" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">
+            <a href="https://twitter.com/stevezweibel" target="_blank" rel="noopener noreferrer" class="text-warm-gray-600 hover:text-rust-600 transition-colors">
               Twitter
             </a>
-            <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">
+            <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer" class="text-warm-gray-600 hover:text-rust-600 transition-colors">
               GitHub
             </a>
-            <a href="mailto:szweibel@gc.cuny.edu" class="text-gray-600 hover:text-gray-900">
+            <a href="mailto:szweibel@gc.cuny.edu" class="text-warm-gray-600 hover:text-rust-600 transition-colors">
               Email
             </a>
           </div>
