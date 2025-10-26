@@ -1,0 +1,112 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Stephen Zweibel',
+  description = 'Digital Scholarship Librarian at CUNY Graduate Center'
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <nav class="border-b border-gray-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="text-xl font-bold text-gray-900 hover:text-gray-700">
+              Stephen Zweibel
+            </a>
+          </div>
+          <div class="flex items-center space-x-8">
+            <a
+              href="/"
+              class:list={[
+                "text-sm font-medium hover:text-gray-900",
+                currentPath === '/' ? 'text-gray-900' : 'text-gray-600'
+              ]}
+            >
+              Home
+            </a>
+            <a
+              href="/about"
+              class:list={[
+                "text-sm font-medium hover:text-gray-900",
+                currentPath === '/about' ? 'text-gray-900' : 'text-gray-600'
+              ]}
+            >
+              About
+            </a>
+            <a
+              href="/projects"
+              class:list={[
+                "text-sm font-medium hover:text-gray-900",
+                currentPath.startsWith('/projects') ? 'text-gray-900' : 'text-gray-600'
+              ]}
+            >
+              Projects
+            </a>
+            <a
+              href="/publications"
+              class:list={[
+                "text-sm font-medium hover:text-gray-900",
+                currentPath === '/publications' ? 'text-gray-900' : 'text-gray-600'
+              ]}
+            >
+              Publications
+            </a>
+            <a
+              href="/cv"
+              class:list={[
+                "text-sm font-medium hover:text-gray-900",
+                currentPath === '/cv' ? 'text-gray-900' : 'text-gray-600'
+              ]}
+            >
+              CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t border-gray-200 mt-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex justify-between items-center">
+          <div class="text-sm text-gray-600">
+            &copy; {new Date().getFullYear()} Stephen Zweibel
+          </div>
+          <div class="flex space-x-6">
+            <a href="https://twitter.com/stevezweibel" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">
+              Twitter
+            </a>
+            <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">
+              GitHub
+            </a>
+            <a href="mailto:szweibel@gc.cuny.edu" class="text-gray-600 hover:text-gray-900">
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -22,3 +22,17 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Old Jekyll files (archived)
+/_layouts/
+/_data/
+/_posts/
+/javascripts/
+/stylesheets/
+/presentations/
+Gemfile
+Gemfile.lock
+_config.yml
+params.json
+about.html
+presentations.html

@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPublications = (await getCollection('publications'))
+  .sort((a, b) => b.data.year - a.data.year);
+
+const peerReviewed = allPublications.filter(p => p.data.type === 'peer-reviewed');
+const guidelines = allPublications.filter(p => p.data.type === 'guidelines');
+const invited = allPublications.filter(p => p.data.type === 'invited');
+const other = allPublications.filter(p => p.data.type === 'other');
+---
+
+<BaseLayout
+  title="Publications - Stephen Zweibel"
+  description="Scholarly publications, articles, and professional guidelines"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Publications</h1>
+      <p class="text-xl text-gray-600">
+        Scholarly articles, professional guidelines, and contributions to library and digital humanities literature.
+      </p>
+    </div>
+
+    <!-- Peer Reviewed -->
+    {peerReviewed.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-200">
+          Peer Reviewed Publications
+        </h2>
+        <div class="space-y-6">
+          {peerReviewed.map(async (pub) => {
+            const { Content } = await pub.render();
+            return (
+              <article class="border-l-4 border-blue-600 pl-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  {pub.data.url ? (
+                    <a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">
+                      {pub.data.title}
+                    </a>
+                  ) : (
+                    pub.data.title
+                  )}
+                </h3>
+                {pub.data.authors && (
+                  <p class="text-gray-700 mb-1">
+                    {pub.data.authors.join(', ')}
+                  </p>
+                )}
+                <p class="text-gray-600 text-sm mb-3">
+                  <em>{pub.data.journal}</em> ({pub.data.year})
+                </p>
+                <div class="text-gray-700 prose">
+                  <Content />
+                </div>
+                {pub.data.url && (
+                  <a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 text-sm">
+                    Read article →
+                  </a>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <!-- Professional Guidelines -->
+    {guidelines.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-200">
+          Professional Guidelines
+        </h2>
+        <div class="space-y-6">
+          {guidelines.map(async (pub) => {
+            const { Content } = await pub.render();
+            return (
+              <article class="border-l-4 border-green-600 pl-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  {pub.data.url ? (
+                    <a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="hover:text-green-600">
+                      {pub.data.title}
+                    </a>
+                  ) : (
+                    pub.data.title
+                  )}
+                </h3>
+                {pub.data.authors && (
+                  <p class="text-gray-700 mb-1">
+                    {pub.data.authors.join(', ')}
+                  </p>
+                )}
+                <p class="text-gray-600 text-sm mb-3">
+                  {pub.data.journal} ({pub.data.year})
+                </p>
+                <div class="text-gray-700 prose">
+                  <Content />
+                </div>
+                {pub.data.url && (
+                  <a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-800 text-sm">
+                    Read full document →
+                  </a>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <!-- Additional Resources -->
+    <section class="mt-16 p-8 bg-gray-50 rounded-lg">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Additional Resources</h2>
+      <p class="text-gray-700 mb-4">
+        For a complete list of presentations, workshops, and conference participation, see the <a href="/cv" class="text-blue-600 hover:text-blue-800">full CV</a>.
+      </p>
+      <p class="text-gray-700">
+        Many workshop materials and code examples are available on <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">GitHub</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
