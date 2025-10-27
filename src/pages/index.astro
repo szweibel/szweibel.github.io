@@ -11,20 +11,31 @@ const featuredProjects = (await getCollection('projects'))
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="py-12">
       <div class="mb-8">
-        <h1 class="text-4xl font-semibold text-charcoal mb-3">
-          Stephen Zweibel
-        </h1>
-        <p class="text-xl text-warm-gray-600 mb-6">
-          Digital Scholarship Librarian, CUNY Graduate Center
-        </p>
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <img
+              src="/images/SteveProfile.jpeg"
+              alt="Stephen Zweibel"
+              class="w-48 h-48 rounded-2xl object-cover shadow-lg"
+            />
+          </div>
+          <div class="flex-1">
+            <h1 class="text-4xl font-semibold text-charcoal mb-3">
+              Stephen Zweibel
+            </h1>
+            <p class="text-xl text-warm-gray-600 mb-6">
+              Digital Scholarship Librarian, CUNY Graduate Center
+            </p>
 
-        <div class="space-y-6 text-charcoal max-w-none leading-relaxed">
-          <p>
-            I support students and faculty in developing digital projects and working with data, individually and through workshops and classes on research skills and tools.
-          </p>
-          <p>
-            My work focuses on democratizing computational literacy in the humanities through teaching, tool development, and infrastructure projects.
-          </p>
+            <div class="space-y-6 text-charcoal max-w-none leading-relaxed">
+              <p>
+                I support students and faculty in developing digital projects and working with data, individually and through workshops and classes on research skills and tools.
+              </p>
+              <p>
+                My work focuses on democratizing computational literacy in the humanities through teaching, tool development, and infrastructure projects.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

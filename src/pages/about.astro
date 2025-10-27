@@ -10,9 +10,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h1 class="text-4xl font-semibold text-charcoal mb-8">About</h1>
 
     <div class="max-w-none">
-      <p class="text-charcoal mb-8 text-lg leading-relaxed">
-        I'm Digital Scholarship Librarian at the CUNY Graduate Center, where I support students and faculty in developing digital projects and working with data, individually and through workshops and classes on research skills and tools.
-      </p>
+      <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+        <div class="flex-shrink-0">
+          <img
+            src="/images/SteveProfile.jpeg"
+            alt="Stephen Zweibel"
+            class="w-48 h-48 rounded-2xl object-cover shadow-lg"
+          />
+        </div>
+        <div class="flex-1">
+          <p class="text-charcoal text-lg leading-relaxed">
+            I'm Digital Scholarship Librarian at the CUNY Graduate Center, where I support students and faculty in developing digital projects and working with data, individually and through workshops and classes on research skills and tools.
+          </p>
+        </div>
+      </div>
 
       <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Education</h2>
       <ul class="space-y-3 text-charcoal">
