@@ -15,8 +15,8 @@ const other = allPublications.filter(p => p.data.type === 'other');
   title="Publications - Stephen Zweibel"
   description="Scholarly publications, articles, and professional guidelines"
 >
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="mb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-10">
       <h1 class="text-4xl font-semibold text-charcoal mb-6">Publications</h1>
       <p class="text-xl text-charcoal leading-relaxed">
         Scholarly articles, professional guidelines, and contributions to library and digital humanities literature.
@@ -25,7 +25,7 @@ const other = allPublications.filter(p => p.data.type === 'other');
 
     <!-- Peer Reviewed -->
     {peerReviewed.length > 0 && (
-      <section class="mb-16">
+      <section class="mb-10">
         <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">
           Peer Reviewed Publications
         </h2>
@@ -68,7 +68,7 @@ const other = allPublications.filter(p => p.data.type === 'other');
 
     <!-- Professional Guidelines -->
     {guidelines.length > 0 && (
-      <section class="mb-16">
+      <section class="mb-10">
         <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">
           Professional Guidelines
         </h2>
@@ -110,7 +110,7 @@ const other = allPublications.filter(p => p.data.type === 'other');
     )}
 
     <!-- Additional Resources -->
-    <section class="mt-20 p-10 bg-warm-gray-50 rounded-xl border-2 border-warm-gray-200">
+    <section class="mt-12 p-10 bg-warm-gray-50 rounded-xl border-2 border-warm-gray-200">
       <h2 class="text-2xl font-semibold text-charcoal mb-6">Additional Resources</h2>
       <p class="text-charcoal mb-6 leading-relaxed">
         For a complete list of presentations, workshops, and conference participation, see the <a href="/cv" class="text-rust-600 hover:text-rust-700 font-medium transition-colors">full CV</a>.
