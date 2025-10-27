@@ -7,4 +7,4 @@ authors: ["Stephen Zweibel"]
 url: "https://journal.code4lib.org/articles/16315"
 ---
 
-A technical article describing the development of an automated system for handling reference consultation requests using JavaScript and Google Forms, improving workflow efficiency for library reference services.
+Describes an automated system for handling reference consultation requests using JavaScript and Google Forms.

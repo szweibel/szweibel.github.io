@@ -37,9 +37,13 @@ const featuredProjects = (await getCollection('projects'))
           {featuredProjects.map((project) => (
             <div class="border-l-4 border-rust-500 pl-6 py-2 bg-rust-50 rounded-r-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 class="font-semibold text-charcoal">
-                <a href={`/projects/${project.slug}`} class="hover:text-rust-600 transition-colors">
-                  {project.data.title}
-                </a>
+                {project.data.github ? (
+                  <a href={project.data.github} target="_blank" rel="noopener noreferrer" class="hover:text-rust-600 transition-colors">
+                    {project.data.title}
+                  </a>
+                ) : (
+                  <span>{project.data.title}</span>
+                )}
               </h3>
               <p class="text-warm-gray-600 mt-2">{project.data.description}</p>
             </div>
