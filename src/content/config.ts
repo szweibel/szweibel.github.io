@@ -30,7 +30,19 @@ const publications = defineCollection({
   }),
 });
 
+const presentations = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    url: z.string(),
+    event: z.string().optional(),
+    description: z.string().optional(),
+  }),
+});
+
 export const collections = {
   projects,
   publications,
+  presentations,
 };

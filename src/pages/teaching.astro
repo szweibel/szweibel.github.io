@@ -6,107 +6,112 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Teaching - Stephen Zweibel"
   description="Courses on programming, data analysis, and AI for humanities researchers"
 >
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h1 class="text-4xl font-semibold text-charcoal mb-8">Teaching</h1>
+  <h1>Teaching</h1>
 
-    <div class="max-w-none">
-      <p class="text-charcoal mb-8 text-lg leading-relaxed">
-        I teach graduate courses in programming and data analysis for humanities and social science researchers at CUNY Graduate Center.
+  <p style="margin-bottom: 2rem;">
+    Graduate courses in programming and data analysis for humanities and social science researchers at CUNY Graduate Center.
+  </p>
+
+  <div class="courses">
+    <!-- JavaScript -->
+    <article class="course">
+      <h2>Introduction to JavaScript</h2>
+      <p class="course-meta">DATA 70600 / DHUM 70600 | Spring semesters | 1 credit</p>
+      <p>
+        Project-oriented introduction to JavaScript for humanities and social science graduate students.
+        Students learn JavaScript fundamentals, web development, and data visualization through hands-on projects
+        using libraries like Leaflet and jQuery.
       </p>
+    </article>
 
-      <div class="space-y-10">
-        <!-- JavaScript -->
-        <div class="border-l-4 border-rust-500 pl-8 py-4 bg-rust-50 rounded-r-lg shadow-sm">
-          <h2 class="text-2xl font-semibold text-charcoal mt-0 mb-3">Introduction to JavaScript</h2>
-          <p class="text-sm text-warm-gray-600 mb-6">DATA 70600 / DHUM 70600 | Spring semesters | 1 credit</p>
+    <!-- Python -->
+    <article class="course">
+      <h2>Python for Researchers</h2>
+      <p class="course-meta">Fall semesters | 1 credit</p>
+      <p>
+        Project-oriented introduction to Python for academic research. Students learn Python fundamentals,
+        data analysis with pandas, working with APIs, and creating visualizations in Jupyter notebooks.
+      </p>
+    </article>
 
-          <p class="text-charcoal leading-relaxed">
-            Project-oriented introduction to JavaScript for humanities and social science graduate students.
-            Students learn JavaScript fundamentals, web development, and data visualization through hands-on projects
-            using libraries like Leaflet and jQuery.
-          </p>
-
-          <p class="text-charcoal mt-4 leading-relaxed">
-            Emphasis on practical skills, learning through experimentation, and building projects that showcase
-            student research interests.
-          </p>
-        </div>
-
-        <!-- Python -->
-        <div class="border-l-4 border-rust-500 pl-8 py-4 bg-rust-50 rounded-r-lg shadow-sm">
-          <h2 class="text-2xl font-semibold text-charcoal mt-0 mb-3">Python for Researchers</h2>
-          <p class="text-sm text-warm-gray-600 mb-6">Fall semesters | 1 credit</p>
-
-          <p class="text-charcoal leading-relaxed">
-            Project-oriented introduction to Python for academic research. Students learn Python fundamentals,
-            data analysis with pandas, working with APIs, and creating visualizations in Jupyter notebooks.
-          </p>
-
-          <p class="text-charcoal mt-4 leading-relaxed">
-            Focus on practical research applications: collecting data, cleaning and analyzing it, and
-            communicating results. Includes discussion of AI-assisted coding practices and reading documentation effectively.
-          </p>
-        </div>
-
-        <!-- AI-Assisted Programming -->
-        <div class="border-l-4 border-rust-500 pl-8 py-4 bg-rust-50 rounded-r-lg shadow-sm">
-          <h2 class="text-2xl font-semibold text-charcoal mt-0 mb-3">AI-Assisted Programming</h2>
-          <p class="text-sm text-warm-gray-600 mb-6">DHUM 78000 / DATA 78000 | Spring 2026 | 1 credit</p>
-
-          <p class="text-charcoal leading-relaxed">
-            Investigative approach to AI-assisted programming for graduate students. Students use AI coding
-            assistants to build web projects, then learn to understand what they've built through systematic
-            investigation techniques.
-          </p>
-
-          <p class="text-charcoal mt-4 leading-relaxed">
-            Develops critical skills for working with AI-generated code: when to trust suggestions, how to debug
-            systematically, how to maintain agency over technical decisions. Emphasizes verification, documentation
-            checking, and iterative development.
-          </p>
-
-          <p class="text-sm text-warm-gray-600 mt-4 italic">
-            No programming experience required.
-          </p>
-        </div>
-
-        <!-- Workshops -->
-        <div class="border-t border-warm-gray-200 pt-8">
-          <h2 class="text-2xl font-semibold text-charcoal mt-0 mb-6">Workshops</h2>
-
-          <p class="text-charcoal mb-6 leading-relaxed">
-            Regular workshops on research skills and digital methods:
-          </p>
-
-          <ul class="list-disc pl-6 space-y-2 text-charcoal marker:text-rust-500">
-            <li>Command Line</li>
-            <li>Python and Data Analysis</li>
-            <li>JavaScript and Web Development</li>
-            <li>Working with APIs</li>
-            <li>Data Management</li>
-            <li>Text Analysis</li>
-            <li>HTML and CSS</li>
-          </ul>
-
-          <p class="text-charcoal mt-8 leading-relaxed">
-            Instructor at Digital Humanities Summer Institute (DHSI) teaching "Web APIs with Python" since 2018.
-          </p>
-        </div>
-
-        <!-- Philosophy -->
-        <div class="border-t border-warm-gray-200 pt-8">
-          <h2 class="text-2xl font-semibold text-charcoal mt-0 mb-6">Teaching Approach</h2>
-
-          <p class="text-charcoal leading-relaxed">
-            Learning to program is difficult and requires repetition. It means learning to sit with failure,
-            to experiment, and to develop curiosity about how things work.
-          </p>
-
-          <p class="text-charcoal mt-6 leading-relaxed">
-            Courses emphasize hands-on practice, project-based learning, and building community around shared learning experiences.
-          </p>
-        </div>
-      </div>
-    </div>
+    <!-- AI-Assisted Programming -->
+    <article class="course">
+      <h2>AI-Assisted Programming</h2>
+      <p class="course-meta">DHUM 78000 / DATA 78000 | Spring 2026 | 1 credit</p>
+      <p>
+        Investigative approach to AI-assisted programming for graduate students. Students use AI coding
+        assistants to build web projects, then learn to understand what they've built through systematic
+        investigation techniques.
+      </p>
+      <p class="text-muted" style="font-size: 0.875rem; font-style: italic;">
+        No programming experience required.
+      </p>
+    </article>
   </div>
+
+  <h2>Workshops</h2>
+  <p>Regular workshops on research skills and digital methods:</p>
+  <ul>
+    <li>Command Line</li>
+    <li>Python and Data Analysis</li>
+    <li>JavaScript and Web Development</li>
+    <li>Working with APIs</li>
+    <li>Data Management</li>
+    <li>Text Analysis</li>
+    <li>HTML and CSS</li>
+  </ul>
+  <p>
+    Instructor at Digital Humanities Summer Institute (DHSI) teaching "Web APIs with Python" since 2018.
+  </p>
+
+  <h2>Open Educational Resources</h2>
+  <p>Extended workshop materials available online:</p>
+  <ul class="oer-list">
+    <li>
+      <a href="http://zweibel.net/Javascripting-Graduate-Student/" target="_blank" rel="noopener noreferrer">
+        Javascripting Graduate Student
+      </a>
+      <span class="text-muted"> — Interactive JavaScript curriculum for humanities researchers</span>
+    </li>
+    <li>
+      <a href="https://github.com/szweibel/twitter-workshop" target="_blank" rel="noopener noreferrer">
+        Twitter API Workshop
+      </a>
+      <span class="text-muted"> — Working with the Twitter API in Python (GC Digital Research Bootcamp)</span>
+    </li>
+  </ul>
+
+  <style>
+    .courses {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .course {
+      padding: 1.25rem;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-alt);
+    }
+
+    .course h2 {
+      font-size: 1.25rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .course-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .course p:last-child {
+      margin-bottom: 0;
+    }
+
+    .oer-list li {
+      margin-bottom: 0.75rem;
+    }
+  </style>
 </BaseLayout>

@@ -4,78 +4,105 @@ import { getCollection } from 'astro:content';
 
 const featuredProjects = (await getCollection('projects'))
   .filter(project => project.data.featured)
-  .sort((a, b) => (b.data.year || 0) - (a.data.year || 0));
+  .sort((a, b) => (b.data.year || 0) - (a.data.year || 0))
+  .slice(0, 3);
+
 ---
 
 <BaseLayout title="Stephen Zweibel - Digital Scholarship Librarian">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="py-12">
-      <div class="mb-8">
-        <div class="flex flex-col md:flex-row gap-8 items-start">
-          <div class="flex-shrink-0">
-            <img
-              src="/images/SteveProfile.jpeg"
-              alt="Stephen Zweibel"
-              class="w-48 h-48 rounded-2xl object-cover shadow-lg"
-            />
-          </div>
-          <div class="flex-1">
-            <h1 class="text-4xl font-semibold text-charcoal mb-3">
-              Stephen Zweibel
-            </h1>
-            <p class="text-xl text-warm-gray-600 mb-6">
-              Digital Scholarship Librarian, CUNY Graduate Center
-            </p>
+  <article class="homepage">
+    <header class="intro">
+      <h1>Stephen Zweibel</h1>
+      <p class="title-line">Digital Scholarship Librarian at the CUNY Graduate Center</p>
+      <p>
+        I work with students and faculty on digital projects, teach computational methods,
+        and write about AI, UX, and library technology.
+      </p>
+    </header>
 
-            <div class="space-y-6 text-charcoal max-w-none leading-relaxed">
-              <p>
-                I support students and faculty in developing digital projects and working with data, individually and through workshops and classes on research skills and tools.
-              </p>
-              <p>
-                My work focuses on democratizing computational literacy in the humanities through teaching, tool development, and infrastructure projects.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Selected Projects -->
     {featuredProjects.length > 0 && (
-      <div class="border-t border-warm-gray-200 pt-12">
-        <h2 class="text-2xl font-semibold text-charcoal mb-8">Selected Projects</h2>
-        <div class="space-y-6">
+      <section class="section">
+        <h2>Selected Projects</h2>
+        <ul class="project-list">
           {featuredProjects.map((project) => (
-            <div class="border-l-4 border-rust-500 pl-6 py-2 bg-rust-50 rounded-r-lg shadow-sm hover:shadow-md transition-shadow">
-              <h3 class="font-semibold text-charcoal">
-                {project.data.github ? (
-                  <a href={project.data.github} target="_blank" rel="noopener noreferrer" class="hover:text-rust-600 transition-colors">
-                    {project.data.title}
-                  </a>
-                ) : (
-                  <span>{project.data.title}</span>
-                )}
-              </h3>
-              <p class="text-warm-gray-600 mt-2">{project.data.description}</p>
-            </div>
+            <li class="project-item">
+              {project.data.github ? (
+                <a href={project.data.github} target="_blank" rel="noopener noreferrer">
+                  {project.data.title}
+                </a>
+              ) : (
+                <span class="project-name">{project.data.title}</span>
+              )}
+              <span class="project-sep"> - </span>
+              <span class="project-description">{project.data.description}</span>
+            </li>
           ))}
-        </div>
-        <div class="mt-8">
-          <a href="/projects" class="text-rust-600 hover:text-rust-700 font-medium transition-colors">
-            View all projects →
-          </a>
-        </div>
-      </div>
+        </ul>
+        <p><a href="/projects">View all projects</a></p>
+      </section>
     )}
 
-    <!-- Contact -->
-    <div class="border-t border-warm-gray-200 pt-12">
-      <h2 class="text-2xl font-semibold text-charcoal mb-6">Contact</h2>
-      <div class="bg-warm-gray-50 p-8 rounded-lg shadow-sm space-y-2 text-charcoal">
-        <p><a href="mailto:szweibel@gc.cuny.edu" class="text-rust-600 hover:text-rust-700 font-medium transition-colors">szweibel@gc.cuny.edu</a></p>
-        <p class="text-warm-gray-600">Mina Rees Library, Room 2313</p>
-        <p class="text-warm-gray-600">The Graduate Center, CUNY</p>
-      </div>
-    </div>
-  </div>
+    <section class="section">
+      <h2>Contact</h2>
+      <p>
+        Questions about AI and digital scholarship, collaboration opportunities, or workshop requests?
+      </p>
+      <p>
+        <a href="mailto:szweibel@gc.cuny.edu">szweibel@gc.cuny.edu</a>
+      </p>
+    </section>
+  </article>
 </BaseLayout>
+
+<style>
+  .homepage {
+    /* Content inherits from BaseLayout container */
+  }
+
+  .intro {
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .title-line {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-border);
+  }
+
+  .section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* Project list styling */
+  .project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  .project-item {
+    margin-bottom: 0.75rem;
+  }
+
+  .project-name {
+    font-weight: 600;
+  }
+
+  .project-sep {
+    color: var(--color-text-muted);
+  }
+
+  .project-description {
+    color: var(--color-text-muted);
+  }
+</style>
