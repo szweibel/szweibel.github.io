@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const presentations = (await getCollection('presentations'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout
+  title="Presentations - Stephen Zweibel"
+  description="Conference presentations and talks"
+>
+  <h1>Presentations</h1>
+  <p class="text-muted" style="margin-bottom: 2rem;">
+    reveal.js slides from conferences, workshops, and talks.
+  </p>
+
+  <div class="presentations-list">
+    {presentations.map((pres) => (
+      <article class="presentation-item">
+        <h2>
+          <a href={pres.data.url} target="_blank" rel="noopener noreferrer">
+            {pres.data.title}
+          </a>
+        </h2>
+        <div class="presentation-meta">
+          <span>{pres.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</span>
+          {pres.data.event && (
+            <>
+              <span class="separator">|</span>
+              <span>{pres.data.event}</span>
+            </>
+          )}
+        </div>
+        {pres.data.description && (
+          <p class="presentation-desc">{pres.data.description}</p>
+        )}
+      </article>
+    ))}
+  </div>
+
+  <style>
+    .presentations-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .presentation-item {
+      padding: 1.25rem;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-alt);
+    }
+
+    .presentation-item h2 {
+      font-size: 1.25rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .presentation-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .separator {
+      margin: 0 0.5rem;
+      color: var(--color-border);
+    }
+
+    .presentation-desc {
+      margin: 0;
+      color: var(--color-text-muted);
+    }
+  </style>
+</BaseLayout>

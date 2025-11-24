@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .bg { fill: #c2704f; }
+      .text { fill: #ffffff; font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 56px; }
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #c2704f; }
+        .text { fill: #ffffff; }
+      }
+    </style>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="128" height="128" rx="24" class="bg"/>
+
+  <!-- SZ text -->
+  <text x="64" y="82" text-anchor="middle" class="text">SZ</text>
+</svg>

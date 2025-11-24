@@ -1,0 +1,236 @@
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Data Management</title>
+
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+		<meta name="description" content="A Presentation on Data and Data Management Plans">
+		<meta name="author" content="Stephen Zweibel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+<section>
+	<h1>Data Management</h1>
+</section>
+<section>
+	<section>
+		<h2>Why share data?</h2>
+	    <ul>
+	    <li>Ensure reproducibility</li>
+	    <li>Promote discovery</li>
+	    <li>Synthesis for data mining</li>
+	    <li>Citation</li>
+	    <li>Correct credit</li>
+	    <li>Required!</li>
+	    </ul>
+	</section>
+	<section>
+		<img src="images/data/entropy.png">
+		<small>http://dx.doi.org/10.1890/1051-0761(1997)007%5B0330:NMFTES%5D2.0.CO;2</small>
+	</section>
+	<section>
+		<img src="images/data/missing.png">
+		<small>http://www.nature.com/news/scientists-losing-data-at-a-rapid-rate-1.14416</small>
+	</section>
+	<!-- <section>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc" frameborder="0" allowfullscreen></iframe>
+	</section> -->
+</section>
+<section>
+	<section>
+		<h2>What is data management?</h2>
+	</section>
+	<section>
+		<h2>Considerations</h2>
+		<p>What data do you expect to have?</p>
+		<p>How will you describe/document your data?</p>
+		<p>How will you store it?</p>
+		<p>What are your obligations for these data (storage/security)?</p>
+		<p>How will you expose these data?</p>
+		<p>How will you preserve these data?</p>
+	</section>
+</section>
+<section>
+	<section>	    
+	<h2>What data do you expect to have?</h2>
+	    <p>What tools are you using for your data?</p>
+        <p>How much data?</p>
+	</section>
+	<section>
+		<h2>How will you describe/document your data?</h2>
+		<p>Write a data abstract</p>
+		<p>Provide a data dictionary</p>
+	</section>	    	
+    <section>
+		<h2>How will you store it?</h2>
+		<p>Multiple locations: Here, near, and far</p>
+		<p>How will it be maintained(during and after)?</p>
+    </section>
+    <section>
+		<h2>Version Control</h2>
+		<img src="images/data/datacomic.gif">
+	</section>
+    <section>
+		<img src="images/data/medialife.png">
+	</section>
+	<section>
+		<h2>What are your obligations for these data?</h2>
+        <dl>
+        <dt>Security</dt>
+            <dd>Physical</dd>
+            <dd>Network</dd>
+            <dd>Computer system and file</dd>
+        <dt>Privacy</dt>
+            <dd>Personally identifying info (PII)</dd>
+            <dd>Personal health info (PHI)</dd>
+        </dl>
+	</section>
+	<section>
+	    <h2>How will you expose these data?</h2>
+        <p>What will be shared?</p>
+        <p>Who is the audience?</p>
+        <p>Is the data citable?</p>
+        <p>Persistent access</p>
+        <p>Quality assurance</p>
+    </section>
+	<section>   
+		<h2>How will you preserve it?</h2>
+		<p>Don't archive in proprietary format!</p>
+		<dl>Sustainable formats:</dl>
+			<dd>Unencrypted</dd>
+			<dd>Uncompressed</dd>
+			<dd>Open standard</dd>
+		<p>ASCII, PDF, .csv, FLAC, TIFF, JPEG2000, MPEG-4, XML, RDF, .txt, .r</p>
+		<p>Domain specific repositories</p>
+		<p>Institutional repositories</p>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Best practices</h2>
+	</section>
+	<section>
+    	<h2>What are the data structure standards for your discipline?</h2>
+		<p>Standard ways to label fields</p> 
+		<p>Specific variables and coding guidelines</p> 
+		<p>Accepted hierarchies and directory structures</p>
+    </section>
+    <section>
+    	<h2>Structure</h2>
+    	<ol>
+			<li>Use one variable per column</li>
+			<li>Make one observation per row</li>
+			<li>Use human-readable column names</li>
+			<li>Include one table per tab</li>
+			<li>If using multiple related tables, use an ID or key to indicate how the tables are related</li>
+    	</ol>
+    </section>
+    <section>
+	    <h2>Context</h2>
+		<p>Include a readme text file with the following:</p>
+		<dl>
+			<dt>Abstract</dt>
+			<dd>Describe why the data has been collected</dd>
+			<dt>Content</dt>
+			<dd>List and describe the files in your data package</dd>
+			<dt>Basic Data Dictionary</dt>
+			<dd>List and describe the variables in the file</dd>
+		</dl>
+    </section>
+    <section>
+    	<h2>Other best practices</h2>
+		<dl>
+			<dt>Do:</dt>
+				<dd>Consider how to represent your NULL values</dd>
+				<dd>Consider whether a more robust data dictionary is required (e.g. with in-depth description of methods, instruments, models, etc.)</dd>
+			<dt>Do not:</dt>
+				<dd>Use formatting to convey information</dd>
+				<dd>Place comments in cells</dd>
+				<dd>Use special characters in field names</dd>
+		</dl>
+		<small>educopia.org ETD guidance</small>
+    </section>
+</section>
+<section>
+		
+		<div>"Many variables govern what constitutes “data” and the management of data, and each discipline has its
+			own culture regarding data. For example, the data produced by an archeologist might be quite
+			different from the data produced by a historian. The data management plan will be evaluated as part of
+			each proposal. Proposals must include sufficient information to enable peer reviewers to assess an
+			applicant’s data management plan. The plan should reflect best practices in the applicant’s area of
+			research, and it should be appropriate to the data that the project will generate."</div>
+		<small>https://www.neh.gov/sites/default/files/inline-files/Data%20Management%20Plans%2C%202019.pdf</small>
+	</section>
+	<section>
+		<h2>Discussion</h2>
+		<div>Look for an institutional repository and/or subject repository, either related to your research or otherwise interesting. 
+			<p>Tell us about it!</p>
+			<p>What does it collect?</p>
+			<p>What are its policies/promises?</p>
+</div>
+	</section>
+	<section>
+		<img src="images/data/DMPtool.png">
+		<img src="images/data/IEDA.png">
+	</section>
+</section>
+<section data-state="blackout">
+	<h1>THE END</h1>
+<small>Thanks to Amy Nurnberger, Columbia University</small>
+</section>
+</div>
+</div>
+</body>
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>

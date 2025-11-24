@@ -1,0 +1,20 @@
+---
+layout: default
+title: Projects
+---
+
+<div>
+{% for project in site.data.projects %}
+<div class="media">
+  <a class="pull-left thumbnail" href="{{ project.link }}">
+    <img class="media-object" src="{{ project.image }}" style='width: 150px; height: 150px;' alt="{{ project.title }}">
+  </a>
+  <div class="media-body">
+    <a href="{{ project.github }}"><h3 class="media-heading">{{ project.title }}</h3></a>
+    {{ project.content }}
+  </div>
+</div>
+{% endfor %}
+
+
+</div>

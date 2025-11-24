@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const featuredProjects = (await getCollection('projects'))
+  .filter(project => project.data.featured)
+  .sort((a, b) => (b.data.year || 0) - (a.data.year || 0))
+  .slice(0, 3);
+
+---
+
+<BaseLayout title="Stephen Zweibel - Digital Scholarship Librarian">
+  <article class="homepage">
+    <header class="intro">
+      <h1>Stephen Zweibel</h1>
+      <p class="title-line">Digital Scholarship Librarian at the CUNY Graduate Center</p>
+      <p>
+        I work with students and faculty on digital projects, teach computational methods,
+        and write about AI, UX, and library technology.
+      </p>
+    </header>
+
+    {featuredProjects.length > 0 && (
+      <section class="section">
+        <h2>Selected Projects</h2>
+        <ul class="project-list">
+          {featuredProjects.map((project) => (
+            <li class="project-item">
+              {project.data.github ? (
+                <a href={project.data.github} target="_blank" rel="noopener noreferrer">
+                  {project.data.title}
+                </a>
+              ) : (
+                <span class="project-name">{project.data.title}</span>
+              )}
+              <span class="project-sep"> - </span>
+              <span class="project-description">{project.data.description}</span>
+            </li>
+          ))}
+        </ul>
+        <p><a href="/projects">View all projects</a></p>
+      </section>
+    )}
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>
+        Questions about AI and digital scholarship, collaboration opportunities, or workshop requests?
+      </p>
+      <p>
+        <a href="mailto:szweibel@gc.cuny.edu">szweibel@gc.cuny.edu</a>
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .homepage {
+    /* Content inherits from BaseLayout container */
+  }
+
+  .intro {
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .title-line {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-border);
+  }
+
+  .section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* Project list styling */
+  .project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  .project-item {
+    margin-bottom: 0.75rem;
+  }
+
+  .project-name {
+    font-weight: 600;
+  }
+
+  .project-sep {
+    color: var(--color-text-muted);
+  }
+
+  .project-description {
+    color: var(--color-text-muted);
+  }
+</style>

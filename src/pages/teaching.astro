@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Teaching - Stephen Zweibel"
+  description="Courses on programming, data analysis, and AI for humanities researchers"
+>
+  <h1>Teaching</h1>
+
+  <p style="margin-bottom: 2rem;">
+    Graduate courses in programming and data analysis for humanities and social science researchers at CUNY Graduate Center.
+  </p>
+
+  <div class="courses">
+    <!-- JavaScript -->
+    <article class="course">
+      <h2>Introduction to JavaScript</h2>
+      <p class="course-meta">DATA 70600 / DHUM 70600 | Spring semesters | 1 credit</p>
+      <p>
+        Project-oriented introduction to JavaScript for humanities and social science graduate students.
+        Students learn JavaScript fundamentals, web development, and data visualization through hands-on projects
+        using libraries like Leaflet and jQuery.
+      </p>
+    </article>
+
+    <!-- Python -->
+    <article class="course">
+      <h2>Python for Researchers</h2>
+      <p class="course-meta">Fall semesters | 1 credit</p>
+      <p>
+        Project-oriented introduction to Python for academic research. Students learn Python fundamentals,
+        data analysis with pandas, working with APIs, and creating visualizations in Jupyter notebooks.
+      </p>
+    </article>
+
+    <!-- AI-Assisted Programming -->
+    <article class="course">
+      <h2>AI-Assisted Programming</h2>
+      <p class="course-meta">DHUM 78000 / DATA 78000 | Spring 2026 | 1 credit</p>
+      <p>
+        Investigative approach to AI-assisted programming for graduate students. Students use AI coding
+        assistants to build web projects, then learn to understand what they've built through systematic
+        investigation techniques.
+      </p>
+      <p class="text-muted" style="font-size: 0.875rem; font-style: italic;">
+        No programming experience required.
+      </p>
+    </article>
+  </div>
+
+  <h2>Workshops</h2>
+  <p>Regular workshops on research skills and digital methods:</p>
+  <ul>
+    <li>Command Line</li>
+    <li>Python and Data Analysis</li>
+    <li>JavaScript and Web Development</li>
+    <li>Working with APIs</li>
+    <li>Data Management</li>
+    <li>Text Analysis</li>
+    <li>HTML and CSS</li>
+  </ul>
+  <p>
+    Instructor at Digital Humanities Summer Institute (DHSI) teaching "Web APIs with Python" since 2018.
+  </p>
+
+  <h2>Open Educational Resources</h2>
+  <p>Extended workshop materials available online:</p>
+  <ul class="oer-list">
+    <li>
+      <a href="http://zweibel.net/Javascripting-Graduate-Student/" target="_blank" rel="noopener noreferrer">
+        Javascripting Graduate Student
+      </a>
+      <span class="text-muted"> — Interactive JavaScript curriculum for humanities researchers</span>
+    </li>
+    <li>
+      <a href="https://github.com/szweibel/twitter-workshop" target="_blank" rel="noopener noreferrer">
+        Twitter API Workshop
+      </a>
+      <span class="text-muted"> — Working with the Twitter API in Python (GC Digital Research Bootcamp)</span>
+    </li>
+  </ul>
+
+  <style>
+    .courses {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .course {
+      padding: 1.25rem;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-alt);
+    }
+
+    .course h2 {
+      font-size: 1.25rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .course-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .course p:last-child {
+      margin-bottom: 0;
+    }
+
+    .oer-list li {
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</BaseLayout>

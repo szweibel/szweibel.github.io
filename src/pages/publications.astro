@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPublications = (await getCollection('publications'))
+  .sort((a, b) => b.data.year - a.data.year);
+
+const peerReviewed = allPublications.filter(p => p.data.type === 'peer-reviewed');
+const guidelines = allPublications.filter(p => p.data.type === 'guidelines');
+const invited = allPublications.filter(p => p.data.type === 'invited');
+const other = allPublications.filter(p => p.data.type === 'other');
+---
+
+<BaseLayout
+  title="Publications - Stephen Zweibel"
+  description="Scholarly publications, articles, and professional guidelines"
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-10">
+      <h1 class="text-4xl font-semibold text-charcoal mb-6">Publications</h1>
+      <p class="text-xl text-charcoal leading-relaxed">
+        Scholarly articles, professional guidelines, and contributions to library and digital humanities literature.
+      </p>
+    </div>
+
+    <!-- Peer Reviewed -->
+    {peerReviewed.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">
+          Peer Reviewed Publications
+        </h2>
+        <div class="space-y-8">
+          {peerReviewed.map(async (pub) => {
+            const { Content } = await pub.render();
+            return (
+              <article class="border-l-4 border-rust-500 pl-8 py-3 bg-rust-50 rounded-r-lg shadow-sm">
+                <h3 class="text-xl font-semibold text-charcoal mb-3">
+                  {pub.data.url ? (
+                    <a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="hover:text-rust-600 transition-colors">
+                      {pub.data.title}
+                    </a>
+                  ) : (
+                    pub.data.title
+                  )}
+                </h3>
+                {pub.data.authors && (
+                  <p class="text-charcoal mb-2">
+                    {pub.data.authors.join(', ')}
+                  </p>
+                )}
+                <p class="text-warm-gray-600 text-sm mb-4">
+                  <em>{pub.data.journal}</em> ({pub.data.year})
+                </p>
+                <div class="text-charcoal prose leading-relaxed">
+                  <Content />
+                </div>
+                {pub.data.url && (
+                  <a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="text-rust-600 hover:text-rust-700 text-sm font-medium transition-colors mt-3 inline-block">
+                    Read article →
+                  </a>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <!-- Professional Guidelines -->
+    {guidelines.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">
+          Professional Guidelines
+        </h2>
+        <div class="space-y-8">
+          {guidelines.map(async (pub) => {
+            const { Content } = await pub.render();
+            return (
+              <article class="border-l-4 border-rust-600 pl-8 py-3 bg-rust-50 rounded-r-lg shadow-sm">
+                <h3 class="text-xl font-semibold text-charcoal mb-3">
+                  {pub.data.url ? (
+                    <a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="hover:text-rust-600 transition-colors">
+                      {pub.data.title}
+                    </a>
+                  ) : (
+                    pub.data.title
+                  )}
+                </h3>
+                {pub.data.authors && (
+                  <p class="text-charcoal mb-2">
+                    {pub.data.authors.join(', ')}
+                  </p>
+                )}
+                <p class="text-warm-gray-600 text-sm mb-4">
+                  {pub.data.journal} ({pub.data.year})
+                </p>
+                <div class="text-charcoal prose leading-relaxed">
+                  <Content />
+                </div>
+                {pub.data.url && (
+                  <a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="text-rust-600 hover:text-rust-700 text-sm font-medium transition-colors mt-3 inline-block">
+                    Read full document →
+                  </a>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <!-- Additional Resources -->
+    <section class="mt-12 p-10 bg-warm-gray-50 rounded-xl border-2 border-warm-gray-200">
+      <h2 class="text-2xl font-semibold text-charcoal mb-6">Additional Resources</h2>
+      <p class="text-charcoal mb-6 leading-relaxed">
+        For a complete list of presentations, workshops, and conference participation, see the <a href="/cv" class="text-rust-600 hover:text-rust-700 font-medium transition-colors">full CV</a>.
+      </p>
+      <p class="text-charcoal leading-relaxed">
+        Many workshop materials and code examples are available on <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer" class="text-rust-600 hover:text-rust-700 font-medium transition-colors">GitHub</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
