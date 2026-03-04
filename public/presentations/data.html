@@ -5,10 +5,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Data Management</title>
+		<title>Research Data Management</title>
 
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-		<meta name="description" content="A presentation on Data and Data Manaagement Plans">
+		<meta name="description" content="A presentation on Research Data Management">
 		<meta name="author" content="Stephen Zweibel">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -25,17 +25,13 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
 	</head>
 <body>
 <div class="reveal">
 <!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
 <section>
-	<h1>Data Management</h1>
+	<h1>Research Data Management</h1>
 </section>
 <section>
 	<section>
@@ -45,190 +41,206 @@
 	<div class='col-md-6'>
 		<small>
 		<p>"Material or information on which an argument, theory, test or hypothesis, or another research output is based."</p>
-		<p>"What constitutes such data will be determined by the community of interest through the process of peer review and program management. This may include, but is not limited to: data, publications, samples, physical collections, software and models"</p>
+		<p>"What constitutes such data will be determined by the community of interest through the process of peer review and program management."</p>
 	</small>
 	</div>
 	<div class='col-md-6'>
 		<small>
 		<p>"Units of information created in the course of research"</p>
-		<p>"(i) Research data is defined as the recorded factual material commonly accepted in the scientific community as necessary to validate research findings, but not any of the following: preliminary analyses, drafts of scientific papers, plans for future research, peer reviews, or communications with colleagues."</p>
+		<p>"Research data is defined as the recorded factual material commonly accepted in the scientific community as necessary to validate research findings."</p>
 		</small>
 	</div>
-		<small style="padding-top: 100px;">Queensland University of Technology. Manual of Procedures and Policies. Section 2.8.3. http://www.mopp.qut.edu.au/D/D_02_08.jsp<br>
-Marieke Guy. http://www.slideshare.net/MariekeGuy/bridging-the-gap-between-researchers-and-research-data-management , #2 <br>
-https://www.nsf.gov/bfa/dias/policy/dmpfaqs.jsp <br>
-OMB-110, Subpart C, section 36, (d) (i), http://www.whitehouse.gov/omb/circulars_a110/</small>
+		<small style="padding-top: 100px;">Queensland University of Technology. Manual of Procedures and Policies. Section 2.8.3.<br>
+Marieke Guy. "Bridging the Gap Between Researchers and Research Data Management"<br>
+NSF Data Management Plan FAQs<br>
+OMB-110, Subpart C, section 36, (d) (i)</small>
 	</section>
 	<section>
 	<p>Material or information necessary to come to your conclusion</p>
 	</section>
 	<section>
-		<h2>Getting data</h2>
-		<dl><div class="container">
-				<div class="row"><div class='col-md-5'>
-							<dt>Collection</dt>
-							    <dd>Experiment</dd>
-							    <dd>Observation</dd>
-							    <dd>Simulation</dd>
-								<dd>Compilation/Derivation</dd>
-								<dd>Reference data</dd>
-						</div>
-						<dl>
-							<dt>Methods</dt>
-							<dd>What was done</dd>
-							<dd>How it was done</dd>
-							<dd>Instrumentation</dd>
-							<dd>Limitations</dd>
-						</dl>
-			</div>
-			</div>
-		</dl>
-	</section>
-	<section>
-		<h2>Being data</h2>
+		<h2>Types of research data</h2>
 		<div class='col-md-6'>
-							<dt>Stage</dt>
-								<dd>Raw</dd>
-							    <dd>Cleaned</dd>
-							    <dd>Processed</dd>
-							    <dd>Analyzed</dd>
-							    <dd>Visualized</dd>
-						</div>
-<!-- 				<div class='row'> -->
-				<div class="col-md-3">
-					<dt>Form</dt>
-					    <dd>Textual</dd>
-					    <dd>Numeric</dd>
-					    <dd>Audio</dd>
-					    <dd>Video</dd>
-					    <dd>Image</dd>
-					    <dd>Code</dd>
-				</div>
+			<dl>
+				<dt>By origin</dt>
+				<dd>Observational</dd>
+				<dd>Experimental</dd>
+				<dd>Simulation</dd>
+				<dd>Derived/Compiled</dd>
+				<dd>Reference</dd>
+			</dl>
+		</div>
+		<div class='col-md-6'>
+			<dl>
+				<dt>By form</dt>
+				<dd>Textual</dd>
+				<dd>Numeric/Tabular</dd>
+				<dd>Geospatial</dd>
+				<dd>Audio/Video</dd>
+				<dd>Images</dd>
+				<dd>Code/Software</dd>
+			</dl>
+		</div>
 	</section>
 	<section>
-	<h2>Forms of data</h2>
+	<h2>Data takes many forms</h2>
 	<div class='col-md-6'>
 		<small>
-		<p>Non-digital text (lab books, field notebooks)</p>
-		<p>Digital texts or digital copies of text</p>
-		<p>Spreadsheets</p>
-		<p>Audio, video</p>
-		<p>Computer Aided Design/CAD</p>
-		<p>Statistical analysis (SPSS, SAS)</p>
+		<p>Lab notebooks, field notebooks</p>
+		<p>Spreadsheets, CSV files</p>
 		<p>Databases</p>
-		<p>Geographic Information Systems (GIS) and spatial data</p>
-		<p>Digital copies of images</p>
-		<p>Web files</p>
+		<p>Statistical files (R, Python, SPSS)</p>
+		<p>Geographic Information Systems (GIS)</p>
+		<p>Digital images and scans</p>
 		</small>
 	</div>
 	<div class='col-md-6'>
 		<small>
-		<p>Scientific sample collections</p>
-		<p>Matlab files & 3D Models</p>
-		<p>Metadata & Paradata</p>
-		<p>Data visualizations</p>
-		<p>Computer code</p>
-		<p>Standard operating procedures and protocols</p>
-		<p>Protein or genetic sequences</p>
-		<p>Artistic products</p>
-		<p>Curriculum materials</p>
-		<p>Collection of digital objects acquired and generated during research</p>
+		<p>Interview recordings and transcripts</p>
+		<p>Genomic and protein sequences</p>
+		<p>Sensor and IoT data</p>
+		<p>Computational models and simulations</p>
+		<p>Computer code and scripts</p>
+		<p>Digital collections and web archives</p>
 		</small>
 	</div>
-		<small>Adapted from: Georgia Tech–http://libguides.gatech.edu/content.php?pid=123776&sid=3067221</small>
+		<small>What counts as data in your field?</small>
 	</section>
 </section>
 <section>
 	<section>
-		<h2>Why share data?</h2>
+		<h2>The data lifecycle</h2>
+	</section>
+	<section>
+		<h2>Stages of research data</h2>
+		<ol>
+			<li>Planning</li>
+			<li>Collection</li>
+			<li>Processing and cleaning</li>
+			<li>Analysis</li>
+			<li>Sharing and publication</li>
+			<li>Preservation and reuse</li>
+		</ol>
+		<p>Data management is relevant at <em>every</em> stage.</p>
+	</section>
+	<section>
+		<h2>Data degrades over time</h2>
+		<img src="images/data/entropy.png" alt="Information entropy diagram showing data and metadata are lost over time">
+		<small>Michener et al. (1997) doi:10.1890/1051-0761(1997)007[0330:NMFTES]2.0.CO;2</small>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Why manage and share data?</h2>
+	</section>
+	<section>
+		<h2>The case for sharing</h2>
 	    <ul>
-	    <li>Ensure reproducibility</li>
-	    <li>Promote discovery</li>
-	    <li>Synthesis for data mining</li>
-	    <li>Citation</li>
-	    <li>Correct credit</li>
-	    <li>Required!</li>
+	    <li>Reproducibility and verification</li>
+	    <li>Accelerates new discovery</li>
+	    <li>Enables meta-analysis and data mining</li>
+	    <li>Citation credit to data creators</li>
+	    <li>Required by funders and journals</li>
 	    </ul>
 	</section>
 	<section>
-		<img src="images/data/entropy.png">
-		<small>http://dx.doi.org/10.1890/1051-0761(1997)007%5B0330:NMFTES%5D2.0.CO;2</small>
+		<h2>Data disappears</h2>
+		<img src="images/data/missing.png" alt="Chart showing data availability declines as research papers age">
+		<small>Vines et al. (2014) Current Biology. doi:10.1016/j.cub.2013.11.014</small>
 	</section>
 	<section>
-		<img src="images/data/missing.png">
-		<small>http://www.nature.com/news/scientists-losing-data-at-a-rapid-rate-1.14416</small>
+		<h2>Funder mandates</h2>
+		<dl>
+			<dt>NIH (January 2023)</dt>
+			<dd>Data Management &amp; Sharing Policy: DMS plan required for all proposals generating scientific data</dd>
+			<dt>NSF (May 2024)</dt>
+			<dd>PAPPG 24-1: data supporting publications must be shared at time of publication</dd>
+			<dt>OSTP (August 2022)</dt>
+			<dd>Nelson Memo: all federal agencies updating public access policies</dd>
+			<dt>DOE, USDA, NEH...</dt>
+			<dd>Agency-specific mandates continue to expand</dd>
+		</dl>
+		<small>If your research is federally funded, data sharing is no longer optional.</small>
 	</section>
-	<!-- <section>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc" frameborder="0" allowfullscreen></iframe>
-	</section> -->
 </section>
 <section>
 	<section>
-		<h2>What is data management?</h2>
+		<h2>The FAIR principles</h2>
+		<p>The standard framework for research data management.</p>
 	</section>
 	<section>
-		<h2>Considerations</h2>
-		<p>What data do you expect to have?</p>
-		<p>How will you describe/document your data?</p>
-		<p>How will you store it?</p>
-		<p>What are your obligations for these data (storage/security)?</p>
-		<p>How will you expose these data?</p>
-		<p>How will you preserve these data?</p>
+		<h2>FAIR</h2>
+		<dl>
+			<dt>Findable</dt>
+			<dd>Persistent identifiers (DOIs), rich metadata, indexed in searchable resources</dd>
+			<dt>Accessible</dt>
+			<dd>Retrievable by identifier via open protocols; metadata always accessible</dd>
+			<dt>Interoperable</dt>
+			<dd>Uses shared vocabularies, standards, and formats; machine-readable</dd>
+			<dt>Reusable</dt>
+			<dd>Clear licensing, provenance, and documentation; meets community standards</dd>
+		</dl>
+		<small>Wilkinson et al. (2016) Scientific Data 3:160018</small>
+	</section>
+	<section>
+		<h2>FAIR in practice</h2>
+		<ul>
+			<li>FAIR does not mean open &mdash; restricted data can still be FAIR</li>
+			<li>FAIR applies to data <em>and</em> metadata</li>
+			<li>FAIR is a spectrum, not a binary</li>
+			<li>Funders and journals increasingly reference FAIR explicitly</li>
+		</ul>
 	</section>
 </section>
 <section>
-	<section>	    
-	<h2>What data do you expect to have?</h2>
-	    <p>What tools are you using for your data?</p>
-        <p>How much data?</p>
+	<section>
+		<h2>Data management plans</h2>
 	</section>
 	<section>
-		<h2>How will you describe/document your data?</h2>
-		<p>Write a data abstract</p>
-		<p>Provide a data dictionary</p>
-	</section>	    	
-    <section>
-		<h2>How will you store it?</h2>
-		<p>Multiple locations: Here, near, and far</p>
-		<p>How will it be maintained(during and after)?</p>
-    </section>
-    <section>
-		<h2>Version Control</h2>
-		<img src="images/data/datacomic.gif">
-	</section>
-    <section>
-		<img src="images/data/medialife.png">
+		<h2>What goes in a DMP?</h2>
+		<ol>
+			<li>Data types and formats expected</li>
+			<li>Standards and metadata</li>
+			<li>Data storage and backup during the project</li>
+			<li>Access policies and sharing timeline</li>
+			<li>Privacy, security, and ethical considerations</li>
+			<li>Long-term preservation and repository selection</li>
+		</ol>
+		<p>Typically 2 pages. Written at proposal stage, updated during the project.</p>
 	</section>
 	<section>
-		<h2>What are your obligations for these data?</h2>
-        <dl>
-        <dt>Security</dt>
-            <dd>Physical</dd>
-            <dd>Network</dd>
-            <dd>Computer system and file</dd>
-        <dt>Privacy</dt>
-            <dd>Personally identifying info (PII)</dd>
-            <dd>Personal health info (PHI)</dd>
-        </dl>
+		<h2>NIH vs. NSF</h2>
+		<div class='col-md-6'>
+			<dl>
+				<dt>NIH DMS Plan</dt>
+				<dd>Applies to all scientific data</dd>
+				<dd>Must name a repository</dd>
+				<dd>Budget for data management allowed</dd>
+				<dd>Reviewed by program staff</dd>
+			</dl>
+		</div>
+		<div class='col-md-6'>
+			<dl>
+				<dt>NSF DMSP</dt>
+				<dd>2-page supplementary document</dd>
+				<dd>Discipline-specific expectations</dd>
+				<dd>Data shared at publication</dd>
+				<dd>Reviewed by peers</dd>
+			</dl>
+		</div>
 	</section>
 	<section>
-	    <h2>How will you expose these data?</h2>
-        <p>What will be shared?</p>
-        <p>Who is the audience?</p>
-        <p>Is the data citable?</p>
-        <p>Persistent access</p>
-        <p>Quality assurance</p>
-    </section>
-	<section>   
-		<h2>How will you preserve it?</h2>
-		<p>Don't archive in proprietary format!</p>
-		<dl>Sustainable formats:</dl>
-			<dd>Unencrypted</dd>
-			<dd>Uncompressed</dd>
-			<dd>Open standard</dd>
-		<p>ASCII, PDF, .csv, FLAC, TIFF, JPEG2000, MPEG-4, XML, RDF, .txt, .r</p>
-		<p>Domain specific repositories</p>
-		<p>Institutional repositories</p>
+		<h2>DMP tools</h2>
+		<dl>
+			<dt>DMPTool (dmptool.org)</dt>
+			<dd>Templates aligned to funder requirements</dd>
+			<dt>DMPOnline (dmponline.dcc.ac.uk)</dt>
+			<dd>UK/international equivalent</dd>
+			<dt>Your library</dt>
+			<dd>Institutional guidance and review</dd>
+			<dt>Funder templates</dt>
+			<dd>NIH, NSF, NEH each provide specific guidance</dd>
+		</dl>
 	</section>
 </section>
 <section>
@@ -236,63 +248,136 @@ OMB-110, Subpart C, section 36, (d) (i), http://www.whitehouse.gov/omb/circulars
 		<h2>Best practices</h2>
 	</section>
 	<section>
-    	<h2>What are the data structure standards for your discipline?</h2>
-		<p>Standard ways to label fields</p> 
-		<p>Specific variables and coding guidelines</p> 
-		<p>Accepted hierarchies and directory structures</p>
-    </section>
+		<h2>File naming</h2>
+		<img src="images/data/datacomic.gif" alt="PHD Comics: A Story Told in File Names">
+		<small>Jorge Cham, PHD Comics</small>
+	</section>
+	<section>
+		<h2>File naming conventions</h2>
+		<ul>
+			<li>Use consistent, descriptive names</li>
+			<li>Include dates in YYYY-MM-DD format</li>
+			<li>Avoid spaces and special characters</li>
+			<li>Include version numbers (v01, v02) or use version control</li>
+			<li>Agree on conventions within your project team</li>
+		</ul>
+		<p><small>Example: <code>survey_responses_2025-01-15_v02_cleaned.csv</code></small></p>
+	</section>
     <section>
-    	<h2>Structure</h2>
+    	<h2>Tidy data structure</h2>
     	<ol>
-			<li>Use one variable per column</li>
-			<li>Make one observation per row</li>
-			<li>Use human-readable column names</li>
-			<li>Include one table per tab</li>
-			<li>If using multiple related tables, use an ID or key to indicate how the tables are related</li>
+			<li>Each variable in its own column</li>
+			<li>Each observation in its own row</li>
+			<li>Each type of observational unit in its own table</li>
+			<li>Human-readable column headers</li>
+			<li>Related tables linked by key/ID columns</li>
     	</ol>
+		<small>Wickham, H. (2014) "Tidy Data." Journal of Statistical Software 59(10)</small>
     </section>
     <section>
-	    <h2>Context</h2>
-		<p>Include a readme text file with the following:</p>
+	    <h2>Documentation</h2>
+		<p>Every dataset needs a README and a data dictionary.</p>
 		<dl>
-			<dt>Abstract</dt>
-			<dd>Describe why the data has been collected</dd>
-			<dt>Content</dt>
-			<dd>List and describe the files in your data package</dd>
-			<dt>Basic Data Dictionary</dt>
-			<dd>List and describe the variables in the file</dd>
+			<dt>README</dt>
+			<dd>Project context, file descriptions, collection methods, access conditions</dd>
+			<dt>Data dictionary</dt>
+			<dd>Variable names, definitions, units, allowed values, codes for missing data</dd>
+			<dt>Metadata standards</dt>
+			<dd>Dublin Core, DDI, Darwin Core, or discipline-specific schemas</dd>
 		</dl>
     </section>
     <section>
-    	<h2>Other best practices</h2>
-		<dl>
-			<dt>Do:</dt>
-				<dd>Consider how to represent your NULL values</dd>
-				<dd>Consider whether a more robust data dictionary is required (e.g. with in-depth description of methods, instruments, models, etc.)</dd>
-			<dt>Do not:</dt>
-				<dd>Use formatting to convey information</dd>
-				<dd>Place comments in cells</dd>
-				<dd>Use special characters in field names</dd>
-		</dl>
-		<small>educopia.org ETD guidance</small>
+    	<h2>Version control</h2>
+		<ul>
+			<li>Git/GitHub: track changes, collaborate, maintain history</li>
+			<li>For code <em>and</em> data (small datasets, scripts, notebooks)</li>
+			<li>DVC (Data Version Control): Git-like tracking for large data files</li>
+			<li>At minimum: consistent file naming with version numbers</li>
+			<li>Never overwrite raw data &mdash; keep originals untouched</li>
+		</ul>
     </section>
 </section>
 <section>
-		<h2>Data management plans</h2>
-		<div>"Beginning January 18, 2011, proposals submitted to NSF must include a supplementary document of no more than two pages labeled "Data Management Plan" (DMP). This supplementary document should describe how the proposal will conform to NSF policy on the dissemination and sharing of research results. Proposals that do not include a DMP will not be able to be submitted."</div>
-		<small>https://www.nsf.gov/eng/general/dmp.jsp</small>
-	</section>
-<!-- 	<section>
-		<h1>Writing a Data Management Plan</h1>
-	</section> -->
 	<section>
-		<img src="images/data/DMPtool.png">
-		<img src="images/data/IEDA.png">
+		<h2>Sharing and preserving data</h2>
+	</section>
+	<section>
+		<h2>Where to deposit data</h2>
+		<dl>
+			<dt>Domain-specific repositories</dt>
+			<dd>ICPSR (social science), GenBank (genomics), PANGAEA (earth science)</dd>
+			<dt>Generalist repositories</dt>
+			<dd>Zenodo, Dryad, Figshare, Dataverse, OSF</dd>
+			<dt>Institutional repositories</dt>
+			<dd>Check with your library</dd>
+		</dl>
+		<small>re3data.org &mdash; Registry of Research Data Repositories</small>
+	</section>
+	<section>
+		<h2>Data citation</h2>
+		<ul>
+			<li>Datasets get DOIs via DataCite</li>
+			<li>Citation format: Creator (Year). Title. Repository. DOI</li>
+			<li>Data citations appear in reference lists alongside papers</li>
+			<li>Proper citation gives credit to data creators</li>
+			<li>ORCID links researchers to their datasets</li>
+		</ul>
+		<p>Sharing data is not losing control &mdash; it is gaining credit.</p>
+	</section>
+	<section>
+		<h2>Preservation formats</h2>
+		<div class='col-md-6'>
+			<dl>
+				<dt>Prefer</dt>
+				<dd>Open, non-proprietary formats</dd>
+				<dd>CSV over Excel</dd>
+				<dd>TIFF/PNG over PSD</dd>
+				<dd>Plain text, PDF/A, XML, JSON</dd>
+				<dd>Uncompressed or lossless</dd>
+			</dl>
+		</div>
+		<div class='col-md-6'>
+			<dl>
+				<dt>Avoid</dt>
+				<dd>Proprietary binary formats</dd>
+				<dd>Software-dependent formats</dd>
+				<dd>Formats without open specs</dd>
+				<dd>Lossy compression</dd>
+				<dd>Encryption without documented keys</dd>
+			</dl>
+		</div>
+	</section>
+	<section>
+		<h2>Storage media have lifespans</h2>
+		<img src="images/data/medialifeExtended.jpeg" alt="Infographic showing lifespan of various storage media">
+		<small>CrashPlan / Code 42 Software</small>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Key takeaways</h2>
+		<ol>
+			<li>Plan early &mdash; write your DMP at the proposal stage</li>
+			<li>Document everything &mdash; future you is your first user</li>
+			<li>Use open formats and standards</li>
+			<li>Apply FAIR principles as a guiding framework</li>
+			<li>Deposit in a repository and get a DOI</li>
+			<li>Your library can help</li>
+		</ol>
+	</section>
+	<section>
+		<h2>Resources</h2>
+		<ul>
+			<li>DMPTool: dmptool.org</li>
+			<li>re3data.org: Registry of Research Data Repositories</li>
+			<li>FAIR Principles: go-fair.org</li>
+			<li>DataCite: datacite.org</li>
+			<li>Library of Congress Recommended Formats: loc.gov/preservation/resources/rfs/</li>
+		</ul>
 	</section>
 </section>
 <section data-state="blackout">
 	<h1>THE END</h1>
-<small>Thanks to Amy Nurnberger, Columbia University</small>
 </section>
 </div>
 </div>
@@ -314,13 +399,11 @@ OMB-110, Subpart C, section 36, (d) (i), http://www.whitehouse.gov/omb/circulars
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
