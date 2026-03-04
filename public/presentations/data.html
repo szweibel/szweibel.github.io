@@ -1,112 +1,100 @@
-
 <!doctype html>
 <html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Research Data Management</title>
+	<meta name="description" content="A presentation on Research Data Management">
+	<meta name="author" content="Stephen Zweibel">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<head>
-		<meta charset="utf-8">
-
-		<title>Research Data Management</title>
-
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-		<meta name="description" content="A presentation on Research Data Management">
-		<meta name="author" content="Stephen Zweibel">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/reveal.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/theme/black.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/zenburn.min.css">
-
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-	</head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="data.css">
+</head>
 <body>
 <div class="reveal">
-<!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
+
 <section>
-	<h1>Research Data Management</h1>
+	<h1 class="r-fit-text">Research Data Management</h1>
 </section>
+
+<!-- ========== WHAT IS RESEARCH DATA? ========== -->
 <section>
 	<section>
 		<h2>What constitutes research data?</h2>
 	</section>
 	<section>
-	<div class='col-md-6'>
-		<small>
-		<p>"Material or information on which an argument, theory, test or hypothesis, or another research output is based."</p>
-		<p>"What constitutes such data will be determined by the community of interest through the process of peer review and program management."</p>
-	</small>
-	</div>
-	<div class='col-md-6'>
-		<small>
-		<p>"Units of information created in the course of research"</p>
-		<p>"Research data is defined as the recorded factual material commonly accepted in the scientific community as necessary to validate research findings."</p>
-		</small>
-	</div>
-		<small style="padding-top: 100px;">Queensland University of Technology. Manual of Procedures and Policies. Section 2.8.3.<br>
-Marieke Guy. "Bridging the Gap Between Researchers and Research Data Management"<br>
-NSF Data Management Plan FAQs<br>
-OMB-110, Subpart C, section 36, (d) (i)</small>
+		<h2>Definitions</h2>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+			<div>
+				<p>"Material or information on which an argument, theory, test or hypothesis, or another research output is based."</p>
+				<p>"What constitutes such data will be determined by the community of interest through the process of peer review and program management."</p>
+			</div>
+			<div>
+				<p>"Units of information created in the course of research"</p>
+				<p>"Research data is defined as the recorded factual material commonly accepted in the scientific community as necessary to validate research findings."</p>
+			</div>
+		</div>
+		<div class="footnote">Queensland University of Technology. Manual of Procedures and Policies. Section 2.8.3. ·
+		Marieke Guy. "Bridging the Gap Between Researchers and Research Data Management" ·
+		NSF Data Management Plan FAQs ·
+		OMB-110, Subpart C, section 36, (d) (i)</div>
 	</section>
 	<section>
-	<p>Material or information necessary to come to your conclusion</p>
+		<p class="r-fit-text">Material or information necessary to come to your conclusion</p>
 	</section>
 	<section>
 		<h2>Types of research data</h2>
-		<div class='col-md-6'>
-			<dl>
-				<dt>By origin</dt>
-				<dd>Observational</dd>
-				<dd>Experimental</dd>
-				<dd>Simulation</dd>
-				<dd>Derived/Compiled</dd>
-				<dd>Reference</dd>
-			</dl>
-		</div>
-		<div class='col-md-6'>
-			<dl>
-				<dt>By form</dt>
-				<dd>Textual</dd>
-				<dd>Numeric/Tabular</dd>
-				<dd>Geospatial</dd>
-				<dd>Audio/Video</dd>
-				<dd>Images</dd>
-				<dd>Code/Software</dd>
-			</dl>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+			<div>
+				<dl>
+					<dt>By origin</dt>
+					<dd>Observational</dd>
+					<dd>Experimental</dd>
+					<dd>Simulation</dd>
+					<dd>Derived/Compiled</dd>
+					<dd>Reference</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>By form</dt>
+					<dd>Textual</dd>
+					<dd>Numeric/Tabular</dd>
+					<dd>Geospatial</dd>
+					<dd>Audio/Video</dd>
+					<dd>Images</dd>
+					<dd>Code/Software</dd>
+				</dl>
+			</div>
 		</div>
 	</section>
 	<section>
-	<h2>Data takes many forms</h2>
-	<div class='col-md-6'>
-		<small>
-		<p>Lab notebooks, field notebooks</p>
-		<p>Spreadsheets, CSV files</p>
-		<p>Databases</p>
-		<p>Statistical files (R, Python, SPSS)</p>
-		<p>Geographic Information Systems (GIS)</p>
-		<p>Digital images and scans</p>
-		</small>
-	</div>
-	<div class='col-md-6'>
-		<small>
-		<p>Interview recordings and transcripts</p>
-		<p>Genomic and protein sequences</p>
-		<p>Sensor and IoT data</p>
-		<p>Computational models and simulations</p>
-		<p>Computer code and scripts</p>
-		<p>Digital collections and web archives</p>
-		</small>
-	</div>
-		<small>What counts as data in your field?</small>
+		<h2>Data takes many forms</h2>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+			<div>
+				<p>Lab notebooks, field notebooks</p>
+				<p>Spreadsheets, CSV files</p>
+				<p>Databases</p>
+				<p>Statistical files (R, Python, SPSS)</p>
+				<p>Geographic Information Systems (GIS)</p>
+				<p>Digital images and scans</p>
+			</div>
+			<div>
+				<p>Interview recordings and transcripts</p>
+				<p>Genomic and protein sequences</p>
+				<p>Sensor and IoT data</p>
+				<p>Computational models and simulations</p>
+				<p>Computer code and scripts</p>
+				<p>Digital collections and web archives</p>
+			</div>
+		</div>
+		<div class="footnote">What counts as data in your field?</div>
 	</section>
 </section>
+
+<!-- ========== THE DATA LIFECYCLE ========== -->
 <section>
 	<section>
 		<h2>The data lifecycle</h2>
@@ -125,44 +113,56 @@ OMB-110, Subpart C, section 36, (d) (i)</small>
 	</section>
 	<section>
 		<h2>Data degrades over time</h2>
-		<img src="images/data/entropy.png" alt="Information entropy diagram showing data and metadata are lost over time">
-		<small>Michener et al. (1997) doi:10.1890/1051-0761(1997)007[0330:NMFTES]2.0.CO;2</small>
+		<img class="r-stretch" src="images/data/entropy.png" alt="Information entropy diagram showing data and metadata are lost over time">
+		<div class="footnote">Michener et al. (1997) doi:10.1890/1051-0761(1997)007[0330:NMFTES]2.0.CO;2</div>
 	</section>
 </section>
+
+<!-- ========== WHY MANAGE AND SHARE? ========== -->
 <section>
 	<section>
 		<h2>Why manage and share data?</h2>
 	</section>
 	<section>
 		<h2>The case for sharing</h2>
-	    <ul>
-	    <li>Reproducibility and verification</li>
-	    <li>Accelerates new discovery</li>
-	    <li>Enables meta-analysis and data mining</li>
-	    <li>Citation credit to data creators</li>
-	    <li>Required by funders and journals</li>
-	    </ul>
+		<ul>
+			<li>Reproducibility and verification</li>
+			<li>Accelerates new discovery</li>
+			<li>Enables meta-analysis and data mining</li>
+			<li>Citation credit to data creators</li>
+			<li>Required by funders and journals</li>
+		</ul>
 	</section>
 	<section>
 		<h2>Data disappears</h2>
-		<img src="images/data/missing.png" alt="Chart showing data availability declines as research papers age">
-		<small>Vines et al. (2014) Current Biology. doi:10.1016/j.cub.2013.11.014</small>
+		<img class="r-stretch" src="images/data/missing.png" alt="Chart showing data availability declines as research papers age">
+		<div class="footnote">Vines et al. (2014) Current Biology. doi:10.1016/j.cub.2013.11.014</div>
 	</section>
 	<section>
 		<h2>Funder mandates</h2>
-		<dl>
-			<dt>NIH (January 2023)</dt>
-			<dd>Data Management &amp; Sharing Policy: DMS plan required for all proposals generating scientific data</dd>
-			<dt>NSF (May 2024)</dt>
-			<dd>PAPPG 24-1: data supporting publications must be shared at time of publication</dd>
-			<dt>OSTP (August 2022)</dt>
-			<dd>Nelson Memo: all federal agencies updating public access policies</dd>
-			<dt>DOE, USDA, NEH...</dt>
-			<dd>Agency-specific mandates continue to expand</dd>
-		</dl>
-		<small>If your research is federally funded, data sharing is no longer optional.</small>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+			<div>
+				<dl>
+					<dt>NIH (January 2023)</dt>
+					<dd>Data Management &amp; Sharing Policy: plan required for all proposals generating scientific data</dd>
+					<dt>NSF (May 2024)</dt>
+					<dd>PAPPG 24-1: data supporting publications shared at time of publication</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>OSTP (August 2022)</dt>
+					<dd>Nelson Memo: all federal agencies updating public access policies</dd>
+					<dt>DOE, USDA, NEH...</dt>
+					<dd>Agency-specific mandates continue to expand</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="footnote">If your research is federally funded, data sharing is no longer optional.</div>
 	</section>
 </section>
+
+<!-- ========== FAIR PRINCIPLES ========== -->
 <section>
 	<section>
 		<h2>The FAIR principles</h2>
@@ -170,17 +170,25 @@ OMB-110, Subpart C, section 36, (d) (i)</small>
 	</section>
 	<section>
 		<h2>FAIR</h2>
-		<dl>
-			<dt>Findable</dt>
-			<dd>Persistent identifiers (DOIs), rich metadata, indexed in searchable resources</dd>
-			<dt>Accessible</dt>
-			<dd>Retrievable by identifier via open protocols; metadata always accessible</dd>
-			<dt>Interoperable</dt>
-			<dd>Uses shared vocabularies, standards, and formats; machine-readable</dd>
-			<dt>Reusable</dt>
-			<dd>Clear licensing, provenance, and documentation; meets community standards</dd>
-		</dl>
-		<small>Wilkinson et al. (2016) Scientific Data 3:160018</small>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+			<div>
+				<dl>
+					<dt>Findable</dt>
+					<dd>Persistent identifiers (DOIs), rich metadata</dd>
+					<dt>Accessible</dt>
+					<dd>Retrievable via open protocols</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>Interoperable</dt>
+					<dd>Shared vocabularies and formats</dd>
+					<dt>Reusable</dt>
+					<dd>Clear licensing and documentation</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="footnote">Wilkinson et al. (2016) Scientific Data 3:160018</div>
 	</section>
 	<section>
 		<h2>FAIR in practice</h2>
@@ -192,65 +200,87 @@ OMB-110, Subpart C, section 36, (d) (i)</small>
 		</ul>
 	</section>
 </section>
+
+<!-- ========== DATA MANAGEMENT PLANS ========== -->
 <section>
 	<section>
 		<h2>Data management plans</h2>
 	</section>
 	<section>
 		<h2>What goes in a DMP?</h2>
-		<ol>
-			<li>Data types and formats expected</li>
-			<li>Standards and metadata</li>
-			<li>Data storage and backup during the project</li>
-			<li>Access policies and sharing timeline</li>
-			<li>Privacy, security, and ethical considerations</li>
-			<li>Long-term preservation and repository selection</li>
-		</ol>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+			<div>
+				<ol>
+					<li>Data types and formats expected</li>
+					<li>Standards and metadata</li>
+					<li>Data storage and backup</li>
+				</ol>
+			</div>
+			<div>
+				<ol start="4">
+					<li>Access policies and sharing timeline</li>
+					<li>Privacy, security, and ethics</li>
+					<li>Preservation and repository selection</li>
+				</ol>
+			</div>
+		</div>
 		<p>Typically 2 pages. Written at proposal stage, updated during the project.</p>
 	</section>
 	<section>
 		<h2>NIH vs. NSF</h2>
-		<div class='col-md-6'>
-			<dl>
-				<dt>NIH DMS Plan</dt>
-				<dd>Applies to all scientific data</dd>
-				<dd>Must name a repository</dd>
-				<dd>Budget for data management allowed</dd>
-				<dd>Reviewed by program staff</dd>
-			</dl>
-		</div>
-		<div class='col-md-6'>
-			<dl>
-				<dt>NSF DMSP</dt>
-				<dd>2-page supplementary document</dd>
-				<dd>Discipline-specific expectations</dd>
-				<dd>Data shared at publication</dd>
-				<dd>Reviewed by peers</dd>
-			</dl>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+			<div>
+				<dl>
+					<dt>NIH DMS Plan</dt>
+					<dd>Applies to all scientific data</dd>
+					<dd>Must name a repository</dd>
+					<dd>Budget for data management allowed</dd>
+					<dd>Reviewed by program staff</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>NSF DMSP</dt>
+					<dd>2-page supplementary document</dd>
+					<dd>Discipline-specific expectations</dd>
+					<dd>Data shared at publication</dd>
+					<dd>Reviewed by peers</dd>
+				</dl>
+			</div>
 		</div>
 	</section>
 	<section>
 		<h2>DMP tools</h2>
-		<dl>
-			<dt>DMPTool (dmptool.org)</dt>
-			<dd>Templates aligned to funder requirements</dd>
-			<dt>DMPOnline (dmponline.dcc.ac.uk)</dt>
-			<dd>UK/international equivalent</dd>
-			<dt>Your library</dt>
-			<dd>Institutional guidance and review</dd>
-			<dt>Funder templates</dt>
-			<dd>NIH, NSF, NEH each provide specific guidance</dd>
-		</dl>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+			<div>
+				<dl>
+					<dt>DMPTool (dmptool.org)</dt>
+					<dd>Templates aligned to funder requirements</dd>
+					<dt>DMPOnline (dmponline.dcc.ac.uk)</dt>
+					<dd>UK/international equivalent</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>Your library</dt>
+					<dd>Institutional guidance and review</dd>
+					<dt>Funder templates</dt>
+					<dd>NIH, NSF, NEH each provide specific guidance</dd>
+				</dl>
+			</div>
+		</div>
 	</section>
 </section>
+
+<!-- ========== BEST PRACTICES ========== -->
 <section>
 	<section>
 		<h2>Best practices</h2>
 	</section>
 	<section>
 		<h2>File naming</h2>
-		<img src="images/data/datacomic.gif" alt="PHD Comics: A Story Told in File Names">
-		<small>Jorge Cham, PHD Comics</small>
+		<img class="r-stretch" src="images/data/datacomic.gif" alt="PHD Comics: A Story Told in File Names">
+		<div class="footnote">Jorge Cham, PHD Comics</div>
 	</section>
 	<section>
 		<h2>File naming conventions</h2>
@@ -261,33 +291,45 @@ OMB-110, Subpart C, section 36, (d) (i)</small>
 			<li>Include version numbers (v01, v02) or use version control</li>
 			<li>Agree on conventions within your project team</li>
 		</ul>
-		<p><small>Example: <code>survey_responses_2025-01-15_v02_cleaned.csv</code></small></p>
+		<div class="footnote">Example: <code>survey_responses_2025-01-15_v02_cleaned.csv</code></div>
 	</section>
-    <section>
-    	<h2>Tidy data structure</h2>
-    	<ol>
+	<section>
+		<h2>Tidy data structure</h2>
+		<ol>
 			<li>Each variable in its own column</li>
 			<li>Each observation in its own row</li>
 			<li>Each type of observational unit in its own table</li>
 			<li>Human-readable column headers</li>
 			<li>Related tables linked by key/ID columns</li>
-    	</ol>
-		<small>Wickham, H. (2014) "Tidy Data." Journal of Statistical Software 59(10)</small>
-    </section>
-    <section>
-	    <h2>Documentation</h2>
+		</ol>
+		<div class="footnote">Wickham, H. (2014) "Tidy Data." Journal of Statistical Software 59(10)</div>
+	</section>
+	<section>
+		<h2>Documentation</h2>
 		<p>Every dataset needs a README and a data dictionary.</p>
-		<dl>
-			<dt>README</dt>
-			<dd>Project context, file descriptions, collection methods, access conditions</dd>
-			<dt>Data dictionary</dt>
-			<dd>Variable names, definitions, units, allowed values, codes for missing data</dd>
-			<dt>Metadata standards</dt>
-			<dd>Dublin Core, DDI, Darwin Core, or discipline-specific schemas</dd>
-		</dl>
-    </section>
-    <section>
-    	<h2>Version control</h2>
+		<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px;">
+			<div>
+				<dl>
+					<dt>README</dt>
+					<dd>Project context, file descriptions, collection methods</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>Data dictionary</dt>
+					<dd>Variable names, units, allowed values, missing data codes</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>Metadata standards</dt>
+					<dd>Dublin Core, DDI, Darwin Core, or discipline-specific</dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>Version control</h2>
 		<ul>
 			<li>Git/GitHub: track changes, collaborate, maintain history</li>
 			<li>For code <em>and</em> data (small datasets, scripts, notebooks)</li>
@@ -295,8 +337,10 @@ OMB-110, Subpart C, section 36, (d) (i)</small>
 			<li>At minimum: consistent file naming with version numbers</li>
 			<li>Never overwrite raw data &mdash; keep originals untouched</li>
 		</ul>
-    </section>
+	</section>
 </section>
+
+<!-- ========== SHARING AND PRESERVING ========== -->
 <section>
 	<section>
 		<h2>Sharing and preserving data</h2>
@@ -311,7 +355,7 @@ OMB-110, Subpart C, section 36, (d) (i)</small>
 			<dt>Institutional repositories</dt>
 			<dd>Check with your library</dd>
 		</dl>
-		<small>re3data.org &mdash; Registry of Research Data Repositories</small>
+		<div class="footnote">re3data.org &mdash; Registry of Research Data Repositories</div>
 	</section>
 	<section>
 		<h2>Data citation</h2>
@@ -326,33 +370,37 @@ OMB-110, Subpart C, section 36, (d) (i)</small>
 	</section>
 	<section>
 		<h2>Preservation formats</h2>
-		<div class='col-md-6'>
-			<dl>
-				<dt>Prefer</dt>
-				<dd>Open, non-proprietary formats</dd>
-				<dd>CSV over Excel</dd>
-				<dd>TIFF/PNG over PSD</dd>
-				<dd>Plain text, PDF/A, XML, JSON</dd>
-				<dd>Uncompressed or lossless</dd>
-			</dl>
-		</div>
-		<div class='col-md-6'>
-			<dl>
-				<dt>Avoid</dt>
-				<dd>Proprietary binary formats</dd>
-				<dd>Software-dependent formats</dd>
-				<dd>Formats without open specs</dd>
-				<dd>Lossy compression</dd>
-				<dd>Encryption without documented keys</dd>
-			</dl>
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+			<div>
+				<dl>
+					<dt>Prefer</dt>
+					<dd>Open, non-proprietary formats</dd>
+					<dd>CSV over Excel</dd>
+					<dd>TIFF/PNG over PSD</dd>
+					<dd>Plain text, PDF/A, XML, JSON</dd>
+					<dd>Uncompressed or lossless</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>Avoid</dt>
+					<dd>Proprietary binary formats</dd>
+					<dd>Software-dependent formats</dd>
+					<dd>Formats without open specs</dd>
+					<dd>Lossy compression</dd>
+					<dd>Encryption without documented keys</dd>
+				</dl>
+			</div>
 		</div>
 	</section>
 	<section>
 		<h2>Storage media have lifespans</h2>
-		<img src="images/data/medialifeExtended.jpeg" alt="Infographic showing lifespan of various storage media">
-		<small>CrashPlan / Code 42 Software</small>
+		<img class="r-stretch" src="images/data/medialifeExtended.jpeg" alt="Infographic showing lifespan of various storage media">
+		<div class="footnote">CrashPlan / Code 42 Software</div>
 	</section>
 </section>
+
+<!-- ========== WRAP-UP ========== -->
 <section>
 	<section>
 		<h2>Key takeaways</h2>
@@ -376,35 +424,25 @@ OMB-110, Subpart C, section 36, (d) (i)</small>
 		</ul>
 	</section>
 </section>
+
 <section data-state="blackout">
 	<h1>THE END</h1>
 </section>
+
 </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<script>
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		hash: true,
+		center: true,
+		transition: 'slide',
+		plugins: [RevealNotes]
+	});
+</script>
 </body>
-		<script src="https://cdn.jsdelivr.net/npm/headjs@1.0.3/dist/1.0.0/head.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script>
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
+</html>
