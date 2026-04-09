@@ -1,0 +1,343 @@
+/* AI Discovery Presentation
+ * Dark theme with CUNY blue accents
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap');
+
+:root {
+  --background-color: #111318;
+  --section-divider-bg: #0a0d14;
+
+  --heading-font: Georgia, "Times New Roman", serif;
+  --body-font: "Lato", Helvetica, sans-serif;
+  --base-font-size: 32px;
+  --text-size: 16pt;
+  --h1-size: 48pt;
+  --h2-size: 34pt;
+  --h3-size: 22pt;
+  --footnote-size: 11pt;
+
+  --primary-color: #4A90D9;
+  --secondary-color: #D4A843;
+  --text-color: #E8E8E8;
+  --muted-color: #8899AA;
+  --line-color: #2A3040;
+  --weak-color: #C0392B;
+  --strong-color: #27AE60;
+  --adequate-color: #D4A843;
+
+  --slide-padding: 60px;
+  --slide-padding-top: 40px;
+  --content-gap: 25px;
+  --box-radius: 6px;
+}
+
+/* ===========================================
+   BASE STYLES
+   =========================================== */
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal-viewport {
+  background-color: var(--background-color);
+}
+
+.reveal-viewport.is-section-divider .slide-background.present {
+  background-color: var(--section-divider-bg) !important;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: var(--heading-font);
+  text-transform: none;
+  color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.reveal h1 { font-size: var(--h1-size); }
+.reveal h2 { font-size: var(--h2-size); margin-bottom: 0; }
+.reveal h3 { font-size: var(--h3-size); }
+
+.reveal p,
+.reveal li,
+.reveal td,
+.reveal th,
+.reveal blockquote {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* ===========================================
+   LISTS
+   =========================================== */
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.reveal ul ul li::before {
+  background: var(--muted-color);
+  width: 6px;
+  height: 6px;
+}
+
+.reveal blockquote p {
+  font-size: inherit;
+}
+
+/* ===========================================
+   SLIDE LAYOUT
+   =========================================== */
+
+.reveal .slides section {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: var(--slide-padding-top) var(--slide-padding) var(--slide-padding) var(--slide-padding) !important;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.reveal .slides section.stack {
+  padding: 0 !important;
+}
+
+.reveal .slides section > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: var(--content-gap);
+  text-align: left;
+}
+
+.reveal .slides section > .footnote {
+  position: absolute;
+  bottom: 15px;
+  left: var(--slide-padding);
+  right: var(--slide-padding);
+  font-size: var(--footnote-size);
+  color: var(--muted-color);
+}
+
+/* ===========================================
+   SECTION DIVIDERS
+   =========================================== */
+
+.reveal .slides section.section-divider {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+.reveal .slides section.section-divider h1 {
+  font-size: 52pt;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.reveal .slides section.section-divider p {
+  font-size: 20pt;
+  color: var(--muted-color);
+}
+
+/* ===========================================
+   TEXT UTILITIES
+   =========================================== */
+
+.text-lg { font-size: 18pt !important; }
+.text-xl { font-size: 20pt !important; }
+.text-2xl { font-size: 24pt !important; }
+.text-3xl { font-size: 28pt !important; }
+.text-4xl { font-size: 32pt !important; }
+.text-muted { color: var(--muted-color) !important; }
+.text-center { text-align: center !important; }
+.text-uppercase { text-transform: uppercase; letter-spacing: 0.1em; }
+.font-light { font-weight: 300; }
+.font-bold { font-weight: 600; }
+
+/* ===========================================
+   BLOCKQUOTES
+   =========================================== */
+
+.reveal blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  background: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+}
+
+.reveal blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  color: var(--muted-color);
+}
+
+/* ===========================================
+   CUSTOM COMPONENTS
+   =========================================== */
+
+/* Concept cards for discovery vs answer generation */
+.concept-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  padding: 20px 25px;
+  border-top: 3px solid var(--primary-color);
+}
+
+.concept-card.answer {
+  border-top-color: var(--secondary-color);
+}
+
+.concept-card h3 {
+  margin: 0 0 10px 0;
+  font-family: var(--body-font);
+}
+
+/* Criteria list items */
+.criteria-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.criteria-item .num {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 14pt;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: right;
+}
+
+.criteria-item .label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.criteria-item .desc {
+  color: var(--muted-color);
+  font-weight: 300;
+}
+
+/* Comparison matrix */
+.reveal table.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12pt;
+}
+
+.reveal table.matrix th {
+  background: rgba(74, 144, 217, 0.15);
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 11pt;
+  font-weight: 600;
+  border-bottom: 2px solid var(--line-color);
+  color: var(--text-color);
+}
+
+.reveal table.matrix th:first-child {
+  text-align: left;
+}
+
+.reveal table.matrix td {
+  padding: 7px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--line-color);
+  font-size: 12pt;
+}
+
+.reveal table.matrix td:first-child {
+  text-align: left;
+  font-weight: 600;
+  font-size: 12pt;
+}
+
+.reveal table.matrix .strong {
+  color: var(--strong-color);
+  font-weight: 600;
+}
+
+.reveal table.matrix .adequate {
+  color: var(--adequate-color);
+}
+
+.reveal table.matrix .weak {
+  color: var(--weak-color);
+  font-weight: 600;
+}
+
+.reveal table.matrix .unknown {
+  color: var(--muted-color);
+  font-style: italic;
+}
+
+/* Top accent line on content slides */
+.reveal .slides section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+}
+
+.reveal .slides section.section-divider::before {
+  display: none;
+}
+
+/* Highlight keyword */
+.highlight {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.highlight-blue {
+  color: var(--primary-color);
+  font-weight: 600;
+}
