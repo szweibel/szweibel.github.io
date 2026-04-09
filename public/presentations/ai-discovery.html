@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluating AI in Library Discovery</title>
+
+  <!-- Reveal.js core + theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="ai-discovery.css">
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ========== TITLE ========== -->
+      <section id="title" class="section-divider" data-state="is-section-divider">
+        <h1>Evaluating AI in Library Discovery</h1>
+        <p>Stephen Zweibel &middot; CUNY Graduate Center</p>
+      </section>
+
+      <!-- ========== THE SITUATION ========== -->
+      <section id="the-situation">
+        <h2>AI is already in your discovery tools</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 15px;">
+            <div class="concept-card">
+              <h3>Primo Research Assistant</h3>
+              <p>Conversational search, multi-document synthesis</p>
+            </div>
+            <div class="concept-card">
+              <h3>EBSCO AI</h3>
+              <p>Research assistant in EBSCOhost</p>
+            </div>
+            <div class="concept-card">
+              <h3>JSTOR AI &middot; Scopus AI &middot; Semantic Scholar</h3>
+              <p>AI across research databases</p>
+            </div>
+          </div>
+          <p class="text-2xl" style="margin-top: 30px;">Not requested by librarians. Arrived as vendor defaults.</p>
+        </div>
+      </section>
+
+      <!-- ========== DIVIDER: CORE QUESTION ========== -->
+      <section id="divider-core" class="section-divider" data-state="is-section-divider">
+        <h1>Two Kinds of AI</h1>
+      </section>
+
+      <!-- ========== DISCOVERY VS ANSWERS ========== -->
+      <section id="discovery-vs-answers">
+        <h2>Discovery assistance vs. answer generation</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div class="concept-card">
+              <h3><i class="fa-solid fa-compass" style="color: var(--primary-color);"></i> &nbsp;Discovery Assistance</h3>
+              <ul>
+                <li>Helps <strong>find and navigate</strong> sources</li>
+                <li>Suggests relevant materials</li>
+                <li>Leaves synthesis to the learner</li>
+              </ul>
+            </div>
+            <div class="concept-card answer">
+              <h3><i class="fa-solid fa-robot" style="color: var(--secondary-color);"></i> &nbsp;Answer Generation</h3>
+              <ul>
+                <li><strong>Synthesizes</strong> across sources</li>
+                <li>Generates narrative summaries</li>
+                <li>Blends sources into a single answer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== WHAT GETS LOST ========== -->
+      <section id="what-gets-lost">
+        <h2>Cognitive offloading</h2>
+        <div class="content">
+          <p class="text-2xl">A student who receives a summary of five articles has not done the work of reading them.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 30px;">
+            <div class="concept-card">
+              <h3>Gerlich (2025)</h3>
+              <p>Cognitive offloading to AI &rarr; reduced critical thinking<br><strong>r = &minus;0.75</strong></p>
+              <p class="text-muted" style="margin-top: 8px;">Strongest among younger, less experienced researchers</p>
+            </div>
+            <div class="concept-card">
+              <h3>Deng et al. (2025)</h3>
+              <p>Meta-analysis, 69 studies: ChatGPT <strong>improves performance</strong> while <strong>reducing mental effort</strong></p>
+              <p class="text-muted" style="margin-top: 8px;">Better metrics may reflect the tool, not the learning</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SOURCE-FORWARD DESIGN ========== -->
+      <section id="source-forward">
+        <h2>Source-forward design</h2>
+        <div class="content">
+          <p class="text-2xl" style="margin-bottom: 20px;">AI assists with <span class="highlight-blue">finding</span>. Synthesis stays with the <span class="highlight">learner</span>.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div>
+              <h3 style="color: var(--primary-color);"><i class="fa-solid fa-check"></i> Remove unhelpful friction</h3>
+              <ul>
+                <li>Confusing database interfaces</li>
+                <li>Boolean syntax requirements</li>
+                <li>Navigating unfamiliar library systems</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: var(--secondary-color);"><i class="fa-solid fa-xmark"></i> Preserve valuable friction</h3>
+              <ul>
+                <li>Reading actual sources</li>
+                <li>Comparing arguments</li>
+                <li>Forming your own conclusions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== DIVIDER: EVALUATING TOOLS ========== -->
+      <section id="divider-evaluating" class="section-divider" data-state="is-section-divider">
+        <h1>The CUNY AI Discovery Guide</h1>
+        <p>Seven evaluation criteria &middot; Adopted October 2025</p>
+      </section>
+
+      <!-- ========== CRITERION 1: TRANSPARENCY ========== -->
+      <section id="criterion-transparency">
+        <h2><span class="num" style="font-size: 28pt;">1</span> &nbsp;Transparency &amp; Citation Traceability</h2>
+        <div class="content">
+          <p class="text-lg">Students should see what was searched, which sources were used, and how each claim ties back to evidence.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 10px;">
+            <div>
+              <h3 style="color: var(--strong-color);"><i class="fa-solid fa-check"></i> Look for</h3>
+              <ul>
+                <li>Inline citations for each claim</li>
+                <li>Query breakdown showing interpretation</li>
+                <li>Clear indication of which corpus was searched</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: var(--weak-color);"><i class="fa-solid fa-flag"></i> Red flags</h3>
+              <ul>
+                <li>Citations only in aggregate lists</li>
+                <li>Synthesis without showing query logic</li>
+                <li>No way to see what was actually searched</li>
+              </ul>
+            </div>
+          </div>
+          <ul style="margin-top: 15px; font-size: 13pt;">
+            <li><strong>Scopus AI:</strong> inline references with clickable links, Copilot query breakdown</li>
+            <li><strong>JSTOR:</strong> grounded in the specific item being read, clear source attribution</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== CRITERION 2: USER AGENCY ========== -->
+      <section id="criterion-agency">
+        <h2><span class="num" style="font-size: 28pt;">2</span> &nbsp;User Agency</h2>
+        <div class="content">
+          <p class="text-lg">The interface should pull students back into the sources.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 10px;">
+            <div>
+              <h3 style="color: var(--strong-color);"><i class="fa-solid fa-check"></i> Look for</h3>
+              <ul>
+                <li>Prompts to explore, read more, follow up</li>
+                <li>Socratic scaffolding (questions, not answers)</li>
+                <li>AI output as starting point, not destination</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: var(--weak-color);"><i class="fa-solid fa-flag"></i> Red flags</h3>
+              <ul>
+                <li>Responses formatted as complete answers</li>
+                <li>No friction between retrieving and moving on</li>
+                <li>Design that signals "you're done"</li>
+              </ul>
+            </div>
+          </div>
+          <ul style="margin-top: 15px; font-size: 13pt;">
+            <li><strong>ChatGPT Study Mode:</strong> steps through problems incrementally</li>
+            <li><strong>Semantic Scholar:</strong> TLDRs keep users anchored to the paper</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== CRITERION 3: DISCOVERY VS ANSWERS ========== -->
+      <section id="criterion-discovery">
+        <h2><span class="num" style="font-size: 28pt;">3</span> &nbsp;Discovery Assistance vs. Answer Generation</h2>
+        <div class="content">
+          <p class="text-lg">The tool can support discovery. Reading and synthesis remain student work.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 10px;">
+            <div>
+              <h3 style="color: var(--strong-color);"><i class="fa-solid fa-check"></i> Look for</h3>
+              <ul>
+                <li>Search refinement, query expansion</li>
+                <li>Citation networks, concept maps</li>
+                <li>Per-document previews for triage</li>
+                <li>Extractive highlights pointing to passages</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: var(--weak-color);"><i class="fa-solid fa-flag"></i> Red flags</h3>
+              <ul>
+                <li>Multi-source synthesis into unified prose</li>
+                <li>Responses that read like literature reviews</li>
+                <li>"Research shows..." from limited results</li>
+              </ul>
+            </div>
+          </div>
+          <ul style="margin-top: 15px; font-size: 13pt;">
+            <li><strong>Primo RA &amp; Scopus AI:</strong> Weak. Blends sources into narratives</li>
+            <li><strong>EBSCO AI:</strong> Strong. Presents sources for direct engagement</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== CRITERION 4: SENSITIVE TOPICS ========== -->
+      <section id="criterion-sensitive">
+        <h2><span class="num" style="font-size: 28pt;">4</span> &nbsp;Sensitive-Topic Search</h2>
+        <div class="content">
+          <p class="text-xl" style="margin-bottom: 15px;">Safety filters designed for consumer chat do not map cleanly onto scholarly research.</p>
+          <div class="concept-card" style="border-top-color: var(--weak-color);">
+            <h3>Primo Research Assistant</h3>
+            <p class="text-lg">Blocked or errored on: <strong>"Gaza war"</strong> &middot; <strong>"Tulsa race massacre"</strong> &middot; <strong>"abortion access"</strong> &middot; <strong>"transgender rights"</strong></p>
+            <p class="text-muted" style="margin-top: 8px;">Likely from Azure OpenAI upstream content moderation</p>
+          </div>
+          <p class="text-lg" style="margin-top: 15px;">JSTOR AI, EBSCO AI, Scopus AI: no widespread blocking reported as of late 2025</p>
+        </div>
+      </section>
+
+      <!-- ========== CRITERION 5: PRIVACY ========== -->
+      <section id="criterion-privacy">
+        <h2><span class="num" style="font-size: 28pt;">5</span> &nbsp;Privacy &amp; Data Ethics</h2>
+        <div class="content">
+          <p class="text-lg">Patron queries should remain confidential and not be used to train commercial models. Data flows should be documented.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 10px;">
+            <div>
+              <h3 style="color: var(--strong-color);"><i class="fa-solid fa-check"></i> Look for</h3>
+              <ul>
+                <li>Written commitment: queries not used for training</li>
+                <li>Named AI service provider</li>
+                <li>Data processing agreement available</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: var(--weak-color);"><i class="fa-solid fa-flag"></i> Red flags</h3>
+              <ul>
+                <li>Privacy policy absent or generic</li>
+                <li>"May use data to improve services"</li>
+                <li>Can't name which AI company processes queries</li>
+              </ul>
+            </div>
+          </div>
+          <ul style="margin-top: 15px; font-size: 13pt;">
+            <li><strong>Scopus AI:</strong> explicitly states prompts sent to Azure OpenAI are private, not used for training</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== CRITERION 6: LIBRARY ALIGNMENT ========== -->
+      <section id="criterion-alignment">
+        <h2><span class="num" style="font-size: 28pt;">6</span> &nbsp;Library Alignment &amp; Access</h2>
+        <div class="content">
+          <p class="text-lg">AI links should take students to copies the library can actually provide.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 10px;">
+            <div>
+              <h3 style="color: var(--strong-color);"><i class="fa-solid fa-check"></i> Look for</h3>
+              <ul>
+                <li>Priority linking to subscribed content</li>
+                <li>Clear labels: subscription vs. open access</li>
+                <li>Integration with link resolvers</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: var(--weak-color);"><i class="fa-solid fa-flag"></i> Red flags</h3>
+              <ul>
+                <li>Links bypass proxy or authentication</li>
+                <li>Suggests sources library doesn't have</li>
+                <li>"Access denied" after following AI links</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CRITERION 7: LIBRARIAN CONTROL ========== -->
+      <section id="criterion-control">
+        <h2><span class="num" style="font-size: 28pt;">7</span> &nbsp;Librarian Control</h2>
+        <div class="content">
+          <p class="text-lg">Libraries need to be able to configure the system, review its behavior, and turn features off.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 10px;">
+            <div>
+              <h3 style="color: var(--strong-color);"><i class="fa-solid fa-check"></i> Look for</h3>
+              <ul>
+                <li>Toggle switches to enable/disable features</li>
+                <li>Role-based settings (faculty vs. students)</li>
+                <li>Usage statistics and analytics access</li>
+                <li>Configurable scope and disclosure language</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: var(--weak-color);"><i class="fa-solid fa-flag"></i> Red flags</h3>
+              <ul>
+                <li>Features auto-enabled without notice</li>
+                <li>Configuration requires a support ticket</li>
+                <li>A/B testing on patrons without consent</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== VENDOR COMPARISON ========== -->
+      <section id="vendor-matrix">
+        <h2>How the tools compare</h2>
+        <div class="content">
+          <table class="matrix">
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Transparency</th>
+                <th>Agency</th>
+                <th>Discovery vs. Answers</th>
+                <th>Sensitive Topics</th>
+                <th>Privacy</th>
+                <th>Library Alignment</th>
+                <th>Control</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>JSTOR AI</td>
+                <td class="strong">Strong</td>
+                <td class="adequate">Adequate</td>
+                <td class="adequate">Adequate</td>
+                <td class="adequate">Adequate</td>
+                <td class="strong">Strong</td>
+                <td class="strong">Strong</td>
+                <td class="adequate">Adequate</td>
+              </tr>
+              <tr>
+                <td>Primo RA</td>
+                <td class="adequate">Adequate</td>
+                <td class="weak">Weak</td>
+                <td class="weak">Weak</td>
+                <td class="weak">Weak</td>
+                <td class="adequate">Adequate</td>
+                <td class="adequate">Adequate</td>
+                <td class="adequate">Adequate</td>
+              </tr>
+              <tr>
+                <td>EBSCO AI</td>
+                <td class="strong">Strong</td>
+                <td class="strong">Strong</td>
+                <td class="strong">Strong</td>
+                <td class="adequate">Adequate</td>
+                <td class="strong">Strong</td>
+                <td class="strong">Strong</td>
+                <td class="unknown">Unknown</td>
+              </tr>
+              <tr>
+                <td>Scopus AI</td>
+                <td class="strong">Strong</td>
+                <td class="adequate">Adequate</td>
+                <td class="weak">Weak</td>
+                <td class="adequate">Adequate</td>
+                <td class="strong">Strong</td>
+                <td class="adequate">Adequate</td>
+                <td class="unknown">Unknown</td>
+              </tr>
+              <tr>
+                <td>Semantic Scholar</td>
+                <td class="adequate">Adequate</td>
+                <td class="adequate">Adequate</td>
+                <td class="strong">Strong</td>
+                <td class="adequate">Adequate</td>
+                <td class="adequate">Adequate</td>
+                <td class="weak">Weak</td>
+                <td class="unknown">N/A</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="footnote">CUNY AI Discovery Guide, August&ndash;September 2025. Tools evolve; verify current capabilities.</div>
+        </div>
+      </section>
+
+      <!-- ========== CLOSING ========== -->
+      <section id="closing">
+        <h2>Support learning over efficiency</h2>
+        <div class="content">
+          <ul class="text-2xl" style="margin-top: 20px;">
+            <li>Use AI to help students find sources</li>
+            <li>Keep reading and synthesis with the learner</li>
+            <li>Test tools with the Guide</li>
+            <li>Prefer designs that preserve source engagement</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== RESOURCES ========== -->
+      <section id="resources">
+        <h2>Guide and Article</h2>
+        <div class="content">
+          <ul class="text-lg">
+            <li><strong>CUNY Libraries AI Discovery Guide</strong><br><span class="text-muted">Evaluation criteria and vendor comparison</span></li>
+            <li><strong>"Evaluating AI Discovery Tools for Academic Libraries"</strong><br><span class="text-muted">Zweibel, C&amp;RL (forthcoming)</span></li>
+          </ul>
+          <div style="margin-top: 25px;">
+            <p class="text-lg" style="margin-bottom: 10px;">With the CUNY Library Research AI Task Force</p>
+            <ul style="columns: 2; column-gap: 40px; font-size: 12pt; color: var(--muted-color);">
+              <li>John DeLooper, Lehman</li>
+              <li>Mark Eaton, Kingsborough CC</li>
+              <li>Iris Finkel, Hunter</li>
+              <li>Kelly Karst, Brooklyn</li>
+              <li>Robin Naughton, Queens</li>
+              <li>Anne O'Reilly, LaGuardia CC</li>
+              <li>Jana Porter, Bronx CC</li>
+              <li>Alevtina Verbovetskaya, OLS</li>
+            </ul>
+          </div>
+          <div style="margin-top: 15px; text-align: center;">
+            <p class="text-2xl" style="color: var(--primary-color);">Stephen Zweibel</p>
+            <p class="text-lg text-muted">szweibel@gc.cuny.edu</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      transition: 'slide',
+      center: false,
+      plugins: [ RevealChart ],
+      chart: {
+        defaults: Object.assign({
+          color: 'rgba(0, 0, 0, 0.8)',
+          borderColor: 'rgba(0, 0, 0, 0.8)',
+          devicePixelRatio: 2
+        }, window.location.search.includes('export') ? { animation: false } : {})
+      }
+    });
+  </script>
+</body>
+</html>
