@@ -85,17 +85,17 @@
         <div class="content">
           <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center;">
             <div>
-              <ul>
-                <li><strong>Regular:</strong> you ask, maybe one tool call, an answer</li>
-                <li><strong>Agentic:</strong> it reads the result, decides what to do next, calls another tool &mdash; and keeps going</li>
+              <ul style="font-size: 19pt;">
+                <li><strong>Regular:</strong> you ask, the model answers (maybe with one tool call)</li>
+                <li><strong>Agentic:</strong> a <strong>harness</strong> wraps the model in a loop &mdash; runs the tool call, feeds the result back, prompts the model again</li>
                 <li>Stops when the task seems done, or when it gets stuck</li>
-                <li style="margin-top: 18px;">The cohort used <strong>Claude Code</strong>; near the end, <strong>Codex</strong> too</li>
+                <li style="margin-top: 14px;">Harnesses: <strong>Claude Code</strong>, <strong>Codex</strong>, Cursor</li>
               </ul>
             </div>
             <div style="background: #fafafa; padding: 16px; border-radius: 4px;">
               <img src="showcase-images/regular-flow.png" alt="ASK to TOOL CALL to ANSWER" style="width: 100%; max-height: 110px; object-fit: contain; display: block;">
               <hr style="border: none; border-top: 1px solid #ccc; margin: 10px 0;">
-              <img src="showcase-images/agentic-loop.png" alt="The agentic loop diagram" style="width: 100%; max-height: 320px; object-fit: contain; display: block;">
+              <img src="showcase-images/agentic-loop.png" alt="The agentic loop diagram" style="width: 100%; max-height: 280px; object-fit: contain; display: block;">
             </div>
           </div>
         </div>
