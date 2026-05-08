@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recognizing AI Writing</title>
+
+  <!-- Reveal.js core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="recognizing-ai-writing.css">
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title" class="section-divider" data-state="is-section-divider">
+        <h1>Recognizing AI Writing</h1>
+        <p class="text-muted" style="margin-top: 40px; font-size: 16pt;">Stephen Zweibel</p>
+        <p class="text-muted" style="font-size: 14pt;">Digital Scholarship Librarian, Graduate Center, CUNY</p>
+      </section>
+
+      <section id="detectors">
+        <h2>AI detectors don't work very well</h2>
+        <div class="content">
+          <ul>
+            <li>False positives are common, including on real student writing</li>
+            <li>Anyone who edits their AI output a little bit can defeat them</li>
+            <li>Pangram and the others are useful, but they don't settle anything</li>
+            <li>Treating detection as the starting point sets up an arms race nobody wins</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="exposure">
+        <h2>Mostly, it's exposure</h2>
+        <div class="content">
+          <ul>
+            <li>Read enough AI writing and you start to see it</li>
+            <li>No single tell does the work</li>
+            <li>Some thoughts that help follow</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="template">
+        <h2>Read for the template</h2>
+        <div class="content">
+          <ul>
+            <li>The question isn't &ldquo;was this written by AI&rdquo;</li>
+            <li>The question is &ldquo;what rhetorical pattern is this text running&rdquo;</li>
+            <li>That framing avoids the false certainty of detectors</li>
+            <li>It also gives readers concrete things to notice</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="first-sentence-scan">
+        <h2>The first-sentence scan</h2>
+        <div class="content">
+          <ul>
+            <li>Read only the first sentence of each paragraph before reading for content</li>
+            <li>If those openers form a neat rhetorical ladder, the writing may be running an AI template</li>
+            <li>It's the fastest method I know that doesn't need a tool</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="paragraph-openers">
+        <h2>Paragraph openers AI keeps using</h2>
+        <div class="content">
+          <ul style="font-size: 18pt;">
+            <li>Broad frame &middot; <em>&ldquo;Everyone is talking about X, but&hellip;&rdquo;</em></li>
+            <li>Big claim &middot; <em>&ldquo;The real issue is&hellip;&rdquo;</em></li>
+            <li>Announced insight &middot; <em>&ldquo;The biggest thing people miss is&hellip;&rdquo;</em></li>
+            <li>Faux-human aside &middot; <em>&ldquo;People feel like&hellip;&rdquo;</em></li>
+            <li>Surprise marker &middot; <em>&ldquo;What's wild is&hellip;&rdquo;</em></li>
+            <li>Payoff sentence &middot; <em>&ldquo;And that is why&hellip;&rdquo;</em></li>
+            <li>Engagement hook &middot; <em>&ldquo;What do you think?&rdquo;</em></li>
+          </ul>
+          <p class="text-muted" style="margin-top: 16px; font-size: 15pt;">Plenty of human writers use these. The signal is that AI prose uses one in every paragraph.</p>
+        </div>
+      </section>
+
+      <section id="surface">
+        <h2>Lowercase and &ldquo;lowkey&rdquo; aren't enough</h2>
+        <div class="content">
+          <ul>
+            <li>People often try to humanize AI output by going lowercase, dropping in &ldquo;lowkey,&rdquo; or breaking into fragments</li>
+            <li>The surface gets informal; the paragraph structure stays the same</li>
+            <li>The first-sentence scan still catches it</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="modern-love">
+        <h2>Modern Love (NYT, 2026)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">Kate Gilgan, &ldquo;Modern Love&rdquo; column. Readers said it sounded like AI. The author later said she used AI tools for &ldquo;inspiration and guidance and correction.&rdquo;</p>
+          <blockquote style="font-size: 22pt; line-height: 1.4; border-left-color: #888;">
+            Not hate. Not anger. Just the flat finality of a heart too tired to keep trying.
+          </blockquote>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 18px;">What to notice: the fragments are arranged for impact, the metaphor explains the feeling too neatly, and the whole sentence performs an emotional landing that no actual heartbreak sounds like.</p>
+        </div>
+      </section>
+
+      <section id="ye">
+        <h2>Vanity Fair: Ye email Q&amp;A (2026)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">After Ye's WSJ apology advertisement, Vanity Fair published written answers attributed to him. Roger Friedman at Showbiz411 wrote that the email interview &ldquo;sure sounds like AI answered the questions.&rdquo;</p>
+          <ul>
+            <li>The phrasing has reputation-management polish, not Ye's usual public voice</li>
+            <li>Therapy-and-accountability abstractions: &ldquo;remorse,&rdquo; &ldquo;treatment,&rdquo; &ldquo;meaningful change,&rdquo; &ldquo;positive course&rdquo;</li>
+            <li>One medication answer folds in generalized statistics that sound sourced but not personally grounded</li>
+            <li>The article format gives plausible deniability: who actually drafted these?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="blanchard">
+        <h2>Margaux Blanchard (Wired, BI, others, 2025)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">Wired and Business Insider removed pieces by &ldquo;Margaux Blanchard,&rdquo; a freelancer who appears not to exist. The whole package was constructed: pitch, byline, bio, personal anecdotes, verification trail.</p>
+          <blockquote style="font-size: 22pt; line-height: 1.4; border-left-color: #888;">
+            archivists of truth
+          </blockquote>
+          <blockquote style="font-size: 22pt; line-height: 1.4; border-left-color: #888;">
+            exists in the industry's collective memory
+          </blockquote>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 14px;">What to notice: cinematic occupational language with no verifiable ground underneath. It sounds like a magazine pitch before it proves the thing it pitches exists.</p>
+        </div>
+      </section>
+
+      <section id="si">
+        <h2>Sports Illustrated (2023)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">SI published commerce content under fake author names with AI-generated headshots and bios. The reviews themselves had the tell.</p>
+          <blockquote style="font-size: 22pt; line-height: 1.4; border-left-color: #888;">
+            volleyball &ldquo;can be a little tricky to get into, especially without an actual ball&rdquo;
+          </blockquote>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 18px;">What to notice: the prose states a premise so basic it sounds alien. It explains the material condition of the sport as if discovering it from metadata.</p>
+        </div>
+      </section>
+
+      <section id="suntimes">
+        <h2>Chicago Sun-Times reading list (May 2025)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">A syndicated summer guide ran in the Sun-Times and the Philadelphia Inquirer with fake book recommendations attributed to real authors.</p>
+          <ul style="font-size: 22pt;">
+            <li><em>Nightshade Market</em> by Min Jin Lee</li>
+            <li><em>The Longest Day</em> by Rumaan Alam</li>
+            <li><em>The Rainmakers</em> by Percival Everett</li>
+          </ul>
+          <p class="text-muted" style="font-size: 15pt; margin-top: 20px;">None of these books exist. The check here isn't stylistic. You just look up the books.</p>
+        </div>
+      </section>
+
+      <section id="cnet">
+        <h2>CNET Money explainers (2023)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">CNET ran AI-assisted finance pieces under the &ldquo;CNET Money Staff&rdquo; byline, then had to correct dozens of them.</p>
+          <blockquote style="font-size: 22pt; line-height: 1.4; border-left-color: #888;">
+            The choice between a bank and credit union is not one-size-fits-all.
+          </blockquote>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 18px;">What to notice: it's serviceable. That's the problem. The sentence could appear in almost any consumer-finance explainer. Fluent generic prose lowers the reader's guard.</p>
+        </div>
+      </section>
+
+      <section id="gannett">
+        <h2>Gannett high school sports recaps (2023)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">Gannett ran AI-written recaps of high school games. Readers ridiculed them. Gannett paused the experiment.</p>
+          <blockquote style="font-size: 24pt; line-height: 1.4; border-left-color: #888;">
+            a close encounter of the athletic kind
+          </blockquote>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 18px;">The phrase showed up across multiple game writeups. The deeper problem: no player names, no reported scenes, no local knowledge. A box score turned into prose can't know that the goalie is also the math teacher's kid.</p>
+        </div>
+      </section>
+
+      <section id="msn">
+        <h2>MSN obituary for Brandon Hunter (2023)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">MSN published an AI-generated obituary for the former NBA player Brandon Hunter, who died at 42.</p>
+          <ul style="font-size: 22pt;">
+            <li>Headline: &ldquo;Brandon Hunter useless at 42&rdquo;</li>
+            <li>&ldquo;performed in 67 video games&rdquo;</li>
+            <li>&ldquo;handed away&rdquo;</li>
+          </ul>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 20px;">What to notice: wrong synonym selection, the texture of bad translation, no understanding of obituary as a genre. The same kind of failure that's awkward in a product blurb is grotesque in an obituary.</p>
+        </div>
+      </section>
+
+      <section id="shy-girl">
+        <h2>Hachette's <em>Shy Girl</em> (March 2026)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">Hachette canceled the U.S. publication of Mia Ballard's horror novel and discontinued the U.K. edition after AI-use concerns. Readers and reviewers flagged the book before the publisher acted.</p>
+          <ul>
+            <li>The first move was a public reading-community sense that something was off</li>
+            <li>The second was contract, attribution, and editorial responsibility catching up</li>
+            <li>This case shows narrative-level tells, not just sentence-level ones</li>
+            <li>AI fiction tends to over-explain themes, favor tidy single-track plots, and show less temporal complexity than human stories</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="peterbot">
+        <h2>The AI apology formula</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">After Fortnite pro Peterbot was caught making racist remarks, his apology read like every AI-generated apology of the last two years.</p>
+          <blockquote style="font-size: 22pt; line-height: 1.4; border-left-color: #888;">
+            I want to sincerely apologize to the communities affected and to anyone who has been hurt by my words.
+          </blockquote>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 18px;">The shape is recognizable: context, responsibility, apology, growth. Once you've seen it twice you see it everywhere. Half of corporate Twitter now sounds like this.</p>
+        </div>
+      </section>
+
+      <section id="latimes">
+        <h2>LA Times &ldquo;Insights&rdquo; (2025)</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">The LA Times added an AI tool that attaches generated summaries and counterpoints to opinion pieces. The paper discloses the feature, so this isn't hidden AI writing. The voice is the lesson.</p>
+          <ul>
+            <li>The tone is flat, even, both-sides</li>
+            <li>The original opinion piece had a clear human stance</li>
+            <li>The AI counterpoint replaces argument with viewpoint-management</li>
+            <li>It's worth showing students because the language itself teaches: this is what argument sounds like when it's been smoothed for a feature</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="amodei">
+        <h2>Vanity Fair: &ldquo;Dario Amodei Has a Cold&rdquo;</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 16px;">Joe Hagan didn't get an interview with the Anthropic CEO. So he fed Claude prior interviews, the Davos comments, and Amodei's essays, then asked Claude to simulate an interview in the style of Raymond Chandler's <em>The Big Sleep</em>. The simulation is in the article, disclosed.</p>
+          <ul>
+            <li>This is the deliberate, declared end of the spectrum</li>
+            <li>Reading question: where does the disclosure appear, and is it loud enough?</li>
+            <li>Reading question: what does the simulated interview accomplish that a regular feature wouldn't?</li>
+            <li>A useful counterexample to the &ldquo;all AI writing is slop&rdquo; reading</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="pangram-contrast">
+        <h2>Pangram's cafe-review contrast</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div>
+              <p class="text-muted" style="font-size: 13pt; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.1em;">AI</p>
+              <blockquote style="font-size: 19pt; line-height: 1.4; border-left-color: #888; margin-top: 0;">
+                a delightful gem<br>
+                inviting ambiance<br>
+                the perfect place to unwind
+              </blockquote>
+            </div>
+            <div>
+              <p class="text-muted" style="font-size: 13pt; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.1em;">Human</p>
+              <blockquote style="font-size: 19pt; line-height: 1.4; border-left-color: #888; margin-top: 0;">
+                some bites were just sausage and nothing else
+              </blockquote>
+            </div>
+          </div>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 20px;">The AI review performs satisfaction with the idea of a cafe. The human review has odd, embodied details that an actual meal leaves behind. That's the thing AI prose has the hardest time faking: local friction.</p>
+        </div>
+      </section>
+
+      <section id="spectrum">
+        <h2>Authorship is a spectrum</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 14pt; margin-bottom: 18px;">Pangram now describes four points along a spectrum, which is more useful than a yes/no answer.</p>
+          <ul style="font-size: 22pt;">
+            <li>Fully human-written</li>
+            <li>Lightly AI-assisted</li>
+            <li>Moderately AI-assisted</li>
+            <li>Fully AI-generated</li>
+          </ul>
+          <p class="text-muted" style="font-size: 14pt; margin-top: 18px;">Many of the cases readers flag are in the middle two. That's the messy zone where disclosure policy hasn't caught up.</p>
+        </div>
+      </section>
+
+      <section id="exercise">
+        <h2>Exercise</h2>
+        <div class="content">
+          <p style="margin-bottom: 16px;">Hand out three short pieces with the sources hidden:</p>
+          <ul>
+            <li>One unedited AI response</li>
+            <li>One AI response edited for tone but not structure</li>
+            <li>One human-written piece with its own unevenness and local specificity</li>
+          </ul>
+          <p style="margin-top: 16px;">Ask people to mark:</p>
+          <ul>
+            <li>Paragraph openers that announce the paragraph's job</li>
+            <li>Phrases that inflate significance without adding evidence</li>
+            <li>Places where adding a concrete detail would sharpen the prose</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="goal">
+        <h2>The goal</h2>
+        <div class="content">
+          <ul>
+            <li>Better reading</li>
+            <li>Better revision</li>
+            <li>Better questions about authorship and disclosure</li>
+            <li>Not accusation. Not surveillance. Not a detector arms race.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="questions" class="section-divider" data-state="is-section-divider">
+        <h1>Questions?</h1>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      transition: 'slide',
+      center: false,
+      plugins: [ RevealChart ],
+      chart: {
+        defaults: Object.assign({
+          color: 'rgba(0, 0, 0, 0.8)',
+          borderColor: 'rgba(0, 0, 0, 0.8)',
+          devicePixelRatio: 2
+        }, window.location.search.includes('export') ? { animation: false } : {})
+      }
+    });
+  </script>
+</body>
+</html>
