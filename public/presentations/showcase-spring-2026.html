@@ -41,16 +41,55 @@
         </div>
       </section>
 
-      <section id="what-tools-do">
-        <h2>What these tools do</h2>
+      <section id="have-you-used">
+        <h2>Have you used these?</h2>
         <div class="content">
           <ul>
-            <li>Claude Code reads files, edits them, runs the result, revises after errors</li>
-            <li>A workflow described becomes a running script the same hour</li>
-            <li>Codex added in the last few weeks</li>
-            <li>Most of the program: checking what the tools produced</li>
-            <li>Running artifacts before the work of judging them</li>
+            <li>ChatGPT, Claude, Copilot, Gemini</li>
+            <li>You type something, it &ldquo;types&rdquo; back</li>
+            <li>Predicting the next word over and over, very fast</li>
+            <li>Trained on a lot of text, learned patterns</li>
+            <li>Fluent &mdash; but not <em>grounded</em></li>
           </ul>
+        </div>
+      </section>
+
+      <section id="groundedness">
+        <h2>Reaching for groundedness</h2>
+        <div class="content">
+          <ul>
+            <li>Sometimes it searches the web</li>
+            <li>Sometimes it reads a file you uploaded</li>
+            <li>Sometimes it runs code</li>
+          </ul>
+          <p style="margin-top: 25px;">A <strong>tool</strong> is a function the system can call. &ldquo;Search this,&rdquo; &ldquo;fetch that,&rdquo; &ldquo;calculate this.&rdquo; The system has a list of tools and picks one when it seems relevant. That's <strong>tool use</strong>.</p>
+        </div>
+      </section>
+
+      <section id="agentic-loop">
+        <h2>Agentic means it loops</h2>
+        <div class="content">
+          <ul>
+            <li><strong>Regular:</strong> you ask, maybe one tool call, an answer</li>
+            <li><strong>Agentic:</strong> it reads the result, decides what to do next, calls another tool &mdash; and keeps going</li>
+            <li>Stops when the task seems done, or when it gets stuck</li>
+            <li>The cohort used <strong>Claude Code</strong>; near the end, <strong>Codex</strong> too</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="example">
+        <h2>What that looks like</h2>
+        <div class="content">
+          <p style="font-style: italic; margin-bottom: 18px;">&ldquo;Find recent books on music theory we don't already own.&rdquo;</p>
+          <ul>
+            <li>Searches WorldCat for recent music theory books &mdash; 25 results with ISBNs</li>
+            <li>Filters to titles not already held by the institution</li>
+            <li>Checks Primo by ISBN to verify holdings</li>
+            <li>Fetches publisher sites for working links</li>
+            <li>Returns a list ready for ordering: title, author, publisher, ISBN, link</li>
+          </ul>
+          <p class="text-muted" style="margin-top: 18px; font-size: 16pt;">(Then the librarian checks whether the list is actually right.)</p>
         </div>
       </section>
 
