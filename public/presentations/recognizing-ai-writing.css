@@ -208,10 +208,17 @@
   border-left: 4px solid var(--primary-color);
   padding-left: 20px;
   margin: 20px 0;
+  font-style: normal !important;
   background: none;
   box-shadow: none;
   width: 100%;
   max-width: none;
+}
+
+.reveal blockquote span,
+.reveal blockquote p,
+.reveal blockquote div {
+  font-style: normal !important;
 }
 
 .reveal blockquote cite {
