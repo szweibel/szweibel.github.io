@@ -1,6 +1,4 @@
-@import "tailwindcss";
-
-@theme {
+:root {
   /* Brutalist Dark Mode Color System */
   --color-bg: #121212;
   --color-bg-alt: #1e1e1e;
@@ -12,10 +10,6 @@
   --color-accent: #ff6b35;
   --color-accent-hover: #ff8c5a;
 
-  /* Semantic mappings */
-  --color-bg-primary: var(--color-bg);
-  --color-bg-secondary: var(--color-bg-alt);
-  --color-bg-surface: var(--color-bg);
 }
 
 /* Base reset */
@@ -95,6 +89,10 @@ h4 {
 p {
   margin: 0 0 1.25rem 0;
   max-width: 70ch;
+}
+
+strong {
+  color: var(--color-text);
 }
 
 /* Code styling */
@@ -247,5 +245,15 @@ button:hover {
   a {
     color: black;
     text-decoration: underline;
+  }
+
+  .nav-container,
+  .footer {
+    display: none;
+  }
+
+  .main-content {
+    max-width: none;
+    padding: 0;
   }
 }

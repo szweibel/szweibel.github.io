@@ -4,7 +4,7 @@ journal: "Code4Lib Journal"
 year: 2022
 type: "peer-reviewed"
 authors: ["Stephen Zweibel"]
-url: "https://journal.code4lib.org/articles/16315"
+url: "https://journal.code4lib.org/articles/16414"
 ---
 
 Describes an automated system for handling reference consultation requests using JavaScript and Google Forms.

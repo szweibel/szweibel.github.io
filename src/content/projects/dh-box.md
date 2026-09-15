@@ -1,8 +1,7 @@
 ---
 title: "DH Box"
-description: "A cloud-based Digital Humanities platform providing accessible computational infrastructure for humanities scholars - NEH Start-Up Grant recipient"
+description: "A cloud-based digital humanities platform that gave scholars a ready-to-use computational environment."
 github: "https://github.com/DH-Box/dhbox"
-image: "/presentations/images/logo.png"
 featured: true
 status: "Historical/Complete"
 funding: "NEH Start-Up Grant ($60,000)"

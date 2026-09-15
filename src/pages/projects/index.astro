@@ -8,237 +8,68 @@ const allProjects = (await getCollection('projects'))
 
 <BaseLayout
   title="Projects - Stephen Zweibel"
-  description="Open source projects, digital humanities tools, and library applications"
+  description="AI infrastructure, digital humanities tools, library applications, and teaching resources"
 >
-  <style>
-    .page-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
+  <header class="page-header">
+    <h1>Projects</h1>
+    <p>
+      AI infrastructure, digital humanities projects, library applications, and open teaching materials. Some are current services; others document earlier experiments and grant-funded work.
+    </p>
+  </header>
 
-    .page-header {
-      margin-bottom: 4rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .page-title {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .page-description {
-      font-size: 1.25rem;
-      color: var(--color-text-muted);
-      max-width: 700px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-
-    .project-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-    }
-
-    .project-card:hover {
-      border-color: var(--color-cyan-500);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 229, 255, 0.15);
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      border: 1px solid var(--color-border);
-    }
-
-    .project-header {
-      margin-bottom: 1rem;
-    }
-
-    .project-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .project-title a {
-      color: var(--color-text);
-      transition: color 0.2s ease;
-    }
-
-    .project-title a:hover {
-      color: var(--color-cyan-500);
-    }
-
-    .funding-badge {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      background: var(--color-deep);
-      border: 1px solid var(--color-pink-500);
-      border-radius: 20px;
-      font-size: 0.875rem;
-      color: var(--color-pink-500);
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-
-    .project-description {
-      color: var(--color-text-muted);
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .tag {
-      padding: 0.25rem 0.75rem;
-      background: var(--color-deep);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      font-size: 0.75rem;
-      color: var(--color-text-dim);
-    }
-
-    .project-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 1rem;
-      border-top: 1px solid var(--color-border);
-    }
-
-    .github-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--color-cyan-500);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s ease;
-    }
-
-    .github-link:hover {
-      color: var(--color-cyan-400);
-    }
-
-    .project-year {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.875rem;
-      color: var(--color-text-dim);
-    }
-
-    .footer-note {
-      padding: 2rem;
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      text-align: center;
-      color: var(--color-text-muted);
-    }
-
-    @media (max-width: 768px) {
-      .page-container {
-        padding: 2rem 1.5rem;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-
-  <div class="page-container">
-    <div class="page-header">
-      <h1 class="page-title">Projects</h1>
-      <p class="page-description">
-        Digital humanities tools, library applications, and educational resources developed for research and teaching.
-      </p>
-    </div>
-
-    <div class="projects-grid">
-      {allProjects.map((project) => (
+  <div class="projects-list">
+    {allProjects.map((project) => {
+      const projectUrl = project.data.url ?? project.data.github;
+      return (
         <article class="project-card">
-          {project.data.image && (
-            <img
-              src={project.data.image}
-              alt={project.data.title}
-              class="project-image"
-            />
-          )}
-
-          <div class="project-header">
-            <h2 class="project-title">
-              {project.data.github ? (
-                <a href={project.data.github} target="_blank" rel="noopener noreferrer">
-                  {project.data.title}
-                </a>
-              ) : (
-                <span>{project.data.title}</span>
-              )}
+          <div class="project-heading">
+            <h2>
+              {projectUrl ? (
+                <a href={projectUrl} target="_blank" rel="noopener noreferrer">{project.data.title}</a>
+              ) : project.data.title}
             </h2>
+            {project.data.year && <span class="project-year">{project.data.year}</span>}
           </div>
 
-          {project.data.funding && (
-            <div class="funding-badge">{project.data.funding}</div>
+          {(project.data.status || project.data.funding) && (
+            <p class="project-meta">{[project.data.status, project.data.funding].filter(Boolean).join(' · ')}</p>
           )}
 
-          <p class="project-description">{project.data.description}</p>
+          <p>{project.data.description}</p>
 
-          {project.data.tags && project.data.tags.length > 0 && (
-            <div class="project-tags">
-              {project.data.tags.map((tag: string) => (
-                <span class="tag">{tag}</span>
-              ))}
-            </div>
+          {project.data.tags && (
+            <ul class="project-tags" aria-label="Project topics">
+              {project.data.tags.map((tag) => <li>{tag}</li>)}
+            </ul>
           )}
 
-          <div class="project-footer">
-            <div>
-              {project.data.github && (
-                <a
-                  href={project.data.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="github-link"
-                >
-                  View on GitHub →
-                </a>
-              )}
-            </div>
-            {project.data.year && (
-              <span class="project-year">{project.data.year}</span>
-            )}
+          <div class="project-links">
+            {project.data.url && <a href={project.data.url} target="_blank" rel="noopener noreferrer">Visit project</a>}
+            {project.data.github && <a href={project.data.github} target="_blank" rel="noopener noreferrer">Source code</a>}
           </div>
         </article>
-      ))}
-    </div>
-
-    <div class="footer-note">
-      <p>
-        Additional projects, workshop materials, and experimental work are available on{' '}
-        <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>.
-      </p>
-    </div>
+      );
+    })}
   </div>
+
+  <aside class="footer-note">
+    More workshop materials and experiments are available on <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer">GitHub</a>.
+  </aside>
 </BaseLayout>
+
+<style>
+  .page-header { margin-bottom: 2.5rem; }
+  .page-header p { color: var(--color-text-muted); }
+  .projects-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .project-card { display: flex; flex-direction: column; padding: 1.25rem; border: 1px solid var(--color-border); background: var(--color-bg-alt); }
+  .project-heading { display: flex; gap: 1rem; justify-content: space-between; align-items: baseline; }
+  .project-heading h2 { font-size: 1.2rem; margin: 0 0 0.5rem; }
+  .project-year, .project-meta { color: var(--color-text-muted); font-size: 0.8rem; }
+  .project-meta { margin-bottom: 0.75rem; }
+  .project-card > p:not(.project-meta) { color: var(--color-text-muted); font-size: 0.9rem; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin-top: auto; padding: 0; }
+  .project-tags li { border: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.7rem; margin: 0; padding: 0.15rem 0.4rem; }
+  .project-links { display: flex; flex-wrap: wrap; gap: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--color-border); font-size: 0.85rem; }
+  .footer-note { border-left: 3px solid var(--color-border); color: var(--color-text-muted); margin-top: 2rem; padding: 0.75rem 1rem; }
+  @media (max-width: 680px) { .projects-list { grid-template-columns: 1fr; } }
+</style>

@@ -1,269 +1,162 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const publications = (await getCollection('publications'))
+  .filter((publication) => publication.data.authors?.includes('Stephen Zweibel'))
+  .sort((a, b) => b.data.year - a.data.year);
 ---
 
 <BaseLayout
   title="Curriculum Vitae - Stephen Zweibel"
-  description="Curriculum Vitae for Stephen Zweibel, Digital Scholarship Librarian at CUNY Graduate Center"
+  description="Curriculum vitae for Stephen Zweibel, Associate Professor and Digital Scholarship Librarian at the CUNY Graduate Center"
 >
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="mb-10">
-      <h1 class="text-4xl font-semibold text-charcoal mb-8">Curriculum Vitae</h1>
-      <div class="text-charcoal leading-relaxed bg-warm-gray-50 p-8 rounded-lg">
-        <p><strong class="text-rust-600">Stephen Zweibel</strong></p>
-        <p>Digital Scholarship Librarian, Associate Professor</p>
-        <p>Mina Rees Library, Room 2313</p>
-        <p>The Graduate Center, City University of New York</p>
-        <p>365 Fifth Avenue, New York, NY 10016</p>
-        <p class="mt-3">
-          <a href="mailto:szweibel@gc.cuny.edu" class="text-rust-600 hover:text-rust-700 font-medium transition-colors">szweibel@gc.cuny.edu</a> |
-          212-817-7067
-        </p>
+  <article class="cv">
+    <header class="cv-header">
+      <h1>Curriculum Vitae</h1>
+      <div class="contact-block">
+        <strong>Stephen Zweibel</strong><br />
+        Associate Professor &amp; Digital Scholarship Librarian<br />
+        Mina Rees Library, CUNY Graduate Center<br />
+        365 Fifth Avenue, New York, NY 10016<br />
+        <a href="mailto:szweibel@gc.cuny.edu">szweibel@gc.cuny.edu</a>
       </div>
-    </div>
+    </header>
 
-    <div class="space-y-10">
-      <!-- Professional Experience -->
-      <section>
-        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">Professional Experience</h2>
-
-        <div class="space-y-10">
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-2">CUNY Graduate Center</h3>
-            <p class="text-charcoal font-medium">Digital Scholarship Librarian, Associate Professor</p>
-            <p class="text-warm-gray-600 text-sm mb-4">Spring 2016-Present</p>
-            <ul class="list-disc pl-6 space-y-2 text-charcoal marker:text-rust-500 leading-relaxed">
-              <li>Support AI literacy initiatives and generative AI integration in academic libraries</li>
-              <li>Support, coordinate, collaborate, and consult with faculty and students on digital research projects</li>
-              <li>Lead library workshops on research and technology, embed in classrooms to teach digital techniques</li>
-              <li>Lead the Web Team, determining website design and functionality</li>
-              <li>Serve as programming resource for humanities research</li>
-              <li>Provide reference support and subject liaison work for: AI, Comparative Literature, Data Science, Data Visualization, Digital Humanities, French, Music</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-2">Hunter College</h3>
-            <p class="text-charcoal font-medium">Visiting Lecturer</p>
-            <p class="text-warm-gray-600 text-sm mb-4">Oct. 2012-Aug. 2015</p>
-            <ul class="list-disc pl-6 space-y-2 text-charcoal marker:text-rust-500 leading-relaxed">
-              <li>Built and deployed a mobile, responsive library catalog for CUNY+, including custom API</li>
-              <li>Developed Augur web application to track and analyze reference data</li>
-              <li>Wrote macros to automate catalog operations, saving thousands of hours of labor</li>
-              <li>Provided reference service and taught information literacy classes</li>
-              <li>Led workshops teaching programming (Python, JavaScript) to CUNY librarians</li>
-            </ul>
-          </div>
+    <section>
+      <h2>Professional experience</h2>
+      <div class="cv-entry">
+        <div>
+          <h3>CUNY Graduate Center</h3>
+          <p class="role">Associate Professor and Digital Scholarship Librarian</p>
         </div>
-      </section>
+        <p class="date">2016–present</p>
+      </div>
+      <ul>
+        <li>Consult with students and faculty on digital research, data, visualization, web publishing, preservation, and computational methods.</li>
+        <li>Teach graduate courses and workshops in programming, research computing, and AI-assisted development.</li>
+        <li>Serve as liaison for Computational Linguistics, Data Science, Data Visualization, Demography, Digital Humanities, and Geography/GIS.</li>
+        <li>Co-direct the <a href="https://ailab.gc.cuny.edu/">CUNY AI Lab</a>, developing shared AI infrastructure, tools, documentation, and professional learning for CUNY.</li>
+      </ul>
 
-      <!-- Education -->
-      <section>
-        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">Education</h2>
-        <ul class="space-y-4 text-charcoal">
-          <li>
-            <strong class="text-rust-600">Master of Arts in Liberal Studies, Digital Humanities Track</strong><br>
-            <span>CUNY Graduate Center, February 2016</span>
-          </li>
-          <li>
-            <strong class="text-rust-600">Master of Science in Library Information Science</strong><br>
-            <span>Palmer School of Long Island University, June 2010</span>
-          </li>
-          <li>
-            <strong class="text-rust-600">Bachelor of Liberal Arts</strong><br>
-            <span>St. John's College, May 2008</span>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Grants & Awards -->
-      <section>
-        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">Grants & Awards</h2>
-        <div class="bg-rust-50 border-2 border-rust-200 rounded-lg p-6 mb-8">
-          <p class="text-lg font-semibold text-rust-900">Total NEH Funding: $622,000</p>
+      <div class="cv-entry">
+        <div>
+          <h3>Hunter College</h3>
+          <p class="role">Visiting Lecturer</p>
         </div>
-        <ul class="space-y-5 text-charcoal leading-relaxed">
+        <p class="date">2012–2015</p>
+      </div>
+      <ul>
+        <li>Built a responsive CUNY+ catalog interface and API and developed Augur for reference statistics.</li>
+        <li>Automated catalog operations, provided reference service, taught information literacy, and led programming workshops for CUNY librarians.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul class="plain-list">
+        <li><strong>MA, Liberal Studies, Digital Humanities</strong> — CUNY Graduate Center, 2016</li>
+        <li><strong>MS, Library and Information Science</strong> — Palmer School, Long Island University, 2010</li>
+        <li><strong>Bachelor of Liberal Arts</strong> — St. John’s College, 2008</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Grants and awards</h2>
+      <ul class="dated-list">
+        <li><span>2025</span><div><strong>Principal Investigator</strong>, Provost’s Innovation Grant, “Enhancing Web Accessibility Through Multimodal LLM Analysis” — $10,000</div></li>
+        <li><span>2023</span><div><strong>Co-Principal Investigator</strong>, NEH Digital Humanities Advancement Grant for DHRIFT — $300,000</div></li>
+        <li><span>2019</span><div><strong>Manager of Open Educational Resources</strong>, NEH Advancement Grant for the Digital Humanities Research Institute — $250,000</div></li>
+        <li><span>2017</span><div><strong>Coordinator and workshop leader</strong>, NEH Start-Up Grant for the Digital Humanities Research Institute — $60,000</div></li>
+        <li><span>2015</span><div><strong>Co-Principal Investigator</strong>, NEH Start-Up Grant for DH Box — $60,000</div></li>
+        <li><span>2014</span><div><strong>Principal Investigator</strong>, ACERT Faculty Innovations in Teaching with Technology Grant — $2,000</div></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications and guidelines</h2>
+      <ul class="dated-list">
+        {publications.map((publication) => (
           <li>
-            <strong class="text-rust-600">Principal Investigator</strong>: Provost's Innovation Grant for "Enhancing Web Accessibility Through Multimodal LLM Analysis", 2025. <strong class="text-rust-700">$10,000</strong>
+            <span>{publication.data.year}</span>
+            <div>
+              {publication.data.authors?.join(', ')}. {publication.data.url ? (
+                <a href={publication.data.url} target="_blank" rel="noopener noreferrer">{publication.data.title}</a>
+              ) : publication.data.title}.
+              {publication.data.journal && <> <em>{publication.data.journal}</em>.</>}
+            </div>
           </li>
-          <li>
-            <strong class="text-rust-600">Co-Principal Investigator</strong>: National Endowment of the Humanities Digital Humanities Advancement Grant for DHRIFT, 2023. <strong class="text-rust-700">$300,000</strong>
-          </li>
-          <li>
-            <strong class="text-rust-600">Manager of Open Educational Resources</strong>: NEH Advancement for Digital Humanities Research Institute, 2019. <strong class="text-rust-700">$250,000</strong>
-          </li>
-          <li>
-            <strong class="text-rust-600">Coordinator, Workshop Leader</strong>: NEH Start-up Grant for Digital Humanities Research Institute, 2017. <strong class="text-rust-700">$60,000</strong>
-          </li>
-          <li>
-            <strong class="text-rust-600">Co-Principal Investigator</strong>: NEH Start-Up Grant for DH Box, 2015. <strong class="text-rust-700">$60,000</strong>
-          </li>
-          <li>
-            <strong class="text-rust-600">Principal Investigator</strong>: ACERT Faculty Innovations in Teaching with Technology Grant, 2014. <strong class="text-rust-700">$2,000</strong>
-          </li>
-        </ul>
-      </section>
+        ))}
+      </ul>
+    </section>
 
-      <!-- Publications -->
-      <section>
-        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">Publications</h2>
+    <section>
+      <h2>Selected presentations and instruction</h2>
+      <ul class="dated-list">
+        <li><span>2026</span><div>“Harnessing Agentic AI: Tools for Open University Infrastructure.” In <a href="https://cuny-ai-lab.github.io/ach-2026/">Building Community-Oriented Infrastructures for AI Experimentation</a>, Association for Computers and the Humanities.</div></li>
+        <li><span>2026</span><div>“Evaluating AI in Library Discovery.” CUNY library presentation.</div></li>
+        <li><span>2025</span><div>“What Happens When ‘Hacking’ Becomes Easy? Teaching Python in 2025.” Digital Humanities 2025, Lisbon. Panelist.</div></li>
+        <li><span>2025</span><div>“Introduction to JavaScript.” Digital Humanities Summer Institute, Montreal. Instructor.</div></li>
+        <li><span>2024</span><div>“DHRIFT: Digital Humanities Resource Infrastructure for Teaching Technology.” Digital Humanities 2024, Washington, DC. Poster with Lisa Rhody.</div></li>
+        <li><span>2024</span><div>“Web APIs with Python.” Digital Humanities Summer Institute, Victoria. Instructor.</div></li>
+        <li><span>2019</span><div>“Digital Humanities Research Institute.” Association for Computers and the Humanities, Pittsburgh. Panelist.</div></li>
+        <li><span>2018–19</span><div>“Web APIs with Python.” Digital Humanities Summer Institute, Victoria. Instructor.</div></li>
+        <li><span>2017</span><div>“DH Box.” Digital Humanities 2017, Montreal. Poster with Jojo Karlin and Patrick Smyth.</div></li>
+      </ul>
+    </section>
 
-        <div class="space-y-10">
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Peer Reviewed Publications</h3>
-            <ul class="space-y-3 text-charcoal leading-relaxed">
-              <li><strong class="text-rust-700">2022</strong> - Zweibel, S. Automating reference consultation requests with JavaScript and a Google Form. <em>Code4Lib Journal</em> 55.</li>
-              <li><strong class="text-rust-700">2020</strong> - Shirazi, R. and Zweibel, S. Documenting digital projects: Instituting guidelines for digital dissertations and theses. <em>College and Research Libraries</em> 81(7).</li>
-              <li><strong class="text-rust-700">2020</strong> - Zweibel, S. Scraping BePress: Downloading Dissertations for Preservation. <em>Code4Lib Journal</em> 47.</li>
-            </ul>
-          </div>
+    <section>
+      <h2>Teaching</h2>
+      <div class="teaching-list">
+        <div><h3>AI-Assisted Programming</h3><p>DHUM 78000 / DATA 78000 · Spring and Fall 2026</p></div>
+        <div><h3>Python for Researchers</h3><p>CUNY Graduate Center · Fall semesters</p></div>
+        <div><h3>Introduction to JavaScript</h3><p>DATA 70600 / DHUM 70600 · Spring semesters</p></div>
+        <div><h3>Agentic AI for Library Practice</h3><p>CUNY Office of Library Services · Spring 2026</p></div>
+      </div>
+    </section>
 
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Invited Publications</h3>
-            <ul class="space-y-3 text-charcoal leading-relaxed">
-              <li><strong class="text-rust-700">2012</strong> - Zweibel, S., and Lane, Z. Probing the Effects of Policy Changes by Evaluating Circulation Activity Data at Columbia University Libraries. <em>The Serials Librarian</em> 63(1):17-27.</li>
-            </ul>
-          </div>
+    <section>
+      <h2>Service</h2>
+      <ul>
+        <li>Chair and primary author, CUNY Libraries Research Artificial Intelligence Task Force, 2024–25</li>
+        <li>Author, <em>Evaluating AI Tools in Research Systems</em>, approved by the CUNY Office of Library Services, 2025</li>
+        <li>Member, CUNY Graduate Center IT Committee</li>
+        <li>Chair, Mina Rees Library Web Services Steering Committee</li>
+        <li>Reviewer, National Endowment for the Humanities digital humanities grants, 2016 and 2024</li>
+        <li>Reviewer, Graduate Center Provost’s Digital Innovation Grant proposals, 2017 and 2025</li>
+      </ul>
+    </section>
 
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Professional Guidelines</h3>
-            <ul class="space-y-3 text-charcoal leading-relaxed">
-              <li><strong class="text-rust-700">2025</strong> - Zweibel, S. (Chair & Author). Evaluating AI Tools in Research Systems. CUNY Library Research Artificial Intelligence Task Force. Approved by CUNY Office of Library Services, October 2025.</li>
-            </ul>
-          </div>
+    <section>
+      <h2>Technical areas</h2>
+      <p>AI infrastructure and model evaluation; Python, JavaScript, and TypeScript; web applications and APIs; data analysis and visualization; digital preservation; library systems and metadata.</p>
+    </section>
 
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Other Publications</h3>
-            <ul class="space-y-3 text-charcoal leading-relaxed">
-              <li><strong class="text-rust-700">2017</strong> - Zweibel, S., & Smyth, P. DH Box and Access in the Digital Humanities. <em>dh+lib</em>.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Conference Participation -->
-      <section>
-        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">Conference Participation</h2>
-
-        <div class="space-y-10">
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Instruction</h3>
-            <ul class="space-y-3 text-charcoal leading-relaxed">
-              <li><strong class="text-rust-700">2025</strong> - "Introduction to JavaScript." Invited workshop. Digital Humanities Summer Institute 2025, Montreal, CA.</li>
-              <li><strong class="text-rust-700">2024</strong> - "Web APIs with Python." Invited workshop. Digital Humanities Summer Institute 2024, Victoria, BC, CA.</li>
-              <li><strong class="text-rust-700">2019</strong> - "Web APIs with Python." Invited workshop. Digital Humanities Summer Institute 2019, Victoria, BC, CA.</li>
-              <li><strong class="text-rust-700">2018</strong> - "Web APIs with Python." Invited workshop. Digital Humanities Summer Institute 2018, Victoria, BC, CA.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Invited Panels</h3>
-            <ul class="space-y-3 text-charcoal leading-relaxed">
-              <li><strong class="text-rust-700">2025</strong> - "What Happens When 'Hacking' Becomes Easy? Teaching Python in 2025." Digital Humanities 2025, Lisbon, Portugal. Panelist.</li>
-              <li><strong class="text-rust-700">2019</strong> - "Digital Humanities Research Institute." ACH 2019, Pittsburgh, PA. Panelist.</li>
-              <li><strong class="text-rust-700">2017</strong> - "Open Source Lit, Open Source Crit." MLA 2017, Philadelphia, PA. Panelist.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Poster Presentations</h3>
-            <ul class="space-y-3 text-charcoal leading-relaxed">
-              <li><strong class="text-rust-700">2024</strong> - "DHRIFT: Digital Humanities Resource Infrastructure for Teaching Technology." With Lisa Rhody. Poster. Digital Humanities 2024, Washington, D.C.</li>
-              <li><strong class="text-rust-700">2017</strong> - "DH Box." With Jojo Karlin, Patrick Smyth. Poster. Digital Humanities 2017, Montreal, CA.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Teaching -->
-      <section>
-        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">Teaching</h2>
-
-        <div class="space-y-8">
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-2">Introduction to JavaScript</h3>
-            <p class="text-warm-gray-600 text-sm mb-3">DATA 70600 / DHUM 70600 | Spring semesters, CUNY Graduate Center</p>
-            <p class="text-charcoal leading-relaxed">Project-oriented introduction to JavaScript for humanities and social science graduate students. Topics: JavaScript fundamentals, web development, data visualization with libraries (Leaflet, jQuery).</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-2">Python for Researchers</h3>
-            <p class="text-warm-gray-600 text-sm mb-3">Fall 2025 | CUNY Graduate Center</p>
-            <p class="text-charcoal leading-relaxed">Project-oriented introduction to Python for academic research. Topics: Python fundamentals, data analysis with pandas, APIs, Jupyter notebooks, visualization, AI-assisted coding practices.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-2">AI-Assisted Programming</h3>
-            <p class="text-warm-gray-600 text-sm mb-3">DHUM 78000 / DATA 78000 | Spring 2026 (in development), CUNY Graduate Center</p>
-            <p class="text-charcoal leading-relaxed">Investigative approach to AI-assisted programming for graduate students. Topics: Code investigation techniques, AI coding assistants, debugging, technical agency.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Service -->
-      <section>
-        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">Service to the Profession</h2>
-
-        <div class="space-y-10">
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Committees and Working Groups</h3>
-            <ul class="list-disc pl-6 space-y-2 text-charcoal marker:text-rust-500 leading-relaxed">
-              <li>Chair, CUNY Library Research Artificial Intelligence Task Force (2024-25) - Authored "Evaluating AI Tools in Research Systems," approved as official CUNY policy</li>
-              <li>CUNY Graduate Center IT Committee (2017-present)</li>
-              <li>Chair, Web Committee, Graduate Center Library (2016-present)</li>
-              <li>Digital Preservation Working Group, Graduate Center Library (2018-present)</li>
-              <li>CUNY Libraries Alma Analytics Working Group (2019-20)</li>
-              <li>LACUNY Executive Council (2015-17)</li>
-              <li>Chair, LACUNY Emerging Technology Committee (2013-15)</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold text-rust-600 mb-4">Refereeing</h3>
-            <ul class="list-disc pl-6 space-y-2 text-charcoal marker:text-rust-500 leading-relaxed">
-              <li>Reviewer for GC Provost's Digital Innovation Grant proposals (2017, 2025)</li>
-              <li>Reviewer for NEH DH grants (2016, 2024)</li>
-              <li>Reviewer for Library Information Technology Association book proposals (2019)</li>
-              <li>Reviewer for Journal of Interactive Technology and Pedagogy (2018)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section>
-        <h2 class="text-2xl font-semibold text-charcoal mb-8 pb-3 border-b-2 border-rust-500">Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 class="font-semibold text-rust-600 mb-2">Programming</h3>
-            <p class="text-charcoal leading-relaxed">Python, JavaScript, TypeScript, PHP</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-rust-600 mb-2">Database Management</h3>
-            <p class="text-charcoal leading-relaxed">MySQL, Access</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-rust-600 mb-2">CMSs and Repositories</h3>
-            <p class="text-charcoal leading-relaxed">WordPress, Drupal, Omeka, Blackboard</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-rust-600 mb-2">Library Systems</h3>
-            <p class="text-charcoal leading-relaxed">Ex Libris Aleph, OCLC Connexion, EZproxy, Voyager</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-rust-600 mb-2">Cataloging</h3>
-            <p class="text-charcoal leading-relaxed">Dublin Core, RDA, MODS, MARC21, AACR2</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-rust-600 mb-2">Languages</h3>
-            <p class="text-charcoal leading-relaxed">French (Intermediate), Ancient Greek (Reading)</p>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="mt-16 pt-8 border-t border-warm-gray-200 text-sm text-warm-gray-600">
-      <p>Last updated: 2025</p>
-    </div>
-  </div>
+    <p class="updated">Last updated: September 2026</p>
+  </article>
 </BaseLayout>
+
+<style>
+  .cv section { margin-top: 3rem; }
+  .cv section > h2 { border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem; }
+  .contact-block { border: 1px solid var(--color-border); background: var(--color-bg-alt); line-height: 1.8; padding: 1.25rem; }
+  .cv-entry { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; margin-top: 1.75rem; }
+  .cv-entry h3 { font-size: 1.1rem; margin: 0; }
+  .role, .date { color: var(--color-text-muted); font-size: 0.85rem; margin: 0; }
+  .date { flex: 0 0 auto; }
+  .plain-list { list-style: none; padding: 0; }
+  .plain-list li { border-bottom: 1px solid var(--color-border); padding: 0.65rem 0; }
+  .dated-list { list-style: none; padding: 0; }
+  .dated-list li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.75rem; border-bottom: 1px solid var(--color-border); padding: 0.75rem 0; }
+  .dated-list li > span { color: var(--color-text-muted); }
+  .teaching-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .teaching-list > div { border: 1px solid var(--color-border); background: var(--color-bg-alt); padding: 1rem; }
+  .teaching-list h3 { font-size: 1rem; margin: 0 0 0.5rem; }
+  .teaching-list p { color: var(--color-text-muted); font-size: 0.8rem; margin: 0; }
+  .updated { border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.8rem; margin-top: 3rem; padding-top: 1rem; }
+  @media (max-width: 600px) {
+    .cv-entry { align-items: flex-start; flex-direction: column; }
+    .dated-list li { grid-template-columns: 4.5rem 1fr; }
+    .teaching-list { grid-template-columns: 1fr; }
+  }
+</style>

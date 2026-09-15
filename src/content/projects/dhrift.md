@@ -1,8 +1,7 @@
 ---
 title: "DHRIFT"
-description: "Digital Humanities Resource Infrastructure for Teaching Technology - NEH Level III Advancement Grant project focused on democratizing DH education"
+description: "Digital Humanities Resource Infrastructure for Teaching Technology, a project for building and sustaining accessible DH learning environments."
 github: "https://github.com/szweibel/DHRIFT-Institute"
-image: "/images/projects/dhrift-screenshot.png"
 featured: true
 status: "Active"
 funding: "NEH Level III Advancement Grant ($300,000)"

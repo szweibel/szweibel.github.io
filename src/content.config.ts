@@ -1,14 +1,14 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const projects = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
     github: z.string().optional(),
     url: z.string().optional(),
-    image: z.string().optional(),
-    stars: z.number().optional(),
     featured: z.boolean().default(false),
     status: z.string().optional(),
     funding: z.string().optional(),
@@ -18,7 +18,7 @@ const projects = defineCollection({
 });
 
 const publications = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/publications' }),
   schema: z.object({
     title: z.string(),
     journal: z.string().optional(),
@@ -31,10 +31,10 @@ const publications = defineCollection({
 });
 
 const presentations = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/presentations' }),
   schema: z.object({
     title: z.string(),
-    date: z.date(),
+    date: z.coerce.date(),
     url: z.string(),
     event: z.string().optional(),
     description: z.string().optional(),

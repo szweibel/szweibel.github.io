@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = 'Stephen Zweibel',
-  description = 'Digital Scholarship Librarian working with AI, UX, and computational literacy'
+  description = 'Associate Professor and Digital Scholarship Librarian working with AI, digital scholarship, and computational literacy'
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -65,13 +65,13 @@ const navItems = [
         <div class="footer-info">
           <span>Stephen Zweibel</span>
           <span class="separator">|</span>
-          <span>Digital Scholarship Librarian</span>
+          <span>Associate Professor &amp; Digital Scholarship Librarian</span>
           <span class="separator">|</span>
           <span>CUNY Graduate Center</span>
         </div>
         <div class="footer-links">
+          <a href="https://ailab.gc.cuny.edu/">CUNY AI Lab</a>
           <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://twitter.com/stevezweibel" target="_blank" rel="noopener noreferrer">Twitter</a>
           <a href="mailto:szweibel@gc.cuny.edu">Email</a>
         </div>
         <div class="footer-copy">&copy; {new Date().getFullYear()}</div>
