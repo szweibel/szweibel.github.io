@@ -21,7 +21,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           I'm an Associate Professor and Digital Scholarship Librarian at the Mina Rees Library of the CUNY Graduate Center. I help students and faculty plan and build digital projects, work with data, and make decisions about AI in research and teaching.
         </p>
         <p>
-          I also co-direct the <a href="https://ailab.gc.cuny.edu/">CUNY AI Lab</a>. We build and operate AI infrastructure for CUNY, including the zero-retention <a href="https://chat.ailab.gc.cuny.edu/">CAIL Sandbox</a>, a public <a href="https://ailab.gc.cuny.edu/models/">model registry</a>, and tools for classroom and research work.
+          I also co-direct the <a href="https://ailab.gc.cuny.edu/">CUNY AI Lab</a>. I built the CAIL Gateway, the service that connects the lab’s tools, approved applications, personal API keys, and Open WebUI to AI models. The <a href="https://chat.ailab.gc.cuny.edu/">CAIL Sandbox</a> uses Open WebUI for its chat interface and connects to the Gateway for governed model access.
         </p>
       </div>
     </div>
@@ -32,7 +32,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="work-item">
         <h3>CUNY AI Lab</h3>
         <p>
-          My work in the lab includes technical architecture, tool development, model and provider policy, workshops, and public documentation. Current projects include the Sandbox and <a href="https://tools.ailab.gc.cuny.edu/">Tools Portal</a>, along with systems that let instructors create assistants, build websites, and publish them through a reviewed process.
+          I designed and built the Gateway to authenticate people and applications, expose a curated model catalog, route requests across approved providers, preserve per-person attribution, and report quotas. I also work on the <a href="https://tools.ailab.gc.cuny.edu/">Tools Portal</a>, agentic studios, model and provider policy, workshops, and public documentation.
         </p>
       </div>
 
@@ -54,6 +54,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section>
       <h2>Selected projects</h2>
       <ul class="project-list">
+        <li>
+          <strong><a href="https://ailab.gc.cuny.edu/models/">CAIL Gateway</a></strong><br />
+          The model-access service I built for CAIL tools, Open WebUI, approved applications, and personal API-key clients.
+        </li>
         <li>
           <strong><a href="https://ailab.gc.cuny.edu/">CUNY AI Lab</a></strong><br />
           Shared AI infrastructure, tools, documentation, and professional development for CUNY.
