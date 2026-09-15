@@ -4,118 +4,199 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="About - Stephen Zweibel"
-  description="Digital Scholarship Librarian at CUNY Graduate Center, focused on democratizing computational literacy"
+  description="Stephen Zweibel is an Associate Professor and Digital Scholarship Librarian at the CUNY Graduate Center and co-director of the CUNY AI Lab."
 >
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h1 class="text-4xl font-semibold text-charcoal mb-8">About</h1>
+  <article class="about-page">
+    <h1>About</h1>
 
-    <div class="max-w-none">
-      <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
-        <div class="flex-shrink-0">
-          <img
-            src="/images/SteveProfile.jpeg"
-            alt="Stephen Zweibel"
-            class="w-48 h-48 rounded-2xl object-cover shadow-lg"
-          />
-        </div>
-        <div class="flex-1">
-          <p class="text-charcoal text-lg leading-relaxed">
-            I'm Digital Scholarship Librarian at the CUNY Graduate Center, where I support students and faculty in developing digital projects and working with data through consultations, workshops, and classes on research skills and tools.
-          </p>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Education</h2>
-      <ul class="space-y-3 text-charcoal">
-        <li><strong class="text-rust-600">MS in Library and Information Science</strong>, Long Island University (2010)</li>
-        <li><strong class="text-rust-600">MA in Liberal Studies (Digital Humanities track)</strong>, CUNY Graduate Center (2016)</li>
-        <li><strong class="text-rust-600">Bachelor of Liberal Arts</strong>, St. John's College (2008)</li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Research Areas</h2>
-      <p class="text-charcoal mb-4 leading-relaxed">Research support across:</p>
-      <ul class="list-disc pl-6 space-y-2 text-charcoal marker:text-rust-500">
-        <li>Data Visualization and Mapping Data</li>
-        <li>Finding Data and Demography</li>
-        <li>SPSS (Statistical Package for the Social Sciences)</li>
-        <li>Comparative Literature and French</li>
-        <li>Music research</li>
-        <li>Master of Arts in Liberal Studies (MALS) program support</li>
-        <li>AI Literacy and Fine-tuning</li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Projects</h2>
-
-      <h3 class="text-xl font-medium text-rust-600 mt-8 mb-3">DH Box</h3>
-      <p class="text-charcoal leading-relaxed">
-        Creator and developer of DH Box, a Digital Humanities platform (NEH Start-Up Grant, 2015).
-      </p>
-
-      <h3 class="text-xl font-medium text-rust-600 mt-8 mb-3">DHRIFT</h3>
-      <p class="text-charcoal leading-relaxed">
-        Co-director of DHRIFT (Digital Humanities Resource Infrastructure for Teaching Technology), NEH Level III Advancement Grant, 2023.
-      </p>
-
-      <h3 class="text-xl font-medium text-rust-600 mt-8 mb-3">Tools & Resources</h3>
-      <p class="text-charcoal leading-relaxed">
-        Open-source tools including Augur (reference desk statistics), Reference Agent (AI-powered library assistant), and workshop materials for teaching programming to humanities researchers.
-      </p>
-
-      <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Recent Publications</h2>
-      <ul class="space-y-4 text-charcoal">
-        <li class="leading-relaxed">
-          Zweibel, S. (2022). Automating reference consultation requests with JavaScript and a Google Form. <em>Code4Lib Journal</em> 55.
-        </li>
-        <li class="leading-relaxed">
-          Zweibel, S. (2020). Scraping BePress: Downloading Dissertations for Preservation. <em>Code4Lib Journal</em> 47.
-        </li>
-        <li class="leading-relaxed">
-          Shirazi, R. and Zweibel, S. (2020). Documenting digital projects: Instituting guidelines for digital dissertations and theses. <em>College and Research Libraries</em> 81(7).
-        </li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Focus</h2>
-      <p class="text-charcoal leading-relaxed">
-        Teaching programming and computational methods to humanities scholars.
-      </p>
-
-      <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Teaching</h2>
-      <p class="text-charcoal leading-relaxed mb-4">
-        Teaching graduate courses at CUNY Graduate Center including:
-      </p>
-      <ul class="list-disc pl-6 space-y-2 text-charcoal marker:text-rust-500">
-        <li><strong class="text-rust-600">Introduction to JavaScript</strong> - Project-oriented introduction to JavaScript for humanities and social science graduate students</li>
-        <li><strong class="text-rust-600">Python for Researchers</strong> - Data analysis, APIs, and AI-assisted coding practices</li>
-        <li><strong class="text-rust-600">AI-Assisted Programming</strong> (in development) - Investigative approach to AI-assisted programming</li>
-      </ul>
-      <p class="mt-6 text-charcoal leading-relaxed">
-        Regular workshops on command line, databases, text analysis, data management, and other research skills. Instructor at Digital Humanities Summer Institute (DHSI) teaching "Web APIs with Python" since 2018.
-      </p>
-
-      <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Service</h2>
-      <ul class="list-disc pl-6 space-y-2 text-charcoal marker:text-rust-500">
-        <li><strong class="text-rust-600">Chair</strong>, CUNY Library Research Artificial Intelligence Task Force (2024-25) - Authored "Evaluating AI Tools in Research Systems," approved as official CUNY policy</li>
-        <li>CUNY Graduate Center IT Committee (2017-present)</li>
-        <li>Chair, Web Committee, Graduate Center Library (2016-present)</li>
-        <li>Reviewer for NEH DH grants, Library Information Technology Association, and academic journals</li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold text-charcoal mt-10 mb-6">Contact</h2>
-      <div class="bg-warm-gray-50 p-8 rounded-lg shadow-sm">
-        <ul class="space-y-3 text-charcoal">
-          <li><strong class="text-rust-600">Email:</strong> <a href="mailto:szweibel@gc.cuny.edu" class="text-rust-600 hover:text-rust-700 transition-colors">szweibel@gc.cuny.edu</a></li>
-          <li><strong class="text-rust-600">Phone:</strong> 212-817-7067 (or x7067 in building)</li>
-          <li><strong class="text-rust-600">Office:</strong> Mina Rees Library, Room 2313</li>
-          <li><strong class="text-rust-600">Institution:</strong> The Graduate Center, CUNY</li>
-          <li><strong class="text-rust-600">Address:</strong> 365 Fifth Avenue, New York, NY 10016</li>
-        </ul>
-        <div class="mt-6 flex space-x-6">
-          <a href="https://twitter.com/SteveZweibel" target="_blank" rel="noopener noreferrer" class="text-rust-600 hover:text-rust-700 transition-colors font-medium">Twitter</a>
-          <a href="https://github.com/szweibel" target="_blank" rel="noopener noreferrer" class="text-rust-600 hover:text-rust-700 transition-colors font-medium">GitHub</a>
-          <a href="https://libguides.gc.cuny.edu/prf.php?account_id=67188" target="_blank" rel="noopener noreferrer" class="text-rust-600 hover:text-rust-700 transition-colors font-medium">LibGuides Profile</a>
-          <a href="https://www.gc.cuny.edu/people/stephen-zweibel" target="_blank" rel="noopener noreferrer" class="text-rust-600 hover:text-rust-700 transition-colors font-medium">Faculty Page</a>
-        </div>
+    <div class="about-intro">
+      <img
+        src="/images/SteveProfile.jpeg"
+        alt="Stephen Zweibel"
+        width="192"
+        height="192"
+      />
+      <div>
+        <p class="lead">
+          I'm an Associate Professor and Digital Scholarship Librarian at the Mina Rees Library of the CUNY Graduate Center. I help students and faculty plan and build digital projects, work with data, and make decisions about AI in research and teaching.
+        </p>
+        <p>
+          I also co-direct the <a href="https://ailab.gc.cuny.edu/">CUNY AI Lab</a>. We build and operate AI infrastructure for CUNY, including the zero-retention <a href="https://chat.ailab.gc.cuny.edu/">CAIL Sandbox</a>, a public <a href="https://ailab.gc.cuny.edu/models/">model registry</a>, and tools for classroom and research work.
+        </p>
       </div>
     </div>
-  </div>
+
+    <section>
+      <h2>Current work</h2>
+
+      <div class="work-item">
+        <h3>CUNY AI Lab</h3>
+        <p>
+          My work in the lab includes technical architecture, tool development, model and provider policy, workshops, and public documentation. Current projects include the Sandbox and <a href="https://tools.ailab.gc.cuny.edu/">Tools Portal</a>, along with systems that let instructors create assistants, build websites, and publish them through a reviewed process.
+        </p>
+      </div>
+
+      <div class="work-item">
+        <h3>Libraries and digital scholarship</h3>
+        <p>
+          At the library, I consult on digital projects, data analysis, visualization, web publishing, preservation, and research workflows. I serve as liaison to programs including Data Science, Digital Humanities, Demography, Computational Linguistics, and Geography/GIS.
+        </p>
+      </div>
+
+      <div class="work-item">
+        <h3>Research and writing</h3>
+        <p>
+          I write about how academic libraries and universities adopt AI while preserving professional judgment, privacy, and their public mission. I also work on agentic programming, computational literacy, and the practical governance of shared AI infrastructure. My 2026 article, <a href="https://doi.org/10.1353/pla.2026.a994555"><em>Do Artifacts Still Have Politics?</em></a>, develops that argument for academic libraries.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected projects</h2>
+      <ul class="project-list">
+        <li>
+          <strong><a href="https://ailab.gc.cuny.edu/">CUNY AI Lab</a></strong><br />
+          Shared AI infrastructure, tools, documentation, and professional development for CUNY.
+        </li>
+        <li>
+          <strong>DHRIFT</strong><br />
+          Co-director of Digital Humanities Resource Infrastructure for Teaching Technology, supported by a 2023 NEH Level III Advancement Grant.
+        </li>
+        <li>
+          <strong>DH Box</strong><br />
+          Creator and developer of a cloud-based digital humanities platform supported by a 2015 NEH Start-Up Grant.
+        </li>
+        <li>
+          <strong>Open-source library and research tools</strong><br />
+          Projects include Reference Agent, Augur, and workshop materials for programming and research APIs.
+        </li>
+      </ul>
+      <p><a href="/projects">View all projects</a></p>
+    </section>
+
+    <section>
+      <h2>Teaching</h2>
+      <p>
+        I teach graduate courses in AI-assisted programming, Python for research, and JavaScript at the Graduate Center. The courses are project-oriented and designed for humanities and social science researchers. I also lead workshops on APIs, command-line tools, databases, text analysis, data management, and related research methods.
+      </p>
+      <p><a href="/teaching">Read more about my teaching</a></p>
+    </section>
+
+    <section>
+      <h2>Service</h2>
+      <ul>
+        <li>Chair and primary author, CUNY Libraries Research Artificial Intelligence Task Force, 2024-25</li>
+        <li>Author of <em>Evaluating AI Tools in Research Systems</em>, approved by the CUNY Office of Library Services in October 2025</li>
+        <li>Member, CUNY Graduate Center IT Committee</li>
+        <li>Chair, Mina Rees Library Web Services Steering Committee</li>
+        <li>Reviewer for NEH Digital Humanities grants and academic journals</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>MS in Library and Information Science, Long Island University, 2010</li>
+        <li>MA in Liberal Studies, Digital Humanities track, CUNY Graduate Center, 2016</li>
+        <li>Bachelor of Liberal Arts, St. John's College, 2008</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="contact-card">
+        <p>
+          <a href="mailto:szweibel@gc.cuny.edu">szweibel@gc.cuny.edu</a><br />
+          Mina Rees Library, Room 2313<br />
+          The Graduate Center, CUNY<br />
+          365 Fifth Avenue, New York, NY 10016
+        </p>
+        <div class="contact-links">
+          <a href="https://github.com/szweibel">GitHub</a>
+          <a href="https://libguides.gc.cuny.edu/prf.php?account_id=67188">LibGuides profile</a>
+          <a href="https://www.gc.cuny.edu/people/stephen-zweibel">CUNY faculty page</a>
+          <a href="/publications">Publications</a>
+          <a href="/cv">Full CV</a>
+        </div>
+      </div>
+    </section>
+  </article>
 </BaseLayout>
+
+<style>
+  .about-page section {
+    margin-top: 3rem;
+  }
+
+  .about-intro {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 1rem;
+  }
+
+  .about-intro img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+
+  .work-item {
+    border-left: 3px solid var(--color-border);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .work-item h3 {
+    margin-top: 0;
+  }
+
+  .work-item p {
+    margin-bottom: 0;
+  }
+
+  .project-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .project-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .project-list li:first-child {
+    padding-top: 0;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+
+  @media (max-width: 640px) {
+    .about-intro {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .about-intro img {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+</style>
