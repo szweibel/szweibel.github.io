@@ -1,6 +1,6 @@
 ---
 title: "CAIL Gateway"
-description: "The model-access service I built for CAIL tools, Open WebUI, approved applications, and personal API-key clients."
+description: "The service I built behind CAIL’s tools, connecting them to the models we provide and keeping track of access and use."
 url: "https://ailab.gc.cuny.edu/models/"
 featured: true
 status: "Active"
