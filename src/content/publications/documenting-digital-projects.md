@@ -1,6 +1,7 @@
 ---
 title: "Documenting digital projects: Instituting guidelines for digital dissertations and theses"
 journal: "College and Research Libraries"
+volume: "81(7)"
 year: 2020
 type: "peer-reviewed"
 authors: ["Roxanne Shirazi", "Stephen Zweibel"]

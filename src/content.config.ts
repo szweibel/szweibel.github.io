@@ -22,9 +22,10 @@ const publications = defineCollection({
   schema: z.object({
     title: z.string(),
     journal: z.string().optional(),
+    volume: z.string().optional(),
     year: z.number(),
     authors: z.array(z.string()).optional(),
-    type: z.enum(['peer-reviewed', 'invited', 'guidelines', 'other']),
+    type: z.enum(['peer-reviewed', 'invited', 'guidelines', 'oer', 'other']),
     url: z.string().optional(),
     pdf: z.string().optional(),
   }),

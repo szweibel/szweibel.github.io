@@ -1,6 +1,7 @@
 ---
 title: "Probing the Effects of Policy Changes by Evaluating Circulation Activity Data at Columbia University Libraries"
 journal: "The Serials Librarian"
+volume: "63(1): 17–27"
 year: 2012
 type: "invited"
 authors: ["Stephen Zweibel", "Zachary B. Lane"]

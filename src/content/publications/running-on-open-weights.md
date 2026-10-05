@@ -1,6 +1,6 @@
 ---
 title: "Running the CUNY AI Lab on Open Weights"
-journal: "CUNY AI Lab"
+journal: "CUNY AI Lab blog"
 year: 2026
 type: "other"
 authors: ["CUNY AI Lab"]

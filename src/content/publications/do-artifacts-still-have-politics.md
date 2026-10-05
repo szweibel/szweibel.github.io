@@ -1,6 +1,7 @@
 ---
 title: "Do Artifacts Still Have Politics? Technological Determinism and Professional Agency in Academic Libraries' AI Transformation"
 journal: "portal: Libraries and the Academy"
+volume: "26(3): 495–512"
 year: 2026
 type: "peer-reviewed"
 authors: ["Stephen Zweibel"]

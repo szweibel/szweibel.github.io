@@ -1,6 +1,7 @@
 ---
 title: "Scraping BePress: Downloading Dissertations for Preservation"
 journal: "Code4Lib Journal"
+volume: "47"
 year: 2020
 type: "peer-reviewed"
 authors: ["Stephen Zweibel"]

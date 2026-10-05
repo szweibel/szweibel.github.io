@@ -1,6 +1,7 @@
 ---
 title: "Automating reference consultation requests with JavaScript and a Google Form"
 journal: "Code4Lib Journal"
+volume: "55"
 year: 2022
 type: "peer-reviewed"
 authors: ["Stephen Zweibel"]
